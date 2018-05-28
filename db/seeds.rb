@@ -27,6 +27,7 @@ book1 = Book.create!(
   price: "19.99",
   age: "4-6",
   photo: "https://www.scholastic.com/content5/media/products/03/9780439287203_mres.jpg",
+
   publishing_year: "2012",
   )
 
