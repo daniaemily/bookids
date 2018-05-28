@@ -20,6 +20,7 @@ users = User.all
 book1 = Book.create!(
   name: "Giraffes can't dance",
   author: "Giles Andreae",
+  category: "sleep"
   description: "Giraffes Can't Dance is a touching tale of Gerald the giraffe, who wants nothing more than to dance. With crooked knees and thin legs, it's harder for a giraffe than you would think. Gerald is finally able to dance to his own tune when he gets some encouraging words from an unlikely friend.
     With light-footed rhymes and high-stepping illustrations, this tale is gentle inspiration for every child with dreams of greatness."
   language: "English",
@@ -27,3 +28,6 @@ book1 = Book.create!(
   age: "4-6",
   photo: "https://www.scholastic.com/content5/media/products/03/9780439287203_mres.jpg",
   )
+
+
+
