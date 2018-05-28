@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_05_28_122630) do
     t.text "category"
     t.text "age"
     t.string "photo"
+    t.integer "publishing_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

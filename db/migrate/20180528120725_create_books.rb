@@ -9,6 +9,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.text :category
       t.text :age
       t.string :photo
+      t.integer :publishing_year
 
       t.timestamps
     end
