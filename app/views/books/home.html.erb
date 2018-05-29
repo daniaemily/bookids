@@ -8,4 +8,11 @@
   <%= image_tag "swim.png" %>
   </div>
 </div>
-  <%= link_to "See all books", books_path, class:"btn btn-primary" %>
+  <%= form_tag books_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find Book Genre"
+    %>
+  <% end %>
+<%= link_to "See all books", books_path, class:"btn btn-primary" %>
