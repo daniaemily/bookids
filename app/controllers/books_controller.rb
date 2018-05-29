@@ -1,6 +1,9 @@
 class BooksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
+  def dashboard
+    @personalizations = current_user.personalizations
+  end
   def home
   end
 
@@ -9,6 +12,8 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
+    @personalizations = @book.personalizations
   end
 end
 
