@@ -12,8 +12,6 @@ Personalization.destroy_all
 
 User.create(email: "test@test.com", password: "123123")
 
-
-
 users = User.all
 
 
@@ -28,7 +26,7 @@ book1 = Book.create!(
   age: "4-6",
   photo: "https://www.scholastic.com/content5/media/products/03/9780439287203_mres.jpg",
   publishing_year: "2012",
-  sku: "book",
+  sku: "book"
   )
 
 book2 = Book.create!(
@@ -42,7 +40,7 @@ book2 = Book.create!(
   age: "4-8",
   photo: "http://a2.mzstatic.com/us/r30/Purple/v4/af/49/2f/af492fff-2000-436f-ff44-c4e6a54353af/mzl.pkznnvhh.png",
   publishing_year: "2006",
-  sku: "book",
+  sku: "book"
   )
 
 book3 = Book.create!(
@@ -55,7 +53,7 @@ book3 = Book.create!(
   age: "3-7",
   photo: "https://cdn.shopify.com/s/files/1/0804/5935/products/WonderfulThings_cover_2048x.png?v=1519241258",
   publishing_year: "2015",
-  sku: "book",
+  sku: "book"
   )
 
 book4 = Book.create!(
@@ -69,7 +67,7 @@ book4 = Book.create!(
   age: "1-3",
   photo: "https://images-na.ssl-images-amazon.com/images/I/81vxp%2Bqf%2ByL.jpg",
   publishing_year: "2013",
-  sku: "book",
+  sku: "book"
   )
 
 book5 = Book.create!(
@@ -83,7 +81,7 @@ book5 = Book.create!(
   age: "3-6",
   photo: "https://images-na.ssl-images-amazon.com/images/I/817T4J3dzhL.jpg",
   publishing_year: "2014",
-  sku: "book",
+  sku: "book"
   )
 
 book6 = Book.create!(
@@ -97,7 +95,7 @@ book6 = Book.create!(
   age: "3-7",
   photo: "https://images-na.ssl-images-amazon.com/images/I/81XWA5qMhHL.jpg",
   publishing_year: "1960",
-  sku: "book",
+  sku: "book"
   )
 
 book6 = Book.create!(
@@ -110,7 +108,7 @@ book6 = Book.create!(
   age: "3-5",
   photo: "https://i5.walmartimages.com/asr/5c11ff5e-05b7-417d-b737-0b2c8c989d61_1.b87224f3ac765a60b3b6fa76a9024d13.jpeg",
   publishing_year: "2015",
-  sku: "book",
+  sku: "book"
   )
 
 book7 = Book.create!(
@@ -124,7 +122,7 @@ book7 = Book.create!(
   age: "2-5",
   photo: "https://s3-us-west-2.amazonaws.com/tabs.web.media/a/j/ajct/ajct-square-1536.jpg",
   publishing_year: "2012",
-  sku: "book",
+  sku: "book"
   )
 
 book8 = Book.create!(
@@ -137,7 +135,7 @@ book8 = Book.create!(
   age: "2-5",
   photo: "https://images-na.ssl-images-amazon.com/images/I/71Hh7lmjsPL.jpg",
   publishing_year: "2016",
-  sku: "book",
+  sku: "book"
   )
 
 book9 = Book.create!(
@@ -150,7 +148,7 @@ book9 = Book.create!(
   age: "2-4",
   photo: "https://www.scholastic.com/content5/media/products/74/9780679805274_mres.jpg",
   publishing_year: "1990",
-  sku: "book",
+  sku: "book"
   )
 
 book10 = Book.create!(
@@ -163,7 +161,7 @@ book10 = Book.create!(
   age: "2-4",
   photo: "https://i5.walmartimages.com/asr/db7ad8a5-b5ee-4762-b6d8-bf04596834c0_1.a59653c015f4d11b085018dcac8ec8f7.jpeg",
   publishing_year: "2005",
-  sku: "book",
+  sku: "book"
   )
 
 book11 = Book.create!(
@@ -176,7 +174,7 @@ book11 = Book.create!(
   age: "4-10",
   photo: "https://2.bp.blogspot.com/-DFeKWosoXIc/WgEcysi_cTI/AAAAAAAAeEg/d2AL2rISSaozPc-5z_8ydDIQn5GTWZqDQCLcBGAs/s1600/loveyouforever%2Bpopup.jpg",
   publishing_year: "1995",
-  sku: "book",
+  sku: "book"
   )
 
 book12 = Book.create!(
@@ -190,7 +188,7 @@ book12 = Book.create!(
   age: "2-3",
   photo: "https://images-na.ssl-images-amazon.com/images/I/81tYD5NHDrL.jpg",
   publishing_year: "2011",
-  sku: "book",
+  sku: "book"
   )
 
 
@@ -204,7 +202,7 @@ book12 = Book.create!(
   age: "5-12",
   photo: "http://ridgewoodparkchurch.org/new/wp-content/uploads/2013/05/AreUMyMother.jpg",
   publishing_year: "1998",
-  sku: "book",
+  sku: "book"
   )
 
 book13 = Book.create!(
@@ -217,7 +215,7 @@ book13 = Book.create!(
   age: "2-3",
   photo: "http://hippofun.com/ekmps/shops/hippofun/images/the-rainbow-fish-big-book-1429-p.jpg",
   publishing_year: "1999",
-  sku: "book",
+  sku: "book"
   )
 
 book14 = Book.create!(
@@ -230,7 +228,7 @@ book14 = Book.create!(
   age: "4-8",
   photo: "https://i.ytimg.com/vi/JcxDx-DVsrg/maxresdefault.jpg",
   publishing_year: "2016",
-  sku: "book",
+  sku: "book"
   )
 
 book15 = Book.create!(
@@ -248,7 +246,7 @@ book15 = Book.create!(
   age: "2-9",
   photo: "https://pbs.twimg.com/media/C_BOPudUIAADOed.jpg",
   publishing_year: "2017",
-  sku: "book",
+  sku: "book"
   )
 
 book16 = Book.create!(
@@ -261,7 +259,7 @@ book16 = Book.create!(
   age: "2-4",
   photo: "https://images-na.ssl-images-amazon.com/images/I/91RCKDIp7nL.jpg",
   publishing_year: "2015",
-  sku: "book",
+  sku: "book"
   )
 
 book17 = Book.create!(
@@ -274,7 +272,7 @@ book17 = Book.create!(
   age: "5-9",
   photo: "https://kbimages1-a.akamaihd.net/2cca8dfb-32e2-4861-9af7-73ace2dff8f4/1200/1200/False/dr-seuss-s-sleep-book-1.jpg",
   publishing_year: "1962",
-  sku: "book",
+  sku: "book"
   )
 
 book18 = Book.create!(
@@ -287,7 +285,7 @@ book18 = Book.create!(
   age: "3-7",
   photo: "https://images-na.ssl-images-amazon.com/images/I/81Tq-UEcBeL.jpg",
   publishing_year: "2017",
-  sku: "book",
+  sku: "book"
   )
 
 book19 = Book.create!(
@@ -301,7 +299,7 @@ book19 = Book.create!(
   age: "4-8",
   photo: "https://prod-ecom-media.soundstrue.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/k/bk04437-good-night-yoga-published-cover_1.jpg",
   publishing_year: "2015",
-  sku: "book",
+  sku: "book"
   )
 
 book20 = Book.create!(
@@ -314,5 +312,5 @@ book20 = Book.create!(
   age: "2-3",
   photo: "https://i5.walmartimages.com/asr/f39a7721-b3a6-4fb1-8b16-3852aebd43e3_1.008539af412e5ff074dc13738be43efa.jpeg",
   publishing_year: "2006",
-  sku: "book",
+  sku: "book"
   )
