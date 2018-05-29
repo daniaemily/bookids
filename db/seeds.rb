@@ -291,7 +291,7 @@ book18 = Book.create!(
   )
 
 book19 = Book.create!(
-  name: "Good Night Yoga: A Pose-by-Pose Bedtime Story",
+  name: "Good Night Yoga",
   author: "Mariam Gates",
   category: "sleep",
   description: "Kids love yoga—and it’s great for them, so much so that the President’s Council has added the practice to the fitness activities in the annual President’s Challenge. For parents and caregivers looking for a fun and effective new routine for bedtime, innovative educator Mariam Gates presents Good Night Yoga, a playful yet wholly practical book for preparing for sleep.

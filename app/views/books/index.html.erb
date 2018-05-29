@@ -1,19 +1,28 @@
 
-<h1>This is the index page</h1>
 <div class="container">
+  <div class="header">
+    <h1>All books</h1>
+  </div>
   <div class="row">
     <% @books.each do |book| %>
-      <div class="col-sm-6 col-md-3 ">
+      <div class="col-sm-6 col-md-3 single-card">
+        <%= link_to book_path(book) do %>
         <div class="thumbnail">
-          <div class="photo-index">
-          <%= link_to image_tag(book.photo), book_path(book) %>
+
+          <p class="name"> <%= book.name %> </p>
+          <div class="photo-index" style="background-image:url(<%= image_path(book.photo)%>)">
           </div>
           <div class="caption">
-            <h3><%= link_to book.name, book_path(book) %></h3>
-            <p> Category: <%= book.category %></p>
-            <p><%= humanized_money_with_symbol(book.price) %></p>
+            <div class="text">
+              <div class="age-stars-price-index">
+                <p><i class="fas fa-child"></i>  <%=book.age %></p>
+                <p>Stars<%= %></p>
+                <p><%= humanized_money_with_symbol(book.price) %></p>
+              </div>
+            </div>
           </div>
         </div>
+        <% end %>
       </div>
     <% end %>
   </div>
