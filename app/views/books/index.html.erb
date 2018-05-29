@@ -9,7 +9,7 @@
     <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
     <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
     <% else %>
-      % @books.each do |book| %>
+      <% @books.each do |book| %>
       <div class="col-sm-6 col-md-3 single-card">
         <%= link_to book_path(book) do %>
         <div class="thumbnail">
@@ -28,6 +28,7 @@
         </div>
         <% end %>
       </div>
+    <% end %>
     <% end %>
   </div>
 </div>
