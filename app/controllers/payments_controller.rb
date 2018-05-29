@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  before_action :set_order
+  before_action :set_personalization
 
   def new
   end
@@ -27,7 +27,7 @@ class PaymentsController < ApplicationController
 
 private
 
-  def set_order
-    @order = current_user.orders.where(state: 'pending').find(params[:order_id])
+  def set_personalization
+    @personalization = current_user.personalizations.where(state: 'pending').find(params[:order_id])
   end
 end
