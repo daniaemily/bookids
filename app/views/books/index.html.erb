@@ -1,9 +1,10 @@
 
-<h1>This is the index page</h1>
+<h1>Your book was not found</h1>
 <div class="container">
   <div class="row">
     <% if @books.count == 0 %>
-
+    Feel free to browse our current <a href="/books">library</a> or try again.
+    <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
     <% else %>
       <% @books.each do |book| %>
         <div class="col-sm-6 col-md-3 ">
