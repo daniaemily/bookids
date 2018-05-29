@@ -2,7 +2,9 @@
   color: white;
   background-color: #82D0E2;
   text-align: center;
-  height: 100vh;
+  height: calc(100vh - 70px);
+  position: relative;
+
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -51,6 +53,7 @@
 }
 
 
+
 .intro{
   color: white;
   background-color: white;
@@ -90,4 +93,5 @@
   }
 
 }
+
 
