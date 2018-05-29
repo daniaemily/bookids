@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 2018_05_28_150146) do
   enable_extension "plpgsql"
 
   create_table "books", force: :cascade do |t|
-    t.string "sku"
     t.string "name"
     t.string "author"
     t.text "description"
     t.string "language"
+    t.integer "price"
     t.text "category"
     t.text "age"
     t.string "photo"
@@ -55,10 +55,6 @@ ActiveRecord::Schema.define(version: 2018_05_28_150146) do
     t.string "character_gender"
     t.bigint "book_id"
     t.bigint "user_id"
-    t.string "state"
-    t.string "book_sku"
-    t.integer "amount_cents", default: 0, null: false
-    t.jsonb "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_personalizations_on_book_id"

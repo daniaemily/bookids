@@ -5,6 +5,7 @@ class BooksController < ApplicationController
     @personalizations = current_user.personalizations
   end
   def home
+    @books = Book.all
   end
 
   def index
