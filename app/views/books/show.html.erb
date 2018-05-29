@@ -22,18 +22,24 @@
       <% end %>
     </div>
   </div>
+  <div style="margin-top:50px;margin-bottom:0">
+    <div class="line"></div>
+  </div>
   <div class="row1">
     <% @personalizations.each do |personalization| %>
       <% personalization.reviews.each do |review| %>
       <div class="col-md-12">
         <div class="card-rating">
           <div class="reviews">
-            <div class="review-content">
-              <%= review.header %>
-              <%= review.description %>
-            </div>
             <div class="review-user">
               <%= personalization.user.first_name %>
+            </div>
+            <div class="review-header">
+              <%= review.header %>
+            </div>
+            <div class="review-description">
+              <%= review.description %>
+              <%= review.stars %>
             </div>
           </div>
         </div>
