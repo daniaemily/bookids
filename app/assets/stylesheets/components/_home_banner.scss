@@ -1,0 +1,97 @@
+.banner {
+  color: white;
+  background-color: #82D0E2;
+  text-align: center;
+  height: calc(100vh - 70px);
+  position: relative;
+
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    h1 {
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-family: 'Montserrat', sans-serif, font;
+    text-shadow: 1px 1px 6px white;
+
+  }
+    p {
+    font-size: 25px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    margin-bottom: 30px;
+    font-family: 'Nunito', sans-serif;
+
+  }
+
+  .btn {
+    padding: 13px 23px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: white;
+
+}
+.btn:hover {
+  box-shadow: 1px 1px 8px white;
+}
+}
+
+.logo_glow {
+  box-shadow: 1px 1px 8px white;
+}
+
+.swim_boy{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+
+.intro{
+  color: white;
+  background-color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  font-size: 18px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: transparent;
+  color: white !important;
+  border-color: white;
+  width: 204px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+  }
+}
+
+
+.search-button {
+  form  {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+

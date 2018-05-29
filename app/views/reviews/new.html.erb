@@ -1,0 +1,14 @@
+<div class="cont">
+  <div class="header-review">
+  <h2> Create a review</h2>
+  </div>
+  <div class="form-group">
+    <%= simple_form_for [@personalization, @review] do |f| %>
+      <%= f.input :header, input_html: {class: 'form-control'}, label: false, placeholder: "header" %>
+      <%= f.input :description, input_html: {class: 'form-control'}, label: false, placeholder: "content" %>
+      <%= f.input :stars, collection: [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']] %>
+
+  </div>
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+</div>

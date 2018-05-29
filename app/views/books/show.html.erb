@@ -16,10 +16,38 @@
       <p>Price: <%= humanized_money_with_symbol(@book.price) %></p>
     </div>
     <div class="col-sm-12 col-md-6">
-      <%= form_tag orders_path do %>
+      <%= form_tag book_personalizations_path(@book)do %>
         <%= hidden_field_tag 'book_id', @book.id %>
         <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
       <% end %>
     </div>
   </div>
+  <div style="margin-top:50px;margin-bottom:0">
+    <div class="line"></div>
+  </div>
+  <div class="row">
+    <% @personalizations.each do |personalization| %>
+      <% personalization.reviews.each do |review| %>
+      <div class="col-md-12">
+        <div class="card-rating">
+          <div class="reviews">
+            <div class="review-user">
+              <%= personalization.user.first_name %>
+            </div>
+            <div class="review-header">
+              <%= review.header %>
+            </div>
+            <div class="review-description">
+              <%= review.description %>
+            <div class="review-stars">
+              <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>

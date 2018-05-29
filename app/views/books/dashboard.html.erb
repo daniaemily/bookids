@@ -1,0 +1,19 @@
+<h1>This is the dashboard</h1>
+
+<h2>Your bookings</h2>
+<div class=container-your-personalizations>
+  <div class="row">
+    <% @personalizations.each do |personalization| %>
+    <div class=" col-sm-6 col-md-4">
+      <div class="card-personalization">
+        <div class="body-personalization">
+          <%= image_tag(personalization.book.photo, width: '100%') %>
+        </div>
+        <div class="footer-own">
+          <%= link_to "Add review", new_personalization_review_path(personalization) %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
