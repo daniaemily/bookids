@@ -25,7 +25,7 @@
   <div style="margin-top:50px;margin-bottom:0">
     <div class="line"></div>
   </div>
-  <div class="row1">
+  <div class="row">
     <% @personalizations.each do |personalization| %>
       <% personalization.reviews.each do |review| %>
       <div class="col-md-12">
@@ -40,7 +40,7 @@
             <div class="review-description">
               <%= review.description %>
             <div class="review-stars">
-              <%= review.stars %>
+              <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
             </div>
             </div>
           </div>
