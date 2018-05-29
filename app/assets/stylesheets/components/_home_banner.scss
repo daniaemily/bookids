@@ -62,3 +62,32 @@
   align-items: center;
   justify-content: center;
 }
+
+.form-control {
+  font-size: 18px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: transparent;
+  color: white !important;
+  border-color: white;
+  width: 204px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+  }
+}
+
+
+.search-button {
+  form  {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
