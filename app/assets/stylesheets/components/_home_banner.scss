@@ -64,19 +64,30 @@
 }
 
 .form-control {
-  margin-bottom: 5%;
-  margin-top: -3%;
   font-size: 18px;
   border-radius: 8px;
   text-align: center;
-  padding: 24px;
-  background-color: #82D0E2;
+  background-color: transparent;
+  color: white !important;
   border-color: white;
   width: 204px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+  }
 }
 
-.input {
-  margin: auto;
-}
 
+.search-button {
+  form  {
+    display: flex;
+    justify-content: center;
+  }
+
+}
 
