@@ -2,7 +2,15 @@
   <div class="banner-content">
     <h1><%= image_tag "bookie_logo.svg", height: 50 %> BOOKIES</h1>
     <p>Inspire your kids with personalized stories</p>
-    <a class="btn btn-primary btn-lg">See how!</a>
+    <div class ="search-button">
+      <%= form_tag books_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Enter Book Genre"
+      %>
+    <% end %>
+  </div>
   </div>
   <div class ="swim_boy">
     <%= image_tag "swim.png" %>
@@ -49,4 +57,6 @@
 
 </div>
 
-  <%= link_to "See all books", books_path, class:"btn btn-primary" %>
+
+<%= link_to "See all books", books_path, class:"btn btn-primary" %>
+

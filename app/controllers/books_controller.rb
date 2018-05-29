@@ -4,12 +4,24 @@ class BooksController < ApplicationController
   def dashboard
     @personalizations = current_user.personalizations
   end
+
   def home
     @books = Book.all
   end
 
   def index
-    @books = Book.all
+    if params[:query].present?
+      sql_query = " \
+        books.name @@ :query \
+        OR books.age @@ :query \
+        OR books.author @@ :query \
+        OR books.category @@ :query
+      "
+        # OR pages.content @@ query
+      @books = Book.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @books = Book.all
+    end
   end
 
   def show
