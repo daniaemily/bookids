@@ -10,7 +10,7 @@ class PersonalizationsController < ApplicationController
     @book = Book.find(params[:book_id])
     @personalization.book = @book
     if @personalization.save
-
+      redirect_to book_path(@book)
     else
       render :new
     end
