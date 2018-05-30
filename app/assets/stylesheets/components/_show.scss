@@ -23,6 +23,8 @@
   }
 
   p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: lighter;
     font-size: 18px;
   }
 }
@@ -33,15 +35,23 @@
 
   h2{
     padding-bottom: 1px;
+    font-size: 25px;
   }
 
   h3{
     padding-top: 1px;
+    font-size: 20px;
   }
   p{
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: justify;
+    font-size: 19px;
+    font-weight: lighter;
+  }
+
+  h3 h2 p {
+    font-family: 'Nunito', sans-serif;
   }
 }
 
