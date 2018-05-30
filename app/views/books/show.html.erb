@@ -1,36 +1,26 @@
 
-<div class="container">
-  <div class="book-row">
-    <div class="col-sm-12 col-md-6 photo-show">
-      <%= image_tag(@book.photo, width: '100%') %>
-    </div>
-    <div class="col-sm-12 col-md-6 author-show">
-      <h2><%= @book.name %></h2>
-      <h3>... a story written by <%= @book.author %></h3>
-      <p><%= @book.description %></p>
-      <div class="list-facts">
-        <p><i class="fas fa-search"></i> <%=  @book.category %></p>
-        <p><i class="fas fa-money-bill-alt"></i> <%= humanized_money_with_symbol(@book.price) %></p>
-        <p><i class="fas fa-child"></i> <%=  @book.age %></p>
-        <p><i class="fas fa-star"></i> <%= %>Stars</p>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-sm-12 col-md-5 single-card-show">
+      <div class="photo-show" style="background-image:url(<%= image_path(@book.photo)%>)"></div>
+      <div class="col-sm-12 col-md-12 author-show">
+        <div class="list-facts">
+          <p><i class="fas fa-search"></i> <%=  @book.category %></p>
+          <p><i class="fas fa-money-bill-alt"></i> <%= humanized_money_with_symbol(@book.price) %></p>
+          <p><i class="fas fa-child"></i> <%=  @book.age %></p>
+          <p><i class="fas fa-star"></i> <%= %>Stars</p>
+        </div>
+        <h2><%= @book.name %></h2>
+        <h3>... written by <%= @book.author %></h3>
+        <p><%= @book.description %></p>
       </div>
     </div>
-    <div class="col-sm-12 col-md-6">
-      <%= form_tag book_personalizations_path(@book) do %>
-        <%= hidden_field_tag 'book_id', @book.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>
-    </div>
   </div>
-
-</div>
-
-<div class="container">
-
 
   <div style="margin-top:50px;margin-bottom:10px">
     <div class="line"></div>
   </div>
+
   <div>
     <% @personalizations.each do |personalization| %>
       <% personalization.reviews.each do |review| %>
@@ -58,26 +48,27 @@
       <% end %>
     <% end %>
   </div>
-</div>
-<div class="container">
-  <%= simple_form_for [@book, @personalization] do |f| %>
-   <% if @personalization.errors.any? %>
-  <div class="errors-container">
-    <ul>
-      <% @personalization.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.input :character_name, input_html: {class: 'form-control'}, label: false, placeholder: "name" %>
-    <%= f.input :character_age, input_html: {class: 'form-control'}, label: false, placeholder: "age" %>
-    <%= f.input :character_gender, input_html: {class: 'form-control'}, label: false, placeholder: "gender" %>
-    <%= f.submit class: 'btn btn-primary' %>
-  </div>
+
+  <%= simple_form_for [@book, @personalization] do |f| %>
+    <% if @personalization.errors.any? %>
+      <div class="errors-container">
+        <ul>
+          <% @personalization.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.input :character_name, input_html: {class: 'form-control'}, label: false, placeholder: "name" %>
+      <%= f.input :character_age, input_html: {class: 'form-control'}, label: false, placeholder: "age" %>
+      <%= f.input :character_gender, input_html: {class: 'form-control'}, label: false, placeholder: "gender" %>
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
   <% end %>
   <div class="btn btn-primary">Preview your book</div>
+
 </div>
 

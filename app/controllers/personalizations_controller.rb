@@ -1,6 +1,7 @@
 class PersonalizationsController < ApplicationController
   def show
-    @personalization = current_user.personalizations.where(state: 'paid').find(params[:id])
+    # @personalization = current_user.personalizations.where(state: 'paid').find(params[:id])
+    @personalization = current_user.personalizations.first  #where(state: 'paid').find(params[:id])
   end
 
   def create
@@ -22,6 +23,7 @@ class PersonalizationsController < ApplicationController
   end
 
   private
+
   def personalization_params
      params.require(:personalization).permit(:character_name, :character_gender, :character_age)
   end
