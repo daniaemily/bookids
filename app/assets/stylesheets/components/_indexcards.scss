@@ -12,21 +12,20 @@
 }
 
 .thumbnail:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22);
-  transition: 0.5s;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
+  transition: 0.2s;
 }
 
 .thumbnail {
   display: block;
-  background-color: #F4F4F4;
-  border: 1px solid #ddd;
+  background-color: white;
+  border: none;
   padding: 0px;
   border-radius: 6px;
   transition: border 0.3s ease-in-out;
   height: 341px;
   margin-bottom: 60px;
-  margin-right: 5vh;
-  width: 96%;
+  width: 100%;
 
 
   a {
@@ -37,6 +36,7 @@
 
   .caption {
     padding: 5px;
+
 
     h3 {
     font-style: Montserrat;
