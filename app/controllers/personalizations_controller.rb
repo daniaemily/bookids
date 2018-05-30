@@ -1,12 +1,29 @@
 class PersonalizationsController < ApplicationController
-  def create
-    book = Book.find(params[:book_id])
-    order  = Personalization.create!(book_sku: book.sku, amount: book.price, state: 'pending', user: current_user, book: book)
-
-    redirect_to new_order_payment_path(order)
-  end
-
   def show
     @personalization = current_user.personalizations.where(state: 'paid').find(params[:id])
   end
+
+  def create
+    @personalization = Personalization.new(personalization_params)
+    @personalization.user = current_user
+    @book = Book.find(params[:book_id])
+    @personalization.book = @book
+    if @personalization.save
+      redirect_to book_path(@book)
+    else
+      render :new
+    end
+  end
+
+  def preview
+    @pages = Page.all[0]
+    @pages.book = Book.find(params[:book_id])
+    content_with_age = @pages.content
+  end
+
+  private
+  def personalization_params
+     params.require(:personalization).permit(:character_name, :character_gender, :character_age)
+  end
+
 end

@@ -26,7 +26,13 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @personalization = Personalization.new
+
     @personalizations = @book.personalizations
+
+  end
+
+  def private
   end
 end
 
