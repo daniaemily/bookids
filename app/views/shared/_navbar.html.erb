@@ -10,9 +10,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-bookie-item navbar-bookie-link" %>
-      <%= link_to "Trips", "#", class: "navbar-bookie-item navbar-bookie-link" %>
-      <%= link_to "Messages", "#", class: "navbar-bookie-item navbar-bookie-link" %>
+      <%= link_to "All books", books_path, class: "navbar-bookie-item navbar-bookie-link" %>
       <%= link_to "Dashboard", dashboard_path, class: "navbar-bookie-item navbar-bookie-link" %>
 
       <!-- Avatar with dropdown menu -->
