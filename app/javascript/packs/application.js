@@ -1,5 +1,4 @@
 import "bootstrap";
-import { init } from "./carrousel"
 import "jquery-bar-rating";
 import "./flipper"
 

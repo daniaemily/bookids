@@ -28,3 +28,32 @@
     color: white;
   }
 }
+
+.btn-carrousel {
+  color: white;
+  border: 1px solid white;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: lighter;
+}
+.btn-carrousel:hover {
+  opacity: 0.6;
+  text-decoration: none;
+  background-color: white;
+  color: orange;
+}
+  .btn-carrousel:focus {
+  background-color: white;
+  color: orange;
+  text-decoration: none;
+}
+
+
+
+.carrousel_filter{
+  padding: 20px;
+}
+
+.home-description{
+  margin-bottom: 16px;
+}

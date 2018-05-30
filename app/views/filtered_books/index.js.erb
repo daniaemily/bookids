@@ -1,0 +1,9 @@
+
+function replaceCarouselContainer() {
+  const carrouselContainer = document.getElementById("main-carrousel")
+  const newCarrousel = "<%= j render 'shared/carrousel', books: @books %>"
+  carrouselContainer.innerHTML = newCarrousel;
+  displayCarrousel();
+}
+
+replaceCarouselContainer()

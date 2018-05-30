@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
   end
 
+  resources :filtered_books, only: :index
+
   resources :orders, only: [:show, :create] do
     resources :payments, only: [:new, :create]
   end
