@@ -54,9 +54,11 @@
       <h1>Welcome to Bookies</h1>
       <p>The funniest way to educate and share stunning personalized stories with your kids.</p>
     </div>
+    <p>.</p>
+      <%= render 'shared/carrousel', books: @books %>
+    </div>
 
 </div>
-
 
 <%= link_to "See all books", books_path, class:"btn btn-primary" %>
 

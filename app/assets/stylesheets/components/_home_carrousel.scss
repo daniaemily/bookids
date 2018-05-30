@@ -1,0 +1,30 @@
+.landing-bottom {
+
+  background-color: #F0BD68;
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+
+
+  h1 {
+    color: white;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  p {
+      color: #565656;
+      font-size: 14px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 20px;
+    }
+  }
+
+.carrousel-container{
+
+    .book-carrousel{
+    color: white;
+  }
+}
