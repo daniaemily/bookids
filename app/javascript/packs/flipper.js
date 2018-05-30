@@ -5,10 +5,6 @@ var pages = [
     { id: '4', color: 'orange' },
     { id: '5', color: 'maroon' },
     { id: '6', color: 'pink' },
-    { id: '7', color: 'purple' },
-    { id: '8', color: 'red' },
-    { id: '9', color: 'blue' },
-    { id: '10', color: 'green' }
 ];
 
 var idx = 0,
@@ -37,7 +33,8 @@ function turn(direction) {
 
     var $cur_left = $('.flipper .current.left.page'),
         $cur_right = $('.flipper .current.right.page'),
-      $new_left = $('<div class="left page ' + direction + '" />'),
+        $new_left_btn = $('<button class="prev" <button/>'),
+        $new_left = $('<div class="left page ' + direction + '" />'),
         $new_right = $('<div class="right page ' + direction + '" />');
 
     if (new_left_data) {
@@ -49,7 +46,7 @@ function turn(direction) {
         $new_right.addClass(new_right_data.color);
         $new_right.html(new_right_data.id);
     }
-
+    $('.flipper').append($new_left_btn);
     $('.flipper').append($new_left);
     $('.flipper').append($new_right);
 
