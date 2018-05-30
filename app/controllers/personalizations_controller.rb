@@ -1,7 +1,7 @@
 class PersonalizationsController < ApplicationController
   def show
     # @personalization = current_user.personalizations.where(state: 'paid').find(params[:id])
-    @personalization = current_user.personalizations.first  #where(state: 'paid').find(params[:id])
+    @personalization = current_user.personalizations.last #where(state: 'paid').find(params[:id])
   end
 
   def create
@@ -10,7 +10,7 @@ class PersonalizationsController < ApplicationController
     @book = Book.find(params[:book_id])
     @personalization.book = @book
     if @personalization.save
-      redirect_to book_path(@book)
+
     else
       render :new
     end
