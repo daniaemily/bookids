@@ -68,7 +68,11 @@
       <%= f.submit class: 'btn btn-primary' %>
     </div>
   <% end %>
-  <div class="btn btn-primary">Preview your book</div>
 
+  <% if @completed_personalization %>
+    <%= link_to "Preview your book", personalization_path(@completed_personalization) %>
+  <% else %>
+    <%= link_to "Preview your book", book_path{@book} %>
+  <% end %>
 </div>
 
