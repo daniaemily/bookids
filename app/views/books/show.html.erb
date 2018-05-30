@@ -67,10 +67,11 @@
       <%= f.submit class: 'btn btn-primary' %>
     </div>
   <% end %>
-  <% if @personalization.id.nil? %>
-    <%= link_to "Preview your book", book_path{@book} %>
+
+  <% if @completed_personalization %>
+    <%= link_to "Preview your book", personalization_path(@completed_personalization) %>
   <% else %>
-  <%= link_to "Preview your book", personalization_path(@personalization) %>
+    <%= link_to "Preview your book", book_path{@book} %>
   <% end %>
 </div>
 

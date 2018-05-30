@@ -28,6 +28,9 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @personalization = Personalization.new
 
+    if params[:personalization]
+      @completed_personalization = Personalization.find(params[:personalization])
+    end
     @personalizations = @book.personalizations
 
   end
