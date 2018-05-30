@@ -1,6 +1,6 @@
-
 <div class="wrapper">
-  <div class="book-row">
+
+<!--   <div class="book-row">
     <div class="col-sm-12 col-md-6 photo-show">
       <%= image_tag(@book.photo, width: '100%') %>
     </div>
@@ -21,8 +21,28 @@
         <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
       <% end %>
     </div>
-  </div>
+  </div> -->
+<div class="row">
 
+    <div class="col-sm-12 col-md-5 single-card-show">
+
+          <div class="photo-show" style="background-image:url(<%= image_path(@book.photo)%>)">
+          </div>
+    <div class="col-sm-12 col-md-12 author-show">
+      <div class="list-facts">
+        <p><i class="fas fa-search"></i> <%=  @book.category %></p>
+        <p><i class="fas fa-money-bill-alt"></i> <%= humanized_money_with_symbol(@book.price) %></p>
+        <p><i class="fas fa-child"></i> <%=  @book.age %></p>
+        <p><i class="fas fa-star"></i> <%= %>Stars</p>
+      </div>
+        <h2><%= @book.name %></h2>
+        <h3>... written by <%= @book.author %></h3>
+        <p><%= @book.description %></p>
+    </div>
+
+
+        </div>
+      </div>
 
 
   <div style="margin-top:50px;margin-bottom:10px">
@@ -55,5 +75,5 @@
       <% end %>
     <% end %>
   </div>
-
+</div>
 </div>
