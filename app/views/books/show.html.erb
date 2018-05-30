@@ -1,19 +1,19 @@
-<h1>This is the show page of books</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1><%= @book.name %></h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
+
+<div class="wrapper">
+  <div class="book-row">
+    <div class="col-sm-12 col-md-6 photo-show">
       <%= image_tag(@book.photo, width: '100%') %>
     </div>
-    <div class="col-sm-12 col-md-6">
-      <p><%= @book.author %></p>
+    <div class="col-sm-12 col-md-6 author-show">
+      <h2><%= @book.name %></h2>
+      <h3>... a story written by <%= @book.author %></h3>
       <p><%= @book.description %></p>
-      <p>category: <%=  @book.category %></p>
-      <p>Price: <%= humanized_money_with_symbol(@book.price) %></p>
+      <div class="list-facts">
+        <p><i class="fas fa-search"></i> <%=  @book.category %></p>
+        <p><i class="fas fa-money-bill-alt"></i> <%= humanized_money_with_symbol(@book.price) %></p>
+        <p><i class="fas fa-child"></i> <%=  @book.age %></p>
+        <p><i class="fas fa-star"></i> <%= %>Stars</p>
+      </div>
     </div>
     <div class="col-sm-12 col-md-6">
       <%= form_tag book_personalizations_path(@book)do %>
@@ -22,29 +22,35 @@
       <% end %>
     </div>
   </div>
-  <div style="margin-top:50px;margin-bottom:0">
+
+
+
+  <div style="margin-top:50px;margin-bottom:10px">
     <div class="line"></div>
   </div>
-  <div class="row">
+  <div>
     <% @personalizations.each do |personalization| %>
       <% personalization.reviews.each do |review| %>
-      <div class="col-md-12">
-        <div class="card-rating">
-          <div class="reviews">
+        <div class="reviews">
+          <div class="reviews-left">
+            <div class="review-stars">
+              <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
+            </div>
             <div class="review-user">
               <%= personalization.user.first_name %>
             </div>
+          </div>
+          <div class="review-right">
             <div class="review-header">
               <%= review.header %>
             </div>
             <div class="review-description">
               <%= review.description %>
-            <div class="review-stars">
-              <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
-            </div>
             </div>
           </div>
         </div>
+      <div style="margin-top:50px;margin-bottom:10px">
+        <div class="line"></div>
       </div>
       <% end %>
     <% end %>
