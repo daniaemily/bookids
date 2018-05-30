@@ -1,27 +1,92 @@
-.book{width:600px;height:400px;position:relative;perspective:1500px;}
-.book .page{position:absolute;top:0;width:50%;height:100%;color:#fff;font-size:80px;transition:all .8s ease;transform-style: preserve-3d;transform:rotateY(0deg);backface-visibility:hidden;z-index:1;}
-.book .page.left{left:0;transform-origin:right;}
-.book .page.right{right:0;transform-origin:left;}
-.book .page.current{z-index:2;}
+.flipper{
+  width:600px;
+  height:400px;
+  position:relative;
+  perspective:1500px;
+}
 
-.book .current.right.page.turn{transform:rotateY(-180deg);}
-.book .current.left.page.turn{transform:rotateY(180deg);}
+.book-container {
+  display: flex;
+  justify-content: center;
+}
+.flipper .page{
+  position:absolute;
+  top:0;width:50%;
+  height:100%;
+  color:#fff;
+  font-size:80px;
+  transition:all .8s ease;
+  transform-style: preserve-3d;
+  transform:rotateY(0deg);
+  backface-visibility:hidden;z-index:1;
+}
+.flipper .page.left{
+  left:0;
+  transform-origin:right;
+}
+.flipper .page.right{
+  right:0;
+  transform-origin:left;
+}
+.flipper .page.current{
+  z-index:2;
+}
 
-.book .next.left.page{transform:rotateY(180deg);}
-.book .next.left.page.turn{transform:rotateY(0deg);}
-.book .next.right.page{}
+.flipper .current.right.page.turn{
+  transform:rotateY(-180deg);
+}
+.flipper .current.left.page.turn{
+  transform:rotateY(180deg);
+}
 
-.book .prev.right.page{transform:rotateY(-180deg);}
-.book .prev.right.page.turn{transform:rotateY(0deg);}
-.book .prev.left.page{}
+.flipper .next.left.page{
+  transform:rotateY(180deg);
+}
+.flipper .next.left.page.turn{
+  transform:rotateY(0deg);
+}
+.flipper .next.right.page{
 
-.book .page.red{background:red;}
-.book .page.blue{background:blue;}
-.book .page.green{background:green;}
-.book .page.orange{background:orange;}
-.book .page.maroon{background:maroon;}
-.book .page.pink{background:pink;}
-.book .page.purple{background:purple;}
+}
 
-.btns{text-align:center;width:600px;margin:20px 0;}
-.btns button{font-size:30px;margin:0 10px;padding:10px 30px;}
+.flipper .prev.right.page{
+  transform:rotateY(-180deg);
+}
+.flipper .prev.right.page.turn{
+  transform:rotateY(0deg);
+}
+.flipper .prev.left.page{
+
+}
+
+.flipper .page.red{
+  background:red;
+}
+.flipper .page.blue{
+  background:blue;
+}
+.flipper .page.green{
+  background:green;
+}
+.flipper .page.orange{
+  background:orange;
+}
+.flipper .page.maroon{
+  background:maroon;
+}
+.flipper .page.pink{
+  background:pink;
+}
+.flipper .page.purple{
+  background:purple;
+}
+
+.btns{
+  text-align:center;
+  margin:20px 0;
+}
+.btns button{
+  font-size: 20px;
+  margin:0 10px;
+  padding:10px 30px;
+}

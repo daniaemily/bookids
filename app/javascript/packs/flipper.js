@@ -35,8 +35,8 @@ function turn(direction) {
 
     is_turning = true;
 
-    var $cur_left = $('.book .current.left.page'),
-        $cur_right = $('.book .current.right.page'),
+    var $cur_left = $('.flipper .current.left.page'),
+        $cur_right = $('.flipper .current.right.page'),
       $new_left = $('<div class="left page ' + direction + '" />'),
         $new_right = $('<div class="right page ' + direction + '" />');
 
@@ -50,8 +50,8 @@ function turn(direction) {
         $new_right.html(new_right_data.id);
     }
 
-    $('.book').append($new_left);
-    $('.book').append($new_right);
+    $('.flipper').append($new_left);
+    $('.flipper').append($new_right);
 
     $cur_left.addClass('to_remove');
     $cur_right.addClass('to_remove');
@@ -72,8 +72,8 @@ function turn(direction) {
     }, 50);
 
     setTimeout(function(){
-        $('.book .page.to_remove').remove();
-        $('.book .page').removeClass('turn next prev');
+        $('.flipper .page.to_remove').remove();
+        $('.flipper .page').removeClass('turn next prev');
         is_turning = false;
     }, 800);
 
