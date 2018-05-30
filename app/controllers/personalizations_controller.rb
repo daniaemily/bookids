@@ -7,6 +7,6 @@ class PersonalizationsController < ApplicationController
   end
 
   def show
-    @personalization = current_user.personalizations.where(state: 'paid').find(params[:id])
+    @personalization = current_user.personalizations.first  #where(state: 'paid').find(params[:id])
   end
 end
