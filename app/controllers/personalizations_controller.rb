@@ -4,7 +4,6 @@ class PersonalizationsController < ApplicationController
     @personalization = current_user.personalizations.last  #where(state: 'paid').find(params[:id])
     content = @personalization.book.pages[0].content
     @content_with_name = content.gsub(/name/,@personalization.character_name)
-
   end
 
   def create
