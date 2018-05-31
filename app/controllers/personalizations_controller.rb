@@ -13,7 +13,7 @@ class PersonalizationsController < ApplicationController
     @personalization.book = @book
     if @personalization.save
       respond_to do |format|
-        format.html { redirect_to book_path(@book, personalization: @personalization) }
+        format.html { redirect_to book_path(@book, @personalization) }
         format.js # views/person.../create.js.erb
       end
     else
