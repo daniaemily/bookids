@@ -1,14 +1,16 @@
 
 <div class="wrapper">
-  <div class="header">
-    <h1>All books</h1>
-  </div>
-  <div class="row">
+  <div class="row row-index">
     <% if @books.count == 0 %>
-    <h1>Sorry, your book was not found</h1>
-    <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
+    <div class="not">
+      <h1>Sorry, your book was not found</h1>
+      <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
+    </div>
     <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
     <% else %>
+      <div class="header">
+        <h1>All books</h1>
+      </div>
       <% @books.each do |book| %>
       <div class="col-sm-6 col-md-3 single-card">
         <%= link_to book_path(book) do %>
