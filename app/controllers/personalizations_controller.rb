@@ -39,6 +39,7 @@ class PersonalizationsController < ApplicationController
     @personalization = Personalization.new(personalization_params)
     @personalization.user = current_user
     @book = Book.find(params[:book_id])
+    @personalization.price = @book.price
     @personalization.book = @book
     if @personalization.save
       respond_to do |format|
