@@ -3,5 +3,5 @@ class Personalization < ApplicationRecord
   belongs_to :user
   has_many :reviews
 
-  # monetize :amount_cents
+  monetize :price_cents
 end
