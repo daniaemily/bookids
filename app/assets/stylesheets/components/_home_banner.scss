@@ -2,7 +2,7 @@
   color: white;
   background-color: #82D0E2;
   text-align: center;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 0px);
   position: relative;
 
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -58,7 +58,7 @@
   color: white;
   background-color: white;
   text-align: center;
-  height: 100vh;
+  height: 100vh ;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
 }

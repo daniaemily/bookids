@@ -21,7 +21,7 @@
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   margin-top: 7%;
 
   .fas {
@@ -38,12 +38,23 @@
 }
 
 .bookmark {
-  font-size: 50px;
+  .fas{
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  right: 100px;
+  color: #F0BD68;
+  }
+}
+
+.description-show {
+  margin-top: 23%;
 }
 
 .author-show {
   padding-left: 35px;
   padding-right: 35px;
+  position: relative;
 
 
   h2{

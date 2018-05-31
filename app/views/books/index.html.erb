@@ -9,7 +9,8 @@
     <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
     <% else %>
       <div class="header">
-        <h1>All books</h1>
+        <h2> <%= current_user.first_name%>, you are only one click away from customizing your child's book #<%= current_user.personalizations.count + 1 %>. Pick one of the following stories and help your child develop through stories. </h2>
+        <h2>Thank you for sharing our passion. <i class="em em-smiley"></i></h2>
       </div>
       <% @books.each do |book| %>
       <div class="col-sm-6 col-md-3 single-card">

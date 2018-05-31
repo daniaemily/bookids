@@ -6,15 +6,22 @@
           <div class="main-content">
             <div class="profile-dashboard">
             <%= image_tag "avatar1.png", height: 50 %>
-
               <h2><%= current_user.first_name%> <%= current_user.last_name %></h2>
-
             </div>
           </div>
         </div>
         <div class="stat">
           <div class="stat-content">
-            <h2>Hey <%= current_user.first_name %>. In the following you can see all your personalised books. </h2>
+            <h2>Hey <%= current_user.first_name %>. You have
+              <% if current_user.personalizations.count > 1 %>
+                already customized and ordered <%= current_user.personalizations.count%> stories. In the following you can see all your personalized books, download them to all your devices and even share your experiences by adding reviews.
+              <%elsif current_user.personalizations.count = 1  %>
+                ordered your first book. You can download it below and add a review if you want to share your experience.
+              <% elsif current_user.personalizations.count == 0 %>
+                not ordered any book yet. Customize your child's first book and educate through stories.
+              <%end%>
+            </h2>
+            <h2><%if current_user.personalizations.count >= 1 %> Thank you for sharing our passion. <i class="em em-smiley"></i></h2><%end %>
           </div>
         </div>
         <div class="description">
