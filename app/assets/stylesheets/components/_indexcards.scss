@@ -29,23 +29,9 @@
 
 
   a {
-    font-style: "Montserrat";
+    font-style: $headings-font-family;
     color: black;
     text-decoration: none;
-  }
-
-  .caption {
-    padding: 5px;
-
-
-    h3 {
-    font-style: Montserrat;
-    font-size: 19px;
-    color: black;
-    text-decoration: none;
-    margin-top: 0px;
-    padding-left: 5px;
-    }
   }
 
   p.name {
@@ -64,6 +50,22 @@
     visibility: visible;
     z-index: 9999;
   }
+
+  .caption {
+    padding: 5px;
+
+
+    h3 {
+    font-style: $headings-font-family;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    margin-top: 0px;
+    padding-left: 5px;
+    }
+  }
+
+
 
   &:hover .photo-index {
    -webkit-filter: brightness(.45);

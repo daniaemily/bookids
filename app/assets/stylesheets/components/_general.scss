@@ -8,6 +8,9 @@ body {
   background-color: aliceblue;
 }
 
+.text-white{
+  color: white !important;
+
 .site {
   display: flex;
   min-height: 100vh;
@@ -17,4 +20,5 @@ body {
 .site-content {
   flex: 1;
 }
+
 
