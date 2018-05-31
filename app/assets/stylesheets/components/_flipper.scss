@@ -5,6 +5,9 @@
   perspective:1500px;
 }
 
+.preview-title {
+  margin-top: 80px;
+}
 .book-container {
   display: flex;
   justify-content: center;
@@ -63,26 +66,24 @@
 }
 
 .flipper .page.red{
-  background:red;
-}
-.flipper .page.blue{
-  background:blue;
-}
-.flipper .page.green{
-  background:green;
-}
-.flipper .page.orange{
   background:orange;
 }
+.flipper .page.blue{
+  background:pink;
+}
+.flipper .page.green{
+  background:orange;
+}
+.flipper .page.orange{
+  background:pink;
+}
 .flipper .page.maroon{
-  background:maroon;
+  background:orange;
 }
 .flipper .page.pink{
   background:pink;
 }
-.flipper .page.purple{
-  background:purple;
-}
+
 
 .btns{
     opacity: 0;

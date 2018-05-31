@@ -41,9 +41,15 @@ class PersonalizationsController < ApplicationController
     @book = Book.find(params[:book_id])
     @personalization.book = @book
     if @personalization.save
-      redirect_to book_path(@book, personalization: @personalization)
+      respond_to do |format|
+        format.html { redirect_to book_path(@book, @personalization) }
+        format.js # views/person.../create.js.erb
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'books/show'}
+        format.js
+      end
     end
   end
 

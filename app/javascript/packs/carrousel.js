@@ -46,3 +46,5 @@ global.displayCarrousel = displayCarrousel
 document.addEventListener("DOMContentLoaded", function() {
   displayCarrousel();
 })
+
+

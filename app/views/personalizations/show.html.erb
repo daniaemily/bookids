@@ -1,4 +1,4 @@
-<h1> Timmy's Story Preview</h1>
+<h1 class="preview-title"> Timmy's Story Preview</h1>
 <div class="book-container">
   <div class="btns">
       <button class="prev"></button>
@@ -20,6 +20,10 @@
   data: { pages: @dataset_flipper} %>
 </div>
 
-
+<!-- payment form -->
+<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'personalization_id', @personalization.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
 
 
