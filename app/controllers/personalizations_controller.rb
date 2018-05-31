@@ -1,20 +1,56 @@
 class PersonalizationsController < ApplicationController
   def show
     # @personalization = current_user.personalizations.where(state: 'paid').find(params[:id])
-    @personalization = current_user.personalizations.last  #where(state: 'paid').find(params[:id])
-    content = @personalization.book.pages[0].content
-    @content_with_name = content.gsub(/name/,@personalization.character_name)
+    @personalization = current_user.personalizations.find(params[:id])  #where(state: 'paid').find(params[:id])
+    # content = @personalization.book.pages[0].content
+    # @content_with_name = content.gsub(/name/,@personalization.character_name)
+
+    # @dataset_flipper = @content_with_name.pages[3]
+    # @dataset_flipper = let @book "#{dataset['id'], dataset['color'], dataset['content']};"
+
+    # # let dataset_flipper = ['id', 'color', 'content'];
+    @dataset_flipper = [
+      { id: '1', color: 'red', content: @personalization.book.name }
+    ]
+    # 6.times { |i|
+    #   @dataset_flipper << {
+    #     id: i + 1,
+    #     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nesciunt !",
+    #     color: ["blue", "yellow", "orange", "maroon", "pink"].sample
+    #   }
+    # }
+    @personalization.book.pages.each_with_index do |page, index|
+      @dataset_flipper << {
+        id: index + 2,
+        content: page.content.gsub(/name/, @personalization.character_name),
+        color: ["blue", "purple", "orange", "maroon", "pink"].sample
+      }
+    end
+
+    # @dataset_flipper = [{ id: '1', color: 'red', content: 'first page' },
+    #       { id: '2', color: 'blue', content: 'Dedication Page' },
+    #       { id: '3', color: 'green', content: 'Random Picture' },
+    #       { id: '4', color: 'orange', content: @content_with_name[0, 15] },
+    #       { id: '5', color: 'maroon', content: @content_with_name[16, 30] },
+    #       { id: '6', color: 'pink', content: @content_with_name[31, 45] },]
   end
 
   def create
     @personalization = Personalization.new(personalization_params)
     @personalization.user = current_user
     @book = Book.find(params[:book_id])
+    @personalization.price = @book.price
     @personalization.book = @book
     if @personalization.save
-      redirect_to book_path(@book, personalization: @personalization)
+      respond_to do |format|
+        format.html { redirect_to book_path(@book, @personalization) }
+        format.js # views/person.../create.js.erb
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'books/show'}
+        format.js
+      end
     end
   end
 
