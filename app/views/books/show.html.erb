@@ -10,14 +10,16 @@
         <div class="bookmark">
           <i class="fas fa-bookmark"></i>
         </div>
+        <div class="description-show">
+          <h2><%= @book.name %></h2>
+          <h3>... written by <%= @book.author %></h3>
+          <p><%= @book.description %></p>
+        </div>
         <div class="list-facts">
           <p><i class="fas fa-search"></i> <%=  @book.category %></p>
           <p><i class="fas fa-money-bill-alt"></i> <%= humanized_money_with_symbol(@book.price) %></p>
           <p><i class="fas fa-child"></i> <%=  @book.age %></p>
         </div>
-          <h2><%= @book.name %></h2>
-          <h3>... written by <%= @book.author %></h3>
-          <p><%= @book.description %></p>
       </div>
     </div>
   </div>

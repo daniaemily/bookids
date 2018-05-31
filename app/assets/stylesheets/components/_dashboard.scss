@@ -49,6 +49,7 @@
 
 // profile
 
+
 .main-content {
   display: flex;
   justify: space-between;
@@ -56,15 +57,25 @@
 
 .profile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 4fr;
   grid-template-rows: 1fr;
   padding: 30px;
-  margin-left: 16%;
-  margin-right: 16%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 .profile .main {
   grid-row: 1 / span 3;
   grid-column: 1 / span 1;
+}
+
+.profile-dashboard {
+  padding-bottom: 15px;
+
+  img {
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #C7374B;
+  }
 }
 .profile .description {
   grid-row: 4 / span 2;
@@ -88,6 +99,7 @@
 /* Fonts and colors */
 .profile h2 {
   font-size: 22px;
+  font-weight: lighter;
 }
 .profile h3 {
   font-size: 22px;
@@ -115,6 +127,11 @@
   color: rgba(0,0,0,0.25);
   font-size: 19px;
 }
+
+.stat-content h2 {
+  line-height: 1.7;
+}
+
 .description h3 {
   color: rgba(0,0,0,0.9);
   font-size: 21px;
