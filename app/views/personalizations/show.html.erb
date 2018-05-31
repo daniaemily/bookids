@@ -5,14 +5,19 @@
       <button class="next"></button>
   </div>
   <div class="flipper">
-      <div class="current left page red ontop">1</div>
-      <div class="current right page blue ontop">2</div>
+      <div class="current left page <%= @dataset_flipper[0][:color] %> ontop"><%= @dataset_flipper[0][:content] %></div>
+      <div class="current right page <%= @dataset_flipper[1][:color] %> ontop"><%= @dataset_flipper[1][:content] %></div>
   </div>
 </div>
 
 
-<div>
- <%= @content_with_name%>
+<div class="customized-pages1">
+<!--  <%= @content_with_name%> -->
+
+ <%= content_tag :div,
+  nil,
+  id: 'data-flipper',
+  data: { pages: @dataset_flipper} %>
 </div>
 
 <!-- payment form -->
@@ -20,4 +25,5 @@
   <%= hidden_field_tag 'personalization_id', @personalization.id %>
   <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
 <% end %>
+
 
