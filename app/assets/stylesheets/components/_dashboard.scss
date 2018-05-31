@@ -1,0 +1,126 @@
+.dashboard-booking {
+  background-color: white;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-right: 0;
+  padding-left: 0;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
+  border-radius: 6px;
+  margin-top: 50px;
+
+  .review-dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 10px;
+
+    .fas {
+
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #C7374B;
+    opacity: 0.75;
+    font-size: 26px;
+    }
+
+    .fas:hover {
+      opacity: 1;
+    }
+
+    a {
+      color: grey;
+      font-family: 'Nunito', sans-serif;
+      font-weight: lighter;
+      font-size: 20px;
+    }
+
+    a:hover {
+      text-decoration: none;
+      font-weight: normal;
+    }
+  }
+
+}
+
+.body-personalization img {
+  border-radius: 6px 6px 0px 0px;
+}
+
+
+
+// profile
+
+.main-content {
+  display: flex;
+  justify: space-between;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 30px;
+  margin-left: 16%;
+  margin-right: 16%;
+}
+.profile .main {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 1;
+}
+.profile .description {
+  grid-row: 4 / span 2;
+  grid-column: 1 / span 2;
+}
+.main, .description, .stat {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 50px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 940px) {
+  .profile {
+    display: block;
+  }
+}
+
+/* Fonts and colors */
+.profile h2 {
+  font-size: 22px;
+}
+.profile h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.profile p {
+  color: rgba(0,0,0,0.6);
+}
+.profile .btn {
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  margin-top: 30px;
+  background: #37B686;
+}
+.profile .btn:hover {
+  background: #37B686;
+  opacity: 0.7;
+}
+.stat h3 {
+  color: #37B686;
+  font-size: 28px;
+}
+.stat p {
+  color: rgba(0,0,0,0.25);
+  font-size: 19px;
+}
+.description h3 {
+  color: rgba(0,0,0,0.9);
+  font-size: 21px;
+  font-weight: normal;
+}
+.description p {
+  color: rgba(0,0,0,0.5);
+  font-weight: lighter;
+}

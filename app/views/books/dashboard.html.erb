@@ -1,21 +1,49 @@
 <h1>This is the dashboard</h1>
 
-<h2>Your bookings</h2>
 <div class="wrapper">
-  <div class=container-your-personalizations>
-    <div class="row">
-      <% @personalizations.each do |personalization| %>
-      <div class=" col-sm-6 col-md-4">
-        <div class="card-personalization">
-          <div class="body-personalization">
-            <%= image_tag(personalization.book.photo, width: '100%') %>
+      <div class="profile text-center">
+        <div class="main">
+          <div class="main-content">
+            <div class="profile-dashboard">
+            <%= image_tag "avatar1.png", height: 50 %>
+
+              <h2><%= current_user.first_name%> <%= current_user.last_name %></h2>
+
+            </div>
           </div>
-          <div class="footer-own">
-            <%= link_to "Add review", new_personalization_review_path(personalization) %>
+        </div>
+        <div class="stat">
+          <div class="stat-content">
+            <h2>Hey <%= current_user.first_name %>. In the following you can see all your personalised books. </h2>
+          </div>
+        </div>
+        <div class="description">
+          <div class="description-content">
+            <div class="row">
+              <% @personalizations.each do |personalization| %>
+              <div class=" col-sm-6 col-md-4">
+                <div class="dashboard-booking">
+                  <div class="card-personalization">
+                    <div class="body-personalization">
+                      <%= image_tag(personalization.book.photo, width: '100%') %>
+                    </div>
+                    <div class="footer-own">
+                      <div class="review-dashboard">
+                        <%= link_to '<i class="fas fa-plus-circle"></i> Review'.html_safe, new_personalization_review_path(personalization) %>
+                        <%= link_to '<i class="fas fa-cloud-download-alt"></i> Download'.html_safe, new_personalization_review_path(personalization) %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
-      <% end %>
-    </div>
-  </div>
 </div>
+
+
+
+
+
