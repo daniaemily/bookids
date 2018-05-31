@@ -15,3 +15,9 @@
  <%= @content_with_name%>
 </div>
 
+<!-- payment form -->
+<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'personalization_id', @personalization.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
+
