@@ -1,6 +1,5 @@
 import "bootstrap";
 import "jquery-bar-rating";
-import "./flipper"
 
 $(function() {
   $('#review_stars').barrating({theme: 'fontawesome-stars'});
