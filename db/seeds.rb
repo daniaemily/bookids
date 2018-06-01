@@ -320,7 +320,7 @@ Page.create!(
   book: book1
   )
 Page.create!(
-  content: "name ist bald ein Schulkind, hurra! Bis es soweit ist, passieren ganz viele aufregende Dinge: die Schulanmeldung, der Besuch bei der netten Ärztin, der Großeinkauf im Schreibwarenladen. Aber das Beste ist der Schnuppertag, den name gemeinsam mit ihrer Erzieherin Hanne besucht. Dort lernt name ihre Klassenlehrerin, viele andere Kinder und das Schulhaus kennen. Als der große Tag der Einschulung dann endlich da ist, ist alles noch tausendmal toller als name es sich vorgestellt hat.",
+  image: '/assets/book.jpeg',
   book: book1
   )
 Page.create!(

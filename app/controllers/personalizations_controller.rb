@@ -10,7 +10,7 @@ class PersonalizationsController < ApplicationController
 
     # # let dataset_flipper = ['id', 'color', 'content'];
     @dataset_flipper = [
-      { id: '1', color: 'orange', content: @personalization.book.name }
+      pages: [{ id: '1', color: 'orange', content: @personalization.book.name, image: @personalization.book.pages.first.image }]
     ]
     # 6.times { |i|
     #   @dataset_flipper << {
@@ -22,8 +22,9 @@ class PersonalizationsController < ApplicationController
     @personalization.book.pages.each_with_index do |page, index|
       @dataset_flipper << {
         id: index + 2,
-        content: page.content.gsub(/name/, @personalization.character_name),
-        color: ["orange", "pink"].sample
+        content: page.content ? page.content.gsub(/name/, @personalization.character_name) : "<img src='#{page.image}' alt='' class='preview-image'>",
+        color: ["orange", "pink"].sample,
+        image: @personalization.book.pages[index].image
       }
     end
 
