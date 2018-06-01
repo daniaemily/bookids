@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_31_142524) do
+ActiveRecord::Schema.define(version: 2018_06_01_123009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2018_05_31_142524) do
 
   create_table "orders", force: :cascade do |t|
     t.string "state"
-    t.string "book_sku"
+    t.string "personalization_sku"
     t.integer "amount_cents", default: 0, null: false
     t.jsonb "payment"
     t.bigint "user_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2018_05_31_142524) do
     t.bigint "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["book_id"], name: "index_pages_on_book_id"
   end
 
@@ -55,10 +56,7 @@ ActiveRecord::Schema.define(version: 2018_05_31_142524) do
     t.string "character_gender"
     t.bigint "book_id"
     t.bigint "user_id"
-    t.string "state"
-    t.string "book_sku"
-    t.integer "amount_cents", default: 0, null: false
-    t.jsonb "payment"
+    t.string "sku"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false

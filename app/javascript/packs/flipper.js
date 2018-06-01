@@ -41,6 +41,7 @@ function turn(direction) {
 
   if (new_left_data) {
     $new_left.addClass(new_left_data.color);
+    console.log(new_left_data.content)
     $new_left.html(new_left_data.content);
   }
 
