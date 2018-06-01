@@ -10,7 +10,7 @@ class PersonalizationsController < ApplicationController
 
     # # let dataset_flipper = ['id', 'color', 'content'];
     @dataset_flipper = [
-      { id: '1', color: 'red', content: @personalization.book.name }
+      { id: '1', color: 'orange', content: @personalization.book.name }
     ]
     # 6.times { |i|
     #   @dataset_flipper << {
@@ -23,7 +23,7 @@ class PersonalizationsController < ApplicationController
       @dataset_flipper << {
         id: index + 2,
         content: page.content.gsub(/name/, @personalization.character_name),
-        color: ["blue", "purple", "orange", "maroon", "pink"].sample
+        color: ["orange", "pink"].sample
       }
     end
 

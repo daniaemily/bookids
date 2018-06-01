@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2018_05_31_142524) do
 
   create_table "orders", force: :cascade do |t|
     t.string "state"
-    t.string "personalization_sku"
+    t.string "book_sku"
     t.integer "amount_cents", default: 0, null: false
     t.jsonb "payment"
     t.bigint "user_id"
@@ -55,7 +55,10 @@ ActiveRecord::Schema.define(version: 2018_05_31_142524) do
     t.string "character_gender"
     t.bigint "book_id"
     t.bigint "user_id"
-    t.string "sku"
+    t.string "state"
+    t.string "book_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.jsonb "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false
