@@ -4,14 +4,14 @@
 .header {
   margin: 90px 15% 100px 15%;
   // background-color: #F0BD68;
-  border-radius: 6px;
-  border: 2px dotted #F0BD68;
-  padding: 10px 10px 20px;
   text-align: center;
 
+  .fas {
+    padding-right: 10px;
+  }
+
   h2 {
-    font-weight: lighter;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1.8;
   }
 }
