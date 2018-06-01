@@ -18,7 +18,7 @@
   top:0;width:50%;
   height:100%;
   color:#fff;
-  font-size:40px;
+  font-size:20px;
   text-align: center;
   transition:all .8s ease;
   transform-style: preserve-3d;
@@ -83,7 +83,23 @@
 .flipper .page.pink{
   background:pink;
 }
+.flipper .page.white{
+  background:white;
+}
 
+.payment-button {
+  margin-top: 86px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flipper-title {
+  display: flex;
+  justify-content: center;
+  h1 {
+    margin-right: 33px;
+  }
+}
 
 .btns{
     opacity: 0;
