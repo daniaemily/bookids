@@ -1,6 +1,17 @@
 <h1>Order</h1>
-<ul>
-  <li>Status: <%= @order.state %></li>
-  <li>Item: <%= @order.personalization_sku %></li>
-  <li>Amount: <%= humanized_money_with_symbol(@order.amount) %></li>
-<ul>
+
+<div class="payed-wrapper">
+  <ul>
+    <div class="icon">
+      <i class="fas fa-check-circle"></i>
+      <h3>Your order is confirmed</h3>
+    </div>
+    <div class="order-summary">
+      <li>First name: <%= @order.user.first_name %></li>
+      <li>Last name: <%= @order.user.last_name %></li>
+      <li>Status: <%= @order.state %></li>
+      <li>Book: <%= @order.user.personalizations.last.book.name %></li>
+      <li><strong>Amount: <%= humanized_money_with_symbol(@order.amount) %></strong></li>
+    </div>
+  <ul>
+</div>

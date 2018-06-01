@@ -76,11 +76,6 @@
     </div>
   <% end %>
 
-  <% personalization = current_user.personalizations.where(book: @book).last %>
-  <% if personalization %>
-    <%= link_to "Preview your book", personalization_path(personalization), class: 'hidden', id: 'preview-cta' %>
-  <% else %>
-    <%= link_to "Preview your book", book_path(@book), class: 'hidden', id: 'preview-cta' %>
-  <% end %>
+  <div id="personalization-links"></div>
 </div>
 

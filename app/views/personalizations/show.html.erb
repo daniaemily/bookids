@@ -1,11 +1,5 @@
 <div class="flipper-title">
-  <h1 class="preview-title"> Timmy's Story Preview</h1>
-    <div class="payment-button">
-      <%= form_tag orders_path do %>
-        <%= hidden_field_tag 'personalization_id', @personalization.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>
-    </div>
+  <h1 class="preview-title"> Your Story Preview</h1>
 </div>
 <div class="book-container">
   <div class="btns">
@@ -13,8 +7,12 @@
       <button class="next"></button>
   </div>
   <div class="flipper">
-      <div class="current left page <%= @dataset_flipper[0][:color] %> ontop"><%= @dataset_flipper[0][:content] %></div>
-      <div class="current right page <%= @dataset_flipper[1][:color] %> ontop"><%= @dataset_flipper[1][:content] %></div>
+      <div class="current left page <%= @dataset_flipper[0][:color] %> ontop"><%= @dataset_flipper[0][:content] %>
+      </div>
+      <div class="shadow-left"></div>
+      <div class="current right page <%= @dataset_flipper[1][:color] %> ontop"><%= @dataset_flipper[1][:content] %>
+      </div>
+        <div class="shadow-right"></div>
   </div>
 </div>
 
@@ -29,6 +27,11 @@
 </div>
 
 <!-- payment form -->
-
+<div class="payment-button">
+  <%= form_tag orders_path do %>
+    <%= hidden_field_tag 'personalization_id', @personalization.id %>
+    <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+  <% end %>
+</div>
 
 
