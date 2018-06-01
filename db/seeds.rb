@@ -320,7 +320,7 @@ Page.create!(
   book: book1
   )
 Page.create!(
-  image: '/assets/picture1.png',
+  image: 'picture1.png',
   book: book1
   )
 Page.create!(
