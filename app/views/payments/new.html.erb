@@ -17,10 +17,17 @@
           <p><i class="em em-couple"></i> <%=  @order.user.personalizations.last.character_gender %></p>
           <p><i class="em em-1234"></i> <%= @order.user.personalizations.last.character_age %></p>
         </div>
-        <div class="price-delivery-checkout">
-          <p>Amount: <%= humanized_money_with_symbol(@order.amount) %></p>
-          <p>Expected delivery: <%= DateTime.now.to_date + 4%></p>
-        </div>
+
+        <table style="width:100%" class="price-delivery-checkout">
+          <tr>
+            <td><p>Amount:</p></td>
+            <td><p><%= humanized_money_with_symbol(@order.amount) %></p></td>
+          </tr>
+          <tr>
+            <td><p>Expected delivery:</p></td>
+            <td><p><%= DateTime.now.to_date + 4%></p></td>
+          </tr>
+        </table>
 
 
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button custom-button"
