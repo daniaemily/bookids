@@ -9,7 +9,11 @@
     <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
     <% else %>
       <div class="header">
-        <h1>All books</h1>
+        <% if current_user != nil %>
+          <h2><%= current_user.first_name %>, our search has resulted the following books:</h2>
+        <% else %>
+          <h2>Our search has resulted the following books:</h2>
+        <% end %>
       </div>
       <% @books.each do |book| %>
       <div class="col-sm-6 col-md-3 single-card">
