@@ -1,7 +1,6 @@
+var linksDiv = $('#personalization-links');
+var htmlLinks = "<%= j link_to 'Preview your book', personalization_path(@personalization), id: 'preview-cta' %>";
+linksDiv.html(htmlLinks);
 
-function displayCtaButton() {
-  const ctaButton = document.getElementById('preview-cta');
-  ctaButton.classList.remove('hidden');
-}
 
-displayCtaButton();
+
