@@ -10,9 +10,9 @@
     <% else %>
       <div class="header">
         <% if current_user != nil %>
-          <h2><%= current_user.first_name %>, our search has resulted the following books:</h2>
+          <h2>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</h2>
         <% else %>
-          <h2>Our search has resulted the following books:</h2>
+          <h2 class="search-results">Our search has resulted the following books:</h2>
         <% end %>
       </div>
       <% @books.each do |book| %>
