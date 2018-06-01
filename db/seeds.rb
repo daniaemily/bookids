@@ -328,7 +328,6 @@ Page.create!(
   book: book1
   )
 Page.create!(
-  content: '/assets/picture2.png',
   book: book1
   )
 Page.create!(
