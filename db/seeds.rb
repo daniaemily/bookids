@@ -316,26 +316,26 @@ book20 = Book.create!(
   )
 
 Page.create!(
-  content: "To: <3 From: Me",
+  content: "Giraffes Can't Dance",
   book: book1
   )
 Page.create!(
-  image: '/assets/book.jpeg',
+  image: '/assets/picture1.png',
   book: book1
   )
 Page.create!(
-  content: "So it begins.... ",
+  content: "This book was made with love for name ",
   book: book1
   )
 Page.create!(
-  content: "Once upon a time, name ist bald ein Schulkind, hurra! Bis es soweit ist, passieren ganz viele aufregende Dinge: die Schulanmeldung, der Besuch bei der netten Ärztin, der Großeinkauf im Schreibwarenladen. Aber das Beste ist der Schnuppertag, den name gemeinsam mit ihrer Erzieherin Hanne besucht. Dort lernt name ihre Klassenlehrerin, viele andere Kinder und das Schulhaus kennen. Als der große Tag der Einschulung dann endlich da ist, ist alles noch tausendmal toller als name es sich vorgestellt hat.",
+  content: '/assets/picture2.png',
   book: book1
   )
 Page.create!(
-  content: "Last year, name ist bald ein Schulkind, hurra! Bis es soweit ist, passieren ganz viele aufregende Dinge: die Schulanmeldung, der Besuch bei der netten Ärztin, der Großeinkauf im Schreibwarenladen. Aber das Beste ist der Schnuppertag, den name gemeinsam mit ihrer Erzieherin Hanne besucht. Dort lernt name ihre Klassenlehrerin, viele andere Kinder und das Schulhaus kennen. Als der große Tag der Einschulung dann endlich da ist, ist alles noch tausendmal toller als name es sich vorgestellt hat.",
+  content: "9 weeks ago , name started the coding Bootcamp at LeWagon. After spending more than nine hours a day in front of a laptop name has spleeping problems. However name is still happy to be here",
   book: book1
   )
 Page.create!(
-  content: "Ending of the book therefore, name ist bald ein Schulkind, hurra! Bis es soweit ist, passieren ganz viele aufregende Dinge: die Schulanmeldung, der Besuch bei der netten Ärztin, der Großeinkauf im Schreibwarenladen. Aber das Beste ist der Schnuppertag, den name gemeinsam mit ihrer Erzieherin Hanne besucht. Dort lernt name ihre Klassenlehrerin, viele andere Kinder und das Schulhaus kennen. Als der große Tag der Einschulung dann endlich da ist, ist alles noch tausendmal toller als name es sich vorgestellt hat.",
+  content: "And name coded happily ever after...",
   book: book1
   )
