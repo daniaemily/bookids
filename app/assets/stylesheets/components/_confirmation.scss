@@ -1,0 +1,32 @@
+.payed-wrapper {
+  margin-left: 20%;
+  margin-right:20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color:white;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 3px 3px rgba(0,0,0,0.1);
+  li {
+    list-style-type: none;
+    padding: 5px;
+  }
+}
+
+.icon {
+  text-align: center;
+  left:10px;
+  top:20px;
+  .fas {
+    color: green;
+    font-size: 50px;
+  }
+}
+
+.order-summary {
+  text-align: center;
+  font-weight:lighter;
+}
+
+
+
