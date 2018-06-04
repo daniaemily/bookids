@@ -20,9 +20,16 @@ class PersonalizationsController < ApplicationController
     #   }
     # }
     @personalization.book.pages.each_with_index do |page, index|
+      if page.content
+        content = page.content.gsub(/name/, @personalization.character_name)
+      elsif page.image
+        content = "<img  src='#{ActionController::Base.helpers.asset_path(page.image)}' alt='' class='preview-image'>"
+      else
+        content = ""
+      end
       @dataset_flipper << {
         id: index + 2,
-        content: page.content ? page.content.gsub(/name/, @personalization.character_name) : "<img src='#{page.image}' alt='' class='preview-image'>",
+        content: content,
         color: ["orange", "pink"].sample,
         image: @personalization.book.pages[index].image
       }
