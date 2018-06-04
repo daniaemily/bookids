@@ -11,14 +11,20 @@ class BooksController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = " \
-        books.name @@ :query \
-        OR books.age @@ :query \
-        OR books.author @@ :query \
-        OR books.category @@ :query
-      "
-        # OR pages.content @@ query
-      @books = Book.where(sql_query, query: "%#{params[:query]}%")
+      filters = {}
+      filters[:age] = params[:age] if params[:age].present?
+      filters[:category] = params[:category] if params[:category].present?
+      filters[:price_cents] = {gt: 0, lt: params[:price_cents]} if params[:price_cents].present?
+      p filters
+      @books = Book.search(params[:query], where: filters, operator: "or")
+      # sql_query = " \
+      #   books.name @@ :query \
+      #   OR books.age @@ :query \
+      #   OR books.author @@ :query \
+      #   OR books.category @@ :query
+      # "
+      #   # OR pages.content @@ query
+      # @books = Book.where(sql_query, query: "%#{params[:query]}%")
     else
       @books = Book.all
     end

@@ -3,7 +3,7 @@
     <div class="photo-row">
     </div>
     <div class="row">
-      <div class="col-sm-6 col-md-6 book-photo">
+      <div class="col-sm-12 col-md-6 book-photo">
         <%= image_tag(@book.photo, width: '100%', height: '100%') %>
       </div>
       <div class="col-sm-12 col-md-6 author-show">
@@ -12,7 +12,7 @@
         </div>
         <div class="description-show">
           <h2><%= @book.name %></h2>
-          <h3>... written by <%= @book.author %></h3>
+          <h3>by <%= @book.author %></h3>
           <p><%= @book.description %></p>
         </div>
         <div class="list-facts">
