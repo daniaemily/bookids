@@ -16,57 +16,57 @@ users = User.all
 
 
 book1 = Book.create!(
-  name: "Giraffes Can't Dance",
+  name: "Sleep Little Monkey",
   author: "Andreae Giles",
   category: "sleep",
-  description: "Giraffes Can't Dance is a touching tale of Gerald the giraffe, who wants nothing more than to dance. With crooked knees and thin legs, it's harder for a giraffe than you would think. Gerald is finally able to dance to his own tune when he gets some encouraging words from an unlikely friend.
+  description: "Sleep Little Monkey is a touching tale of Lina the monkey, who wants nothing more than to dance. After over six months of training with her friend Mr. Butterfly, Lina is finally able to dance to her own tune, but only when she gets some encouraging words from her dearest friend.
     With light-footed rhymes and high-stepping illustrations, this tale is gentle inspiration for every child with dreams of greatness.",
   language: "English",
-  price: "19.99",
-  age: "4-6",
-  photo: "https://www.scholastic.com/content5/media/products/03/9780439287203_mres.jpg",
-  publishing_year: "2012",
+  price: "15.99",
+  age: "4-7",
+  photo: '/assets/books-images-cropped/16.jpg',
+  publishing_year: "2016",
   sku: "book"
   )
 
 book2 = Book.create!(
-  name: "Goodnight Moon",
+  name: "5 friends build a castle",
   author: "Margaret Wise Brown",
-  category: "sleep",
+  category: "friends",
   description: "In a great green room, tucked away in bed, is a little bunny. Goodnight room, goodnight moon. And to all the familiar things in the softly lit room—to the picture of the three little bears sitting on chairs, to the clocks and his socks, to the mittens and the kittens, to everything one by one—the little bunny says goodnight.
     In this classic of children's literature, beloved by generations of readers and listeners, the quiet poetry of the words and the gentle, lulling illustrations combine to make a perfect book for the end of the day.",
   language: "English",
   price: "17.99",
   age: "4-8",
-  photo: "http://a2.mzstatic.com/us/r30/Purple/v4/af/49/2f/af492fff-2000-436f-ff44-c4e6a54353af/mzl.pkznnvhh.png",
-  publishing_year: "2006",
+  photo: '/assets/books-images-cropped/5.jpg',
+  publishing_year: "2009",
   sku: "book"
   )
 
 book3 = Book.create!(
-  name: "The Wonderful Things You Will Be",
+  name: "Nico & Whoopper",
   author: "Emily Winfield Martin",
-  category: "school",
+  category: "friends",
   description: "From brave and bold to creative and clever, Emily Winfield Martin's rhythmic rhyme expresses all the loving things that parents think of when they look at their children. With beautiful, and sometimes humorous, illustrations, and a clever gatefold with kids in costumes, this is a book grown-ups will love reading over and over to kids—both young and old. A great gift for any occasion, but a special stand-out for baby showers, birthdays, and graduation. The Wonderful Things You Will Be has a loving and truthful message that will endure for lifetimes.",
   language: "English",
   price: "22.99",
   age: "3-7",
-  photo: "https://cdn.shopify.com/s/files/1/0804/5935/products/WonderfulThings_cover_2048x.png?v=1519241258",
+  photo: '/assets/books-images-cropped/11.jpg',
   publishing_year: "2015",
   sku: "book"
   )
 
 book4 = Book.create!(
-  name: "Kiss, Kiss Good Night",
+  name: "Finny & Semmel Explore Kritannia",
   author: "Kenn Nesbitt",
-  category: "sleep",
-  description: "Snuggle up with this bedtime poem by children's poet laureate Kenn Nesbitt, all about how mommy animals say good night to their little ones.
+  category: "friends",
+  description: "Snuggle up with this exploration story by children's poet laureate Kenn Nesbitt, all about how mommy animals say good night to their little ones.
     What happens when baby animals need to rest their little heads? Their mothers tuck them into bed, of course! Read along as baby bunnies, lambs, chicks, kittens, and cubs settle down for a good night's sleep while their mommies give them nuzzles, cuddles, and good-night kisses! A lulling, soothing bedtime poem perfect for getting little ones to settle down.",
   language: "English",
   price: "13.99",
-  age: "1-3",
-  photo: "https://images-na.ssl-images-amazon.com/images/I/81vxp%2Bqf%2ByL.jpg",
-  publishing_year: "2013",
+  age: "3-9",
+  photo: '/assets/books-images-cropped/17.jpg',
+  publishing_year: "2018",
   sku: "book"
   )
 
@@ -79,40 +79,26 @@ book5 = Book.create!(
   language: "English",
   price: "19.99",
   age: "3-6",
-  photo: "https://images-na.ssl-images-amazon.com/images/I/817T4J3dzhL.jpg",
+  photo: '/assets/books-images-cropped/2.jpg',
   publishing_year: "2014",
   sku: "book"
   )
 
 book6 = Book.create!(
-  name: "Green Eggs and Ham",
-  author: "Dr. Seuss",
-  category: "food",
-  description: "Do you like green eggs and ham? asks Sam-I-am in this Beginner Book by Dr. Seuss. In a house or with a mouse? In a boat or with a goat? On a train or in a tree? Sam keeps asking persistently. With unmistakable characters and signature rhymes, Dr. Seuss’s beloved favorite has cemented its place as a children’s classic. In this most famous of cumulative tales, the list of places to enjoy green eggs and ham, and friends to enjoy them with, gets longer and longer. Follow Sam-I-am as he insists that this unusual treat is indeed a delectable snack to be savored everywhere and in every way.
-  Originally created by Dr. Seuss, Beginner Books encourage children to read all by themselves, with simple words and illustrations that give clues to their meaning.",
-  language: "English",
-  price: "16.99",
-  age: "3-7",
-  photo: "https://images-na.ssl-images-amazon.com/images/I/81XWA5qMhHL.jpg",
-  publishing_year: "1960",
-  sku: "book"
-  )
-
-book6 = Book.create!(
-  name: "The Night Before My Dance Recital",
+  name: "The Night Before My World Dance Championships",
   author: "Natasha Wing",
   category: "sports",
-  description: "It's the night before a young girl's first dance recital. At the dress rehearsal, she and her class go over the steps one last time. What if she messes up? she worries. But the next day, she's ready to perform. When the class spins left she spins right! Without missing a beat, she keeps on dancing and smiling. The Night Before My Dance Recital celebrates this with humor, warmth, and engaging illustrations by Amy Wummer.",
+  description: "It's the night before Peter Panama's first dance recital. At the dress rehearsal, he and her class go over the steps one last time. What if he messes up? he worries. But the next day, he's ready to perform. When the class spins left she spins right! Without missing a beat, he keeps on dancing and smiling. The incredible story celebrates this with humor, warmth, and engaging illustrations by Amy Wummer.",
   language: "English",
   price: "19.99",
   age: "3-5",
-  photo: "https://i5.walmartimages.com/asr/5c11ff5e-05b7-417d-b737-0b2c8c989d61_1.b87224f3ac765a60b3b6fa76a9024d13.jpeg",
+  photo: '/assets/books-images-cropped/7.jpg',
   publishing_year: "2015",
   sku: "book"
   )
 
 book7 = Book.create!(
-  name: "Llama Llama Time to Share",
+  name: "There's A Tiger In The Garden",
   author: "Anna Dewdney",
   category: "friends",
   description: "Llama Llama has new neighbors! Nelly Gnu and her mama stop by for a play date, but Llama's not so sure it's time to share all his toys. Maybe just his blocks? It could be fun to make a castle with Nelly . . . But wait--Nelly has Llama's little Fuzzy Llama! The fun turns to tears when Fuzzy Llama is ripped in two, all because of Nelly Gnu! Mama comes to the rescue and fixes Fuzzy, but she makes it clear: I will put Fuzzy on the stairs, until you are sure that you can share.
@@ -120,20 +106,20 @@ book7 = Book.create!(
   language: "English",
   price: "15.99",
   age: "2-5",
-  photo: "https://s3-us-west-2.amazonaws.com/tabs.web.media/a/j/ajct/ajct-square-1536.jpg",
+  photo: '/assets/books-images-cropped/8.jpg',
   publishing_year: "2012",
   sku: "book"
   )
 
 book8 = Book.create!(
-  name: "Goodnight Little One",
+  name: "The Secret Keepers",
   author: "Margaret Wise Brown",
   category: "sleep",
   description: "From the author of Goodnight Moon, this beautiful children's picture book with gentle illustrations is a perfect way to get your children reading with a lovable, engaging storyline. Ideal for beginning readers, this book is a wonderful bedtime story.",
   language: "English",
   price: "19.99",
   age: "2-5",
-  photo: "https://images-na.ssl-images-amazon.com/images/I/71Hh7lmjsPL.jpg",
+  photo: '/assets/books-images-cropped/9.jpg',
   publishing_year: "2016",
   sku: "book"
   )
@@ -145,40 +131,40 @@ book9 = Book.create!(
   description: "From soaring to high heights and seeing great sights to being left in a Lurch on a prickle-ly perch, Dr. Seuss addresses life’s ups and downs with his trademark humorous verse and illustrations, while encouraging readers to find the success that lies within. In a starred review, Booklist notes, “Seuss’s message is simple but never sappy: life may be a ‘Great Balancing Act,’ but through it all ‘There’s fun to be done.’” A perennial favorite and a perfect gift for anyone starting a new phase in their life!",
   language: "English",
   price: "16.99",
-  age: "2-4",
-  photo: "https://www.scholastic.com/content5/media/products/74/9780679805274_mres.jpg",
-  publishing_year: "1990",
+  age: "4-8",
+  photo: '/assets/books-images-cropped/10.jpg',
+  publishing_year: "2017",
   sku: "book"
   )
 
 book10 = Book.create!(
-  name: "My Very First Book of Colors",
+  name: "ODO - My Very First Book of Colors",
   author: "Dr. Seuss",
-  category: "exploration",
+  category: "grow-up",
   description: "What color is a bluebird? Easy to answer, but even easier when you have thecolor to match it with. Find the color in the top half of a page that matches the picture on the bottom half. From pink flowers to purple grapes, this colorful book is full of fun and surprises. Children will love solving these color puzzles featuring Eric Carle's bold and vibrant artwork.",
   language: "English",
   price: "19.99",
   age: "2-4",
-  photo: "https://i5.walmartimages.com/asr/db7ad8a5-b5ee-4762-b6d8-bf04596834c0_1.a59653c015f4d11b085018dcac8ec8f7.jpeg",
-  publishing_year: "2005",
+  photo: '/assets/books-images-cropped/3.jpg',
+  publishing_year: "2010",
   sku: "book"
   )
 
 book11 = Book.create!(
-  name: "Love You Forever",
+  name: "The Little Prince",
   author: "Robert Munsch",
   category: "grow-up",
-  description: "So begins the story that has touched the hearts of millions worldwide. Since publication in l986, Love You Forever has sold more than 15 million copies in paperback and the regular hardcover edition (as well as hundreds of thousands of copies in Spanish and French).",
+  description: "Few stories are as widely read and as universally cherished by children and adults alike as The Little Prince. Richard Howard's translation of the beloved classic beautifully reflects Saint-Exupéry's unique and gifted style. Howard, an acclaimed poet and one of the preeminent translators of our time, has excelled in bringing the English text as close as possible to the French, in language, style, and most important, spirit.",
   language: "English",
   price: "13.99",
   age: "4-10",
-  photo: "https://2.bp.blogspot.com/-DFeKWosoXIc/WgEcysi_cTI/AAAAAAAAeEg/d2AL2rISSaozPc-5z_8ydDIQn5GTWZqDQCLcBGAs/s1600/loveyouforever%2Bpopup.jpg",
+  photo: '/assets/books-images-cropped/13.jpg',
   publishing_year: "1995",
   sku: "book"
   )
 
 book12 = Book.create!(
-  name: "A Book of Sleep",
+  name: "Caroline - A Book of Sleep",
   author: "Il Sung Na",
   category: "sleep",
   description: "With a spare, soothing text and beautifully rich and textured illustrations of a starry night, this is the perfect “book of sleep.” Join the owl on his moonlit journey as he watches all the other animals settle in for the night: some sleep standing up, while some sleep on the move! Some sleep peacefully alone, while others sleep all together, huddled close.
@@ -186,57 +172,58 @@ book12 = Book.create!(
   language: "English",
   price: "15.99",
   age: "2-3",
-  photo: "https://images-na.ssl-images-amazon.com/images/I/81tYD5NHDrL.jpg",
+  photo: '/assets/books-images-cropped/14.jpg',
   publishing_year: "2011",
   sku: "book"
   )
 
 
 book12 = Book.create!(
-  name: "Are You My Mother?",
+  name: "Recipes For You & Your Family",
   author: "P.D. Eastman",
   category: "grow-up",
   description: "A baby bird goes in search of his mother in this hilarious board book edited by Dr. Seuss. When a mother bird’s egg starts to jump, she hurries off to make sure she has something for her little one to eat. But as soon as she’s gone, out pops the baby bird. He immediately sets off to find his mother, but not knowing what she looks like makes it a challenge. The little hatchling is determined to find his mother, even after meeting a kitten, a hen, a dog, and a Snort. The timeless message of the bond between mother and child make this abridged, super-simple edition of P. D. Eastman’s Are You My Mother? a must for baby showers, beginning readers, and Mother’s Day.",
   language: "English",
   price: "19.99",
   age: "5-12",
-  photo: "http://ridgewoodparkchurch.org/new/wp-content/uploads/2013/05/AreUMyMother.jpg",
+  photo: '/assets/books-images-cropped/15.jpg',
   publishing_year: "1998",
   sku: "book"
   )
 
 book13 = Book.create!(
-  name: "The Rainbow Fish",
+  name: "Away We Go",
   author: "Marcus Pfister",
-  category: "exploration",
-  description: "The award-winning book about a beautiful fish who finds friendship and happiness when he learns to share is now available in a board book edition for the youngest child.",
+  category: "sleep",
+  description: "Away We Go is a touching tale of a animal family, who wants nothing more than to sleep on their long journey to America. With crooked knees and thin legs, it's harder for a monkey than you would think. Lina is finally able to dance to her own tune when she gets some encouraging words from an unlikely friend.
+    With light-footed rhymes and high-stepping illustrations, this tale is gentle inspiration for every child with dreams of greatness.",
   language: "English",
   price: "18.99",
   age: "2-3",
-  photo: "http://hippofun.com/ekmps/shops/hippofun/images/the-rainbow-fish-big-book-1429-p.jpg",
+  photo: '/assets/books-images-cropped/1.jpg',
   publishing_year: "1999",
   sku: "book"
   )
 
 book14 = Book.create!(
-  name: "Pete the Cat: Scuba-Cat",
+  name: "How Pigs Sleep",
   author: "James Dean",
-  category: "sports",
-  description: "Pete the Cat is going scuba diving! Before he hits the water, Captain Joe tells him about all the sea creatures he can encounter, and Pete is super excited to see a seahorse. But when he is suited up and swimming around, he has to search high and low to find the little guy. In this aquatic adventure, Pete makes a new friend and gets a big surprise!",
+  category: "sleep",
+  description: "Pete the pig is going scuba diving! Before he hits the water, Captain Joe tells him about all the sea creatures he can encounter, and Pete is super excited to see a seahorse. But when he is suited up and swimming around, he has to search high and low to find the little guy. In this aquatic adventure, Pete makes a new friend and gets a big surprise!",
   language: "English",
   price: "21.99",
   age: "4-8",
-  photo: "https://i.ytimg.com/vi/JcxDx-DVsrg/maxresdefault.jpg",
+  photo: '/assets/books-images-cropped/4.jpg',
   publishing_year: "2016",
   sku: "book"
   )
 
 book15 = Book.create!(
-  name: "I Don't Want To Sleep",
+  name: "Bulle & Pelle",
   author: "Sigal Adler",
   category: "sleep",
   description: "At night when most kids were dozing so deep,
-    Michael could never quite manage to sleep.
+    Bulle could never quite manage to sleep.
     His mother would read him one book, or two,
     His father would sing until his face turned blue,
     All day Michael ran and played and kicked ball,
@@ -244,20 +231,20 @@ book15 = Book.create!(
   language: "English",
   price: "21.99",
   age: "2-9",
-  photo: "https://pbs.twimg.com/media/C_BOPudUIAADOed.jpg",
+  photo: '/assets/books-images-cropped/18.jpg',
   publishing_year: "2017",
   sku: "book"
   )
 
 book16 = Book.create!(
-  name: "Where Do Diggers Sleep at Night? ",
+  name: "Mr. Galliano's Circus",
   author: "Brianna Caplan Sayres",
-  category: "sleep",
-  description: "Pete the Cat is going scuba diving! Before he hits the water, Captain Joe tells him about all the sea creatures he can encounter, and Pete is super excited to see a seahorse. But when he is suited up and swimming around, he has to search high and low to find the little guy. In this aquatic adventure, Pete makes a new friend and gets a big surprise!",
+  category: "sports",
+  description: "Mr. Galliano is going scuba diving in his circus. Before he hits the water, Captain Joe tells him about all the sea creatures he can encounter, and Pete is super excited to see a seahorse. But when he is suited up and swimming around, he has to search high and low to find the little guy. In this aquatic adventure, Pete makes a new friend and gets a big surprise!",
   language: "English",
   price: "16.99",
   age: "2-4",
-  photo: "https://images-na.ssl-images-amazon.com/images/I/91RCKDIp7nL.jpg",
+  photo: '/assets/books-images-cropped/19.jpg',
   publishing_year: "2015",
   sku: "book"
   )
@@ -270,7 +257,7 @@ book17 = Book.create!(
   language: "English",
   price: "18.99",
   age: "5-9",
-  photo: "https://kbimages1-a.akamaihd.net/2cca8dfb-32e2-4861-9af7-73ace2dff8f4/1200/1200/False/dr-seuss-s-sleep-book-1.jpg",
+  photo: '/assets/books-images-cropped/20.jpg',
   publishing_year: "1962",
   sku: "book"
   )
@@ -283,7 +270,7 @@ book18 = Book.create!(
   language: "English",
   price: "21.99",
   age: "3-7",
-  photo: "https://images-na.ssl-images-amazon.com/images/I/81Tq-UEcBeL.jpg",
+  photo: '/assets/books-images-cropped/21.jpg',
   publishing_year: "2017",
   sku: "book"
   )
@@ -297,7 +284,7 @@ book19 = Book.create!(
   language: "English",
   price: "21.99",
   age: "4-8",
-  photo: "https://prod-ecom-media.soundstrue.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/k/bk04437-good-night-yoga-published-cover_1.jpg",
+  photo: '/assets/books-images-cropped/22.jpg',
   publishing_year: "2015",
   sku: "book"
   )
@@ -310,7 +297,7 @@ book20 = Book.create!(
   language: "English",
   price: "21.99",
   age: "2-3",
-  photo: "https://i5.walmartimages.com/asr/f39a7721-b3a6-4fb1-8b16-3852aebd43e3_1.008539af412e5ff074dc13738be43efa.jpeg",
+  photo: '/assets/books-images-cropped/12.jpg',
   publishing_year: "2006",
   sku: "book"
   )

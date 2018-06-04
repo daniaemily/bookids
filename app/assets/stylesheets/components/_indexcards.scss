@@ -1,5 +1,9 @@
-
-
+.site-content-index {
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+  background-color: #B4D682;
+}
 
 .header {
   margin: 1% 15% 5% 15%;
@@ -23,7 +27,6 @@
 }
 
 .thumbnail:hover {
-  box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
   transition: 0.2s;
 }
 
@@ -34,9 +37,10 @@
   padding: 0px;
   border-radius: 6px;
   transition: border 0.3s ease-in-out;
-  height: 341px;
+  height: 420px;
   margin-bottom: 60px;
-  width: 100%;
+  width: 90%;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
 
 
   a {
@@ -50,8 +54,8 @@
     position: absolute;
     width: 86%;
     top: 30%;
-    font-size: 25px;
-    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-family: 'Gaegu';
     padding: 11px;
     text-align: center;
     color: white;
@@ -88,12 +92,13 @@
 .age-stars-price-index {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 2px 10px;
 
   p {
-    font-family: 'Nunito', sans-serif;
-    font-size: 17px;
-    font-weight: lighter;
+    font-family: 'Gaegu';
+    font-weight: 500;
+    font-size: 22px;
+    color: #757A77;
   }
 }
 
@@ -103,7 +108,7 @@
   display: block;
   max-width: 100%;
   background-size: cover;
-  height: 300px;
+  height: 375px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 6px 6px 0px 0px;
@@ -112,10 +117,12 @@
   min-width: 100%;
 }
 
-.row-index {
-  margin-top: 100px;
 
-}
+
+// .row-index {
+//   margin-top: 25px;
+
+// }
 
 // .book-name-index {
 //     text-align: center;
