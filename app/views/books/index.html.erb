@@ -1,41 +1,51 @@
-
-<div class="wrapper">
-  <div class="row row-index">
-    <% if @books.count == 0 %>
-    <div class="not">
-      <h1>Sorry, your book was not found</h1>
-      <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
-    </div>
-    <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
-    <% else %>
-      <div class="header">
-        <% if current_user != nil %>
-          <h2>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</h2>
-        <% else %>
-          <h2 class="search-results">Our search has resulted the following books:</h2>
-        <% end %>
+<div class="site-content-index">
+  <div class="wrapper">
+    <div class="row row-index">
+      <% if @books.count == 0 %>
+      <div class="not">
+        <h1>Sorry, your book was not found</h1>
+        <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
       </div>
-      <% @books.each do |book| %>
-      <div class="col-sm-6 col-md-3 single-card">
-        <%= link_to book_path(book) do %>
-        <div class="thumbnail">
-          <p class="name"> <%= book.name %></p>
-          <div class="photo-index" style="background-image:url(<%= image_path(book.photo)%>)">
+      <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
+      <% else %>
+        <div class="header">
+          <% if current_user != nil %>
+            <h2>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</h2>
+          <% else %>
+            <h2 class="search-results">Our search has resulted the following books:</h2>
+          <% end %>
+        </div>
+        <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
+        <% else %>
+          <div class="header">
+            <% if current_user != nil %>
+              <h2><%= current_user.first_name %>, our search has resulted the following books:</h2>
+            <% else %>
+              <h2>Our search has resulted the following books:</h2>
+            <% end %>
           </div>
-          <div class="caption">
-            <div class="text">
-              <div class="age-stars-price-index">
-                <p><i class="fas fa-child"></i>  <%=book.age %></p>
-                <p>Stars<%= %></p>
-                <p><%= humanized_money_with_symbol(book.price) %></p>
+          <% @books.each do |book| %>
+          <div class="col-sm-6 col-md-4 single-card">
+            <%= link_to book_path(book) do %>
+            <div class="thumbnail">
+              <p class="name"> <%= book.name %></p>
+              <div class="photo-index" style="background-image:url(<%= image_path(book.photo)%>)">
+              </div>
+              <div class="caption">
+                <div class="text">
+                  <div class="age-stars-price-index">
+                    <p><i class="fas fa-child"></i>  <%=book.age %></p>
+                    <p>Stars<%= %></p>
+                    <p><%= humanized_money_with_symbol(book.price) %></p>
+                  </div>
+                </div>
               </div>
             </div>
+            <% end %>
           </div>
-        </div>
+        <% end %>
         <% end %>
       </div>
-    <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
-
