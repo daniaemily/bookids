@@ -16,17 +16,16 @@ users = User.all
 
 
 book1 = Book.create!(
-  name: "Sleep Little Monkey",
+  name: "Little Monkey",
   author: "Andreae Giles",
   category: "sleep",
-  description: "Sleep Little Monkey is a touching tale of Lina the monkey, who wants nothing more than to dance. After over six months of training with her friend Mr. Butterfly, Lina is finally able to dance to her own tune, but only when she gets some encouraging words from her dearest friend.
-    With light-footed rhymes and high-stepping illustrations, this tale is gentle inspiration for every child with dreams of greatness.",
+  description: "Little Monkey is a touching tale of Lina the monkey, who struggles with sleeping through the whole night. A meeting with Mr. Butterfly during her walk home from school on a sunny and warm afternoon changes everything... In this classic of children's literature, beloved by generations of readers and listeners, the quiet poetry of the words and the gentle, lulling illustrations combine to make a perfect book for the end of the day.",
   language: "English",
   price: "15.99",
   age: "4-7",
   photo: '/assets/books-images-cropped/16.jpg',
   publishing_year: "2016",
-  sku: "book"
+  sku: "book",
   )
 
 book2 = Book.create!(
@@ -40,7 +39,7 @@ book2 = Book.create!(
   age: "4-8",
   photo: '/assets/books-images-cropped/5.jpg',
   publishing_year: "2009",
-  sku: "book"
+  sku: "book",
   )
 
 book3 = Book.create!(
@@ -53,7 +52,7 @@ book3 = Book.create!(
   age: "3-7",
   photo: '/assets/books-images-cropped/11.jpg',
   publishing_year: "2015",
-  sku: "book"
+  sku: "book",
   )
 
 book4 = Book.create!(
@@ -67,7 +66,7 @@ book4 = Book.create!(
   age: "3-9",
   photo: '/assets/books-images-cropped/17.jpg',
   publishing_year: "2018",
-  sku: "book"
+  sku: "book",
   )
 
 book5 = Book.create!(
@@ -81,7 +80,7 @@ book5 = Book.create!(
   age: "3-6",
   photo: '/assets/books-images-cropped/2.jpg',
   publishing_year: "2014",
-  sku: "book"
+  sku: "book",
   )
 
 book6 = Book.create!(
@@ -94,7 +93,7 @@ book6 = Book.create!(
   age: "3-5",
   photo: '/assets/books-images-cropped/7.jpg',
   publishing_year: "2015",
-  sku: "book"
+  sku: "book",
   )
 
 book7 = Book.create!(
@@ -108,7 +107,7 @@ book7 = Book.create!(
   age: "2-5",
   photo: '/assets/books-images-cropped/8.jpg',
   publishing_year: "2012",
-  sku: "book"
+  sku: "book",
   )
 
 book8 = Book.create!(
@@ -121,7 +120,7 @@ book8 = Book.create!(
   age: "2-5",
   photo: '/assets/books-images-cropped/9.jpg',
   publishing_year: "2016",
-  sku: "book"
+  sku: "book",
   )
 
 book9 = Book.create!(
@@ -134,7 +133,7 @@ book9 = Book.create!(
   age: "4-8",
   photo: '/assets/books-images-cropped/10.jpg',
   publishing_year: "2017",
-  sku: "book"
+  sku: "book",
   )
 
 book10 = Book.create!(
@@ -147,7 +146,7 @@ book10 = Book.create!(
   age: "2-4",
   photo: '/assets/books-images-cropped/3.jpg',
   publishing_year: "2010",
-  sku: "book"
+  sku: "book",
   )
 
 book11 = Book.create!(
@@ -160,7 +159,7 @@ book11 = Book.create!(
   age: "4-10",
   photo: '/assets/books-images-cropped/13.jpg',
   publishing_year: "1995",
-  sku: "book"
+  sku: "book",
   )
 
 book12 = Book.create!(
@@ -174,7 +173,7 @@ book12 = Book.create!(
   age: "2-3",
   photo: '/assets/books-images-cropped/14.jpg',
   publishing_year: "2011",
-  sku: "book"
+  sku: "book",
   )
 
 
@@ -188,7 +187,7 @@ book12 = Book.create!(
   age: "5-12",
   photo: '/assets/books-images-cropped/15.jpg',
   publishing_year: "1998",
-  sku: "book"
+  sku: "book",
   )
 
 book13 = Book.create!(
@@ -202,7 +201,7 @@ book13 = Book.create!(
   age: "2-3",
   photo: '/assets/books-images-cropped/1.jpg',
   publishing_year: "1999",
-  sku: "book"
+  sku: "book",
   )
 
 book14 = Book.create!(
@@ -215,7 +214,7 @@ book14 = Book.create!(
   age: "4-8",
   photo: '/assets/books-images-cropped/4.jpg',
   publishing_year: "2016",
-  sku: "book"
+  sku: "book",
   )
 
 book15 = Book.create!(
@@ -233,7 +232,7 @@ book15 = Book.create!(
   age: "2-9",
   photo: '/assets/books-images-cropped/18.jpg',
   publishing_year: "2017",
-  sku: "book"
+  sku: "book",
   )
 
 book16 = Book.create!(
@@ -246,7 +245,7 @@ book16 = Book.create!(
   age: "2-4",
   photo: '/assets/books-images-cropped/19.jpg',
   publishing_year: "2015",
-  sku: "book"
+  sku: "book",
   )
 
 book17 = Book.create!(
@@ -259,7 +258,7 @@ book17 = Book.create!(
   age: "5-9",
   photo: '/assets/books-images-cropped/20.jpg',
   publishing_year: "1962",
-  sku: "book"
+  sku: "book",
   )
 
 book18 = Book.create!(
@@ -272,7 +271,7 @@ book18 = Book.create!(
   age: "3-7",
   photo: '/assets/books-images-cropped/21.jpg',
   publishing_year: "2017",
-  sku: "book"
+  sku: "book",
   )
 
 book19 = Book.create!(
@@ -286,7 +285,7 @@ book19 = Book.create!(
   age: "4-8",
   photo: '/assets/books-images-cropped/22.jpg',
   publishing_year: "2015",
-  sku: "book"
+  sku: "book",
   )
 
 book20 = Book.create!(
@@ -299,7 +298,7 @@ book20 = Book.create!(
   age: "2-3",
   photo: '/assets/books-images-cropped/12.jpg',
   publishing_year: "2006",
-  sku: "book"
+  sku: "book",
   )
 
 Page.create!(
