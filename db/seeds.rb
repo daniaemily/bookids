@@ -19,7 +19,7 @@ book1 = Book.create!(
   name: "Sleep Little Monkey",
   author: "Andreae Giles",
   category: "sleep",
-  description: "Sleep Little Monkey is a touching tale of Lina the monkey, who wants nothing more than to dance. With crooked knees and thin legs, it's harder for a monkey than you would think. Lina is finally able to dance to her own tune when she gets some encouraging words from an unlikely friend.
+  description: "Sleep Little Monkey is a touching tale of Lina the monkey, who wants nothing more than to dance. After over six months of training with her friend Mr. Butterfly, Lina is finally able to dance to her own tune, but only when she gets some encouraging words from her dearest friend.
     With light-footed rhymes and high-stepping illustrations, this tale is gentle inspiration for every child with dreams of greatness.",
   language: "English",
   price: "15.99",
