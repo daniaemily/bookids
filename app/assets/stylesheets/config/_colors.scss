@@ -5,6 +5,30 @@ $red: #EE5F5B;
 $blue: #9ACFE1;
 $yellow: #FDB631;
 $orange: #E67E22;
-$green: #32B796;
+// $green: #32B796;
+$green: #B4D682;
 $gray: #000000;
 $light-gray: #F4F4F4;
+
+
+// Pages color theme
+$index_color: $green;
+$show_color: $orange;
+$home_color: $blue;
+$dashboard_color: $red;
+
+.index-color {
+  background-color: $index_color;
+}
+
+.show-color {
+  background-color: $show_color;
+}
+
+.home-color {
+  background-color: $home_color;
+}
+
+.dashboard-color {
+  background-color: $dashboard_color;
+}
