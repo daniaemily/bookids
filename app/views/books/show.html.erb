@@ -22,47 +22,91 @@
             <p><i class="fas fa-child"></i> <%=  @book.age %></p>
           </div>
         </div>
-      </div>
-    </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+          Peronalize your book
+        </button>
 
-    <div style="margin-top:50px;margin-bottom:10px">
-      <div class="line"></div>
-    </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLongTitle">Personalize your book</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Simple Form -->
+                <%= simple_form_for [@book, @personalization], remote: true do |f| %>
+                  <% if @personalization.errors.any? %>
+                    <div class="errors-container">
+                      <ul>
+                        <% @personalization.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  <% end %>
 
-    <%= simple_form_for [@book, @personalization], remote: true do |f| %>
-      <% if @personalization.errors.any? %>
-        <div class="errors-container">
-          <ul>
-            <% @personalization.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-            <% end %>
-          </ul>
+                  <div id="form_personalization">
+                    <div class="row">
+                      <input class="form-control string optional" id="fancy-text" type="text" name="personalization[character_name]">
+                      <label class="form-control-label string optional" for="fancy-text">Name</label>
+                    </div>
+                    <div class="row">
+                      <input class="form-control string optional" id="fancy-text" type="text" name="personalization[character_age]">
+                      <label class="form-control-label string optional" for="fancy-text">Age</label>
+                    </div>
+                    <div class="gender-row">
+                      <div class="form-check-gender">
+                        <input class="hidden" type="radio" value="female" name="personalization[character_gender]" id="personalization_character_gender_female">
+                        <label class="choice" for="personalization_character_gender_female"><%= image_tag "girl.png" %></label>
+                      </div>
+                      <div class="form-check-gender">
+                        <input class="hidden" type="radio" value="male" name="personalization[character_gender]" id="personalization_character_gender_male">
+                        <label class="choice" for="personalization_character_gender_male"><%= image_tag "boy.png" %></label>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="button-save">
+                  <%= f.submit class: 'save-button', value: "Save" %>
+                </div>
+
+                <div id="personalization-links"></div>
+              </div>
+              <% end %>
+
+            </div>
+          </div>
         </div>
-      <% end %>
 
-      <div id="form_personalization" class="form-group">
-        <%= f.input :character_name, input_html: {class: 'form-control'}, label: false, placeholder: "name" %>
-        <%= f.input :character_age, input_html: {class: 'form-control'}, label: false, placeholder: "age" %>
-        <%= f.input :character_gender, input_html: {class: 'form-control'}, label: false, placeholder: "gender" %>
-        <%= f.submit class: 'btn btn-primary' %>
       </div>
-    <% end %>
-    <div id="personalization-links"></div>
-
-    <div style="margin-top:50px;margin-bottom:10px">
-      <div class="line"></div>
     </div>
-    <div>
-      <% @personalizations.each do |personalization| %>
-        <% personalization.reviews.each do |review| %>
-          <div class="reviews">
-            <div class="reviews-left">
-              <div class="review-stars">
-                <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
-              </div>
-              <div class="review-user">
-                <%= personalization.user.first_name %>
-              </div>
+
+<!-- reviews -->
+  <div style="margin-top:50px;margin-bottom:10px">
+    <div class="line"></div>
+  </div>
+  <div>
+    <% @personalizations.each do |personalization| %>
+      <% personalization.reviews.each do |review| %>
+        <div class="reviews">
+          <div class="reviews-left">
+            <div class="review-stars">
+              <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
+            </div>
+            <div class="review-user">
+              <%= personalization.user.first_name %>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="review-header">
+              <%= review.header %>
             </div>
             <div class="review-right">
               <div class="review-header">
