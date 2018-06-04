@@ -1,6 +1,4 @@
 var linksDiv = $('#personalization-links');
-var htmlLinks = "<%= j link_to 'Preview your book', personalization_path(@personalization), id: 'preview-cta' %>";
+
+var htmlLinks = "<%= j link_to 'Preview your book', personalization_path(@personalization), id: 'preview-cta', class: 'btn-preview-book' %>";
 linksDiv.html(htmlLinks);
-
-
-
