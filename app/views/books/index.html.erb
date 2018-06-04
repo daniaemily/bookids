@@ -15,6 +15,14 @@
           <h2 class="search-results">Our search has resulted the following books:</h2>
         <% end %>
       </div>
+    <div class ="search-button-index">
+      <%= form_tag books_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-form form-control-index",
+        placeholder: "Enter Child's Age"
+      %>
+    <% end %>
       <% @books.each do |book| %>
       <div class="col-sm-6 col-md-3 single-card">
         <%= link_to book_path(book) do %>
