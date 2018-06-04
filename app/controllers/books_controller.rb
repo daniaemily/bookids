@@ -14,7 +14,7 @@ class BooksController < ApplicationController
       filters = {}
       filters[:age] = params[:age] if params[:age].present?
       filters[:category] = params[:category] if params[:category].present?
-      filters[:price_cents] = {gt: 0, lt: params[:price_cents]} if params[:price_cents].present?
+       filters[:price_cents] = {gt: 0, lt: params[:price_cents]} if params[:price_cents].present?
       p filters
       @books = Book.search(params[:query], where: filters, operator: "or")
       # sql_query = " \
@@ -40,6 +40,12 @@ class BooksController < ApplicationController
     @personalizations = @book.personalizations
 
   end
+
+  # def multisearch
+
+  #   pg_search_scope : search_page_fields, :against => [:category, :price_cents, :age]
+
+  # end
 
   def private
   end
