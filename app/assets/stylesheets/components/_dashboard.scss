@@ -1,15 +1,16 @@
-.site-content-dashbaord {
-  height: 100%;
+.site-content-dashboard {
+  height: calc(100vh - 70px);
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  background-color: #B4D682;
+  background-color: #F0BD68;
 }
 
 
 
 .dashboard-booking {
   background-color: white;
+  width: 100%;
   margin-right: 15px;
   margin-left: 15px;
   padding-right: 0;
@@ -72,6 +73,7 @@
   padding: 30px;
   margin-left: 4%;
   margin-right: 4%;
+  padding-top: 100px;
 }
 .profile .main {
   grid-row: 1 / span 3;
