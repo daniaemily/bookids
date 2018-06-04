@@ -15,15 +15,6 @@
             <h2 class="search-results">Our search has resulted the following books:</h2>
           <% end %>
         </div>
-        <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
-        <% else %>
-          <div class="header">
-            <% if current_user != nil %>
-              <h2><%= current_user.first_name %>, our search has resulted the following books:</h2>
-            <% else %>
-              <h2>Our search has resulted the following books:</h2>
-            <% end %>
-          </div>
           <% @books.each do |book| %>
           <div class="col-sm-6 col-md-4 single-card">
             <%= link_to book_path(book) do %>
@@ -48,4 +39,3 @@
       </div>
     </div>
   </div>
-</div>
