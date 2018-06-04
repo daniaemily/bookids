@@ -1,6 +1,13 @@
 class BooksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
+  def like
+    book = Book.find(params[:id])
+    book.favorite = true
+    book.save
+    raise
+  end
+
   def dashboard
     @personalizations = current_user.personalizations
   end
