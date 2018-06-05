@@ -1,11 +1,16 @@
+.site-content-checkout {
+  background-color: #F0BD68;
+  height: 100%;
+}
+
 .checkout-wrapper {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 30%;
+  margin-right: 30%;
   margin-top: 10%;
   border-radius: 6px;
   padding: 0px;
   background-color: white;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
   box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
 }
 
@@ -14,14 +19,14 @@
 }
 
 .description-checkout {
-  margin-top: 15%;
+  margin-top: 6%;
 }
 
 
 
 .price-delivery-checkout {
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 
   p {
     padding-bottom: 1px;
@@ -29,14 +34,22 @@
 }
 
 .book-photo-checkout {
-  padding: 0px;
-  height: 100%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   img {
-    width: 100%;
-    height: 100%;
-    border-radius: 6px 0px 0px 6px;
+    width: 40%;
+    margin-top: 5%;
+    border-radius: 15px;
+
   }
+}
+
+.center {
+  display: block;
+  height: 20vh;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 
 .pay-now-button {
@@ -44,4 +57,81 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.title-checkout {
+
+  h3 {
+    font-family: "Gaegu";
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+}
+
+.details-checkout {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.details-checkout {
+  padding: 0px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.list-personalization {
+  display: flex;
+
+  .em {
+    margin-right: 10px;
+  }
+
+  p {
+    margin: 0;
+    font-family: 'Gaegu';
+    font-weight: 500;
+    font-size: 25px;
+    padding-right: 25px;
+  }
+}
+
+// .stripe-button-el {
+//   margin-left: 38%;
+//   margin-right: 38%;
+// }
+
+
+.stripe-button-el {
+  width: 150px;
+  border-radius: 7px !important;
+  border: 0 !important;
+  background-image: none !important;
+  background-color: #B4D682 !important;
+  font-weight: normal !important;
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+.stripe-button-el span {
+  font-family: sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal !important;
+  font-size: 1em !important;
+  border-radius: 7px !important;
+  border: 0 !important;
+  box-shadow: none;
+  background-image: none !important;
+  background: #B4D682 !important;
+  background-color: #B4D682 !important;
+  text-shadow: none !important;
+}
+
+// .stripe-button-el span:hover {
+//   background-color: white !important;
+//   border: 2px solid #B4D682 !importants;
+//   color: black;
+//   box-shadow: none !important;
+//   text-shadow: none !important;
+// }
+
+
 
