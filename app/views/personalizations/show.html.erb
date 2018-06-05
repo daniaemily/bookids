@@ -14,18 +14,18 @@
   </div>
   <div class="flipper">
     <div class="current left page <%= @dataset_flipper[0][:color] %> ontop">
-      <% if @dataset_flipper[0][:image] %>
-      <img src="<%= @dataset_flipper[0][:image] %>" alt="">
+      <% if @dataset_flipper[0][:image] && false%>
+        <img src="<%#= @dataset_flipper[0][:image] %>" alt="" class="preview-image">
       <% else %>
-      <%= @dataset_flipper[0][:content] %>
+        <%= @dataset_flipper[0][:content].html_safe %>
       <% end %>
     </div>
     <div class="shadow-left"></div>
     <div class="current right page <%= @dataset_flipper[1][:color] %> ontop">
       <% if @dataset_flipper[1][:image] %>
-      <img src="<%= @dataset_flipper[1][:image] %>" alt="">
+        <img src="<%= @dataset_flipper[1][:image] %>" alt="">
       <% else %>
-      <%= @dataset_flipper[1][:content] %>
+        <%= @dataset_flipper[1][:content].html_safe  %>
       <% end %>
     </div>
     <div class="shadow-right"></div>

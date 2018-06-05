@@ -304,18 +304,25 @@ book20 = Book.create!(
 
 Page.create!(
   content: "Giraffes Can't Dance",
+  book: book1,
+  markup: "title"
+  )
+Page.create!(
+  content: "My name is Dimitri",
   book: book1
   )
 Page.create!(
   image: 'picture1.png',
-  book: book1
+  book: book1,
+  markup: "image"
   )
 Page.create!(
   content: "This book was made with love for name ",
   book: book1
   )
 Page.create!(
-  book: book1
+  book: book1,
+  content: "hello"
   )
 Page.create!(
   content: "9 weeks ago , name started the coding Bootcamp at LeWagon. After spending more than nine hours a day in front of a laptop name has spleeping problems. However name is still happy to be here",
