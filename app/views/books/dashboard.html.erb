@@ -4,7 +4,7 @@
           <div class="main">
             <div class="main-content">
               <div class="profile-dashboard">
-              <%= image_tag "avatar1.png", height: 50 %>
+                <%= cl_image_tag current_user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar" %>
                 <h2><%= current_user.first_name%> <%= current_user.last_name %></h2>
               </div>
             </div>
