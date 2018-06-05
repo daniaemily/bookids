@@ -1,7 +1,7 @@
 .banner {
   color: white;
-  background-color: #82D0E2;
   text-align: center;
+  background: url('bookies_background.jpg');
   height: calc(100vh - 0px);
   position: relative;
 
@@ -16,7 +16,6 @@
     letter-spacing: 10px;
     font-family: 'Montserrat', sans-serif, font;
     text-shadow: 1px 1px 6px white;
-
   }
   //   p {
   //   font-size: 25px;
@@ -91,4 +90,14 @@
 
 }
 
+.banner-image{
+  border-radius: 8px;
+  margin-top: 61px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+
+.banner_bottom{
+  width: 100%;
+}

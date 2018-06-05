@@ -94,6 +94,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animejs@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-2.2.0.tgz#35eefdfc535b81949c9cb06f0b3e60c02e6fdc80"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
@@ -3024,7 +3028,7 @@ jquery-bar-rating@^1.2.2:
   dependencies:
     jquery ">=1.7.2"
 
-jquery@>=1.7.2, jquery@^3.3.1:
+jquery@>=1.7.2, jquery@^3.1.1, jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -5510,6 +5514,12 @@ through2@^2.0.0:
 thunky@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/thunky/-/thunky-1.0.2.tgz#a862e018e3fb1ea2ec3fce5d55605cf57f247371"
+
+tilt.js@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/tilt.js/-/tilt.js-1.2.1.tgz#7d140ecb06744192815735e538b02739fe24d92f"
+  dependencies:
+    jquery "^3.1.1"
 
 time-stamp@^2.0.0:
   version "2.0.0"
