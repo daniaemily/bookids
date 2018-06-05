@@ -44,7 +44,7 @@
           <% @books.each do |book| %>
           <div class="col-sm-6 col-md-4 single-card">
             <%= link_to book_path(book) do %>
-            <div class="thumbnail">
+            <div class='thumbnail'>
               <p class="name"> <%= book.name %></p>
               <div class="photo-index" style="background-image:url(<%= image_path(book.photo)%>)">
               </div>
@@ -52,8 +52,14 @@
                 <div class="text">
                   <div class="age-stars-price-index">
                     <p><i class="fas fa-child"></i>  <%=book.age %></p>
-                    <%= link_to like_book_path(@books) do %>
-                      <i class="far fa-heart"></i>
+                    <% if @favorite.nil? %>
+                      <%= link_to like_book_path(book), method:'patch' do %>
+                        <i class="far fa-heart like"></i>
+                      <% end %>
+                    <% else %>
+                      <%= link_to dislike_book_path(book), method:'patch' do %>
+                        <i class="fas fa-heart dislike"></i>
+                      <% end %>
                     <% end %>
                     <p><%= humanized_money_with_symbol(book.price) %></p>
                   </div>
