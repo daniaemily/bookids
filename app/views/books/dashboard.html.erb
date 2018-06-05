@@ -52,17 +52,16 @@
             <div class="description-content">
               <h1>Your wishlist</h1>
               <div class="row">
-                <% @personalizations.each do |personalization| %>
+                <% @favorites.each do |favorite| %>
                 <div class=" col-sm-6 col-md-4">
                   <div class="dashboard-booking">
                     <div class="card-personalization">
                       <div class="body-personalization">
-                        <%= image_tag(personalization.book.photo, width: '100%') %>
+                        <%= image_tag(favorite.book.photo, width: '100%') %>
                       </div>
                       <div class="footer-own">
                         <div class="review-dashboard">
-                          <%= link_to '<i class="fas fa-plus-circle"></i> Review'.html_safe, new_personalization_review_path(personalization) %>
-                          <%= link_to '<i class="fas fa-cloud-download-alt"></i> Download'.html_safe, new_personalization_review_path(personalization) %>
+                          <p>hallo</p>
                         </div>
                       </div>
                     </div>

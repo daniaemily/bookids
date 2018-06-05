@@ -13,6 +13,7 @@ class BooksController < ApplicationController
 
   def dashboard
     @personalizations = current_user.personalizations
+    @favorites = Favorite.where(user:current_user)
   end
 
   def home
