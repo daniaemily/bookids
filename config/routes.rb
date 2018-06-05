@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
 
   get 'dashboard', to: 'books#dashboard', as: :dashboard
+  get 'show', to: 'pdfs#show', as: :show_pdf
 
   # patch '/books/:id/like', to: 'books#like', as: :like_book
   # patch 'books/:id/dislike', to: 'books#dislike', as: :dislike_book

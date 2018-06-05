@@ -5,6 +5,8 @@ gem 'money-rails'
 gem 'stripe'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 gem 'bootsnap', require: false
 gem 'devise'
