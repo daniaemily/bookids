@@ -301,6 +301,7 @@ book20 = Book.create!(
   sku: "book",
   )
 
+
 Page.create!(
   content: "Giraffes Can't Dance",
   book: book1
