@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :personalizations, dependent: :destroy
   has_many :books, through: :personalizations
   has_many :orders, dependent: :destroy
+  has_many :favorites, through: :books
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
