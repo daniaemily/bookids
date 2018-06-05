@@ -24,19 +24,13 @@ class BooksController < ApplicationController
       filters = {}
       filters[:age] = params[:age] if params[:age].present?
       filters[:category] = params[:category] if params[:category].present?
-       filters[:price_cents] = {gt: 0, lt: params[:price_cents]} if params[:price_cents].present?
-      p filters
+      filters[:price_cents] = {gt: 0, lt: params[:price_cents].to_i * 100 } if params[:price_cents].present?
       @books = Book.search(params[:query], where: filters, operator: "or")
-      # sql_query = " \
-      #   books.name @@ :query \
-      #   OR books.age @@ :query \
-      #   OR books.author @@ :query \
-      #   OR books.category @@ :query
-      # "
-      #   # OR pages.content @@ query
-      # @books = Book.where(sql_query, query: "%#{params[:query]}%")
     else
       @books = Book.all
+      @books = @books.where(age: params[:age]) if params[:age].present?
+      @books = @books.where(category: params[:category]) if params[:category].present?
+      @books = @books.where("price_cents <= ?", params[:price_cents].to_i * 100) if params[:price_cents].present?
     end
   end
 

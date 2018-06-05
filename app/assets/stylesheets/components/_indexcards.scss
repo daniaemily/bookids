@@ -6,8 +6,7 @@
 }
 
 .header {
-  margin: 1% 15% 5% 15%;
-  // background-color: #F0BD68;
+  margin-top: 70px;
   text-align: center;
 
   .fas {
@@ -140,6 +139,10 @@
 .search-filters {
     display: flex;
     justify-content: flex-start;
+
+    div {
+      flex: 1;
+    }
 }
 
 .slidecontainer {
@@ -176,6 +179,9 @@
     cursor: pointer;
 }
 
+.index-search {
+  background-color: white;
+}
 // .row-index {
 //   margin-top: 25px;
 
