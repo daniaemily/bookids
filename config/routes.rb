@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :books, only: [:index, :show] do
+    resources :favorites, only: [:create, :destroy]
     resources :personalizations, only: [:create]
   end
 
@@ -19,6 +20,6 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'books#dashboard', as: :dashboard
 
-  patch '/books/:id/like', to: 'books#like', as: :like_book
-  patch 'books/:id/dislike', to: 'books#dislike', as: :dislike_book
+  # patch '/books/:id/like', to: 'books#like', as: :like_book
+  # patch 'books/:id/dislike', to: 'books#dislike', as: :dislike_book
 end

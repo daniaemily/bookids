@@ -1,0 +1,11 @@
+
+function toggleLikeBtn() {
+  const btn = document.getElementById('favorite-book-<%= @book.id %>')
+  console.log('favorite-book-' + '<%= @book.id %>')
+  console.log(btn)
+  btn.classList.remove("dislike")
+  btn.classList.add("like")
+  // btn.classList.toggle('like')
+}
+
+toggleLikeBtn()
