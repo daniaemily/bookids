@@ -1,10 +1,11 @@
 module NavbarHelper
   def set_bg_color
-    case params[:action]
-    when 'show' then 'show-color'
-    when 'index' then 'index-color'
-    when 'dashboard' then 'dashboard-color'
-    when 'home' then 'home-color'
+    case "#{params[:action]}##{params[:controller]}"
+    when 'show#books' then 'show-color'
+    when 'index#books' then 'index-color'
+    when 'dashboard#books' then 'dashboard-color'
+    when 'home#books' then 'home-color'
+    when 'new#payments' then 'checkout-color'
     else
       ''
     end

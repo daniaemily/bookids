@@ -6,8 +6,7 @@
 }
 
 .header {
-  margin: 1% 15% 5% 15%;
-  // background-color: #F0BD68;
+  margin-top: 70px;
   text-align: center;
 
   .fas {
@@ -100,6 +99,30 @@
     font-size: 22px;
     color: #757A77;
   }
+
+  .dislike {
+    margin-top:5px;
+    color: gray;
+    opacity: 0.5;
+  }
+
+  .dislike:hover {
+    margin-top:5px;
+    color: red;
+    opacity: 1;
+  }
+
+  .like {
+    margin-top:5px;
+    color: red;
+    opacity: 1;
+  }
+
+  .like:hover {
+    margin-top:5px;
+    color: gray;
+    opacity: 0.5;
+  }
 }
 
 
@@ -120,6 +143,10 @@
 .search-filters {
     display: flex;
     justify-content: flex-start;
+
+    div {
+      flex: 1;
+    }
 }
 
 .slidecontainer {
@@ -156,6 +183,9 @@
     cursor: pointer;
 }
 
+.index-search {
+  background-color: white;
+}
 // .row-index {
 //   margin-top: 25px;
 

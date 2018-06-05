@@ -3,13 +3,17 @@ class BooksController < ApplicationController
 
   def like
     book = Book.find(params[:id])
-    book.favorite = true
-    book.save
-    raise
+    @favorite = Favorite.create(book:book, user: current_user)
+    redirect_to books_path
+  end
+
+  def dislike
+
   end
 
   def dashboard
     @personalizations = current_user.personalizations
+    @favorites = Favorite.where(user:current_user)
   end
 
   def home
@@ -21,19 +25,13 @@ class BooksController < ApplicationController
       filters = {}
       filters[:age] = params[:age] if params[:age].present?
       filters[:category] = params[:category] if params[:category].present?
-       filters[:price_cents] = {gt: 0, lt: params[:price_cents]} if params[:price_cents].present?
-      p filters
+      filters[:price_cents] = {gt: 0, lt: params[:price_cents].to_i * 100 } if params[:price_cents].present?
       @books = Book.search(params[:query], where: filters, operator: "or")
-      # sql_query = " \
-      #   books.name @@ :query \
-      #   OR books.age @@ :query \
-      #   OR books.author @@ :query \
-      #   OR books.category @@ :query
-      # "
-      #   # OR pages.content @@ query
-      # @books = Book.where(sql_query, query: "%#{params[:query]}%")
     else
       @books = Book.all
+      @books = @books.where(age: params[:age]) if params[:age].present?
+      @books = @books.where(category: params[:category]) if params[:category].present?
+      @books = @books.where("price_cents <= ?", params[:price_cents].to_i * 100) if params[:price_cents].present?
     end
   end
 
@@ -46,15 +44,29 @@ class BooksController < ApplicationController
     end
     @personalizations = @book.personalizations
 
+    @average = average
   end
+
+
 
   # def multisearch
 
   #   pg_search_scope : search_page_fields, :against => [:category, :price_cents, :age]
 
   # end
-
-  def private
+private
+  def average
+    sum = 0
+    number = 0
+    @personalizations = @book.personalizations
+    @personalizations.each do |personalization|
+      personalization.reviews.each do |review|
+        number += 1
+        sum += review.stars
+      end
+    end
+    @average = (sum.to_f/number.to_f).to_f.round(1)
+    return @average
   end
 end
 

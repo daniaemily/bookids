@@ -1,83 +1,72 @@
 <div class="site-content-index">
   <div class="wrapper">
     <div class="row row-index">
-      <% if @books.count == 0 %>
-      <div class="not">
-        <h1>Sorry, your book was not found</h1>
-        <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
-      </div>
 
+      <% if @books.count == 0 %>
+        <div class="not">
+          <h1>Sorry, your book was not found</h1>
+          <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
+        </div>
       <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
       <% else %>
-        <div class="header">
-          <% if current_user != nil %>
-            <h2>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</h2>
-          <% else %>
-            <h2 class="search-results">Our search has resulted the following books:</h2>
-          <% end %>
-        </div>
-        <div class="search-filters">
+        <div class="index-search">
+          <%= form_tag books_path, method: :get, class: 'search-filters' do %>
           <div class ="search-button-index">
-            <%= form_tag books_path, method: :get do %>
-              <%= text_field_tag :query,
-                params[:query],
-                class: "search-form form-control-index",
-                placeholder: "Enter Child's Age"
-              %>
-            <% end %>
-          <div>
-          <select name="skills" multiple="" class="ui fluid dropdown">
-              <option value="">Genre</option>
-            <option value="friends">Friends</option>
-            <option value="sleep">Sleep</option>
-            <option value="sports">Sports</option>
-            <option value="food">Food</option>
-          </select>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "search-form form-control-index",
+              placeholder: "Enter Child's Age"
+            %>
           </div>
-        </div>
-         <div class="slidecontainer">
-            <input type="range" min="1" max="30" value="10" class="slider" id="myPriceRange">
+            <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"], ["Grow Up", "grow-up"]]), id: "index-category") %>
+          <div class="slidecontainer">
+            <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 15, class: "slider", id: "myPriceRange") %>
             <p>Price Range <span id="demo"></span></p>
           </div>
-
+          <input type="submit" name="commit">
+          <% end %>
         </div>
-          <% @books.each do |book| %>
-          <div class="col-sm-6 col-md-4 single-card">
-            <%= link_to book_path(book) do %>
-            <div class="thumbnail">
-              <p class="name"> <%= book.name %></p>
-              <div class="photo-index" style="background-image:url(<%= image_path(book.photo)%>)">
-              </div>
-              <div class="caption">
-                <div class="text">
-                  <div class="age-stars-price-index">
-                    <p><i class="fas fa-child"></i>  <%=book.age %></p>
-                    <%= link_to like_book_path(@books) do %>
-                      <i class="far fa-heart"></i>
+
+        <% @books.each do |book| %>
+        <div class="col-sm-6 col-md-4 single-card">
+          <%= link_to book_path(book) do %>
+          <div class='thumbnail'>
+            <p class="name"> <%= book.name %></p>
+            <div class="photo-index" style="background-image:url(<%= image_path(book.photo)%>)">
+            </div>
+            <div class="caption">
+              <div class="text">
+                <div class="age-stars-price-index">
+                  <p><i class="fas fa-child"></i>  <%=book.age %></p>
+                    <%= link_to book_favorites_path(book), method: :post, remote: true do %>
+                      <i class="fas fa-heart <%= book.liked?(current_user) ? "like" : "dislike"  %>" id='favorite-book-<%= book.id %>'></i>
                     <% end %>
-                    <p><%= humanized_money_with_symbol(book.price) %></p>
-                  </div>
+                  <p><%= humanized_money_with_symbol(book.price) %></p>
                 </div>
               </div>
             </div>
-            <% end %>
           </div>
+        </div>
         <% end %>
-      <% end %>
+    <% end %>
+    <%end %>
     </div>
   </div>
 </div>
 
-  <script>
-          var slider = document.getElementById("myPriceRange");
-          var output = document.getElementById("demo");
-          output.innerHTML = slider.value; // Display the default slider value
 
-          // Update the current slider value (each time you drag the slider handle)
-          slider.oninput = function() {
-          output.innerHTML = this.value;
-          }
-        </script>
+<%= javascript_pack_tag 'choices' %>
+<%= javascript_pack_tag 'dropdown' %>
+<script>
+  var slider = document.getElementById("myPriceRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value; // Display the default slider value
 
-        <%= javascript_pack_tag 'dropdown' %>
+  // Update the current slider value (each time you drag the slider handle)
+  slider.oninput = function() {
+  output.innerHTML = this.value;
+  }
+</script>
+
+
 
