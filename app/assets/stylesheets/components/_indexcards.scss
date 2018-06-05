@@ -102,7 +102,23 @@
   }
 
   .like {
+    color: gray;
+    opacity: 0.5;
+  }
+
+  .like:hover {
     color: red;
+    opacity: 1;
+  }
+
+  .dislike {
+    color: red;
+    opacity: 1;
+  }
+
+  .dislike:hover {
+    color: gray;
+    opacity: 0.5;
   }
 }
 

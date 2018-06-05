@@ -54,7 +54,7 @@
                     <p><i class="fas fa-child"></i>  <%=book.age %></p>
                     <% if @favorite.nil? %>
                       <%= link_to like_book_path(book), method:'patch' do %>
-                        <i class="far fa-heart like"></i>
+                        <i class="fas fa-heart like"></i>
                       <% end %>
                     <% else %>
                       <%= link_to dislike_book_path(book), method:'patch' do %>
