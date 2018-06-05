@@ -1,53 +1,79 @@
-<h1>This is the dashboard</h1>
-
-<div class="wrapper">
-      <div class="profile text-center">
-        <div class="main">
-          <div class="main-content">
-            <div class="profile-dashboard">
-            <%= image_tag "avatar1.png", height: 50 %>
-              <h2><%= current_user.first_name%> <%= current_user.last_name %></h2>
+<div class="site-content-dashboard">
+  <div class="wrapper">
+        <div class="profile text-center">
+          <div class="main">
+            <div class="main-content">
+              <div class="profile-dashboard">
+              <%= image_tag "avatar1.png", height: 50 %>
+                <h2><%= current_user.first_name%> <%= current_user.last_name %></h2>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="stat">
-          <div class="stat-content">
-            <h2>Hey <%= current_user.first_name %>. You have
-              <% if current_user.personalizations.count > 1 %>
-                already customized and ordered <%= current_user.personalizations.count%> stories. In the following you can see all your personalized books, download them to all your devices and even share your experiences by adding reviews.
-              <%elsif current_user.personalizations.count = 1  %>
-                ordered your first book. You can download it below and add a review if you want to share your experience.
-              <% elsif current_user.personalizations.count == 0 %>
-                not ordered any book yet. Customize your child's first book and educate through stories.
-              <%end%>
-            </h2>
-            <h2><%if current_user.personalizations.count >= 1 %> Thank you for sharing our passion. <i class="em em-smiley"></i></h2><%end %>
+          <div class="stat">
+            <div class="stat-content">
+              <h2>Hey <%= current_user.first_name %>. You have
+                <% if current_user.personalizations.count > 1 %>
+                  already customized and ordered <%= current_user.personalizations.count%> stories. In the following you can see all your personalized books, download them to all your devices and even share your experiences by adding reviews.
+                <% elsif current_user.personalizations.count == 1  %>
+                  ordered your first book. You can download it below and add a review if you want to share your experience.
+                <% elsif current_user.personalizations.count == 0 %>
+                  not ordered any book yet. Customize your child's first book and educate through stories.
+                <%end%>
+              </h2>
+              <h2><%if current_user.personalizations.count >= 1 %> Thank you for sharing our passion. <i class="em em-smiley"></i></h2><%end %>
+            </div>
           </div>
-        </div>
-        <div class="description">
-          <div class="description-content">
-            <div class="row">
-              <% @personalizations.each do |personalization| %>
-              <div class=" col-sm-6 col-md-4">
-                <div class="dashboard-booking">
-                  <div class="card-personalization">
-                    <div class="body-personalization">
-                      <%= image_tag(personalization.book.photo, width: '100%') %>
-                    </div>
-                    <div class="footer-own">
-                      <div class="review-dashboard">
-                        <%= link_to '<i class="fas fa-plus-circle"></i> Review'.html_safe, new_personalization_review_path(personalization) %>
-                        <%= link_to '<i class="fas fa-cloud-download-alt"></i> Download'.html_safe, new_personalization_review_path(personalization) %>
+          <div class="description">
+            <div class="description-content">
+              <h1>Your books</h1>
+              <div class="row">
+                <% @personalizations.each do |personalization| %>
+                <div class=" col-sm-6 col-md-4">
+                  <div class="dashboard-booking">
+                    <div class="card-personalization">
+                      <div class="body-personalization">
+                        <%= image_tag(personalization.book.photo, width: '100%') %>
+                      </div>
+                      <div class="footer-own">
+                        <div class="review-dashboard">
+                          <%= link_to '<i class="fas fa-plus-circle"></i> Review'.html_safe, new_personalization_review_path(personalization) %>
+                          <%= link_to '<i class="fas fa-cloud-download-alt"></i> Download'.html_safe, new_personalization_review_path(personalization) %>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <% end %>
               </div>
-              <% end %>
+            </div>
+          </div>
+
+          <div class="stars-dashboard">
+            <div class="description-content">
+              <h1>Your wishlist</h1>
+              <div class="row">
+                <% @personalizations.each do |personalization| %>
+                <div class=" col-sm-6 col-md-4">
+                  <div class="dashboard-booking">
+                    <div class="card-personalization">
+                      <div class="body-personalization">
+                        <%= image_tag(personalization.book.photo, width: '100%') %>
+                      </div>
+                      <div class="footer-own">
+                        <div class="review-dashboard">
+                          <%= link_to '<i class="fas fa-plus-circle"></i> Review'.html_safe, new_personalization_review_path(personalization) %>
+                          <%= link_to '<i class="fas fa-cloud-download-alt"></i> Download'.html_safe, new_personalization_review_path(personalization) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+  </div>
 </div>
 
 

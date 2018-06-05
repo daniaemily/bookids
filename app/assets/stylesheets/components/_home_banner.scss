@@ -62,24 +62,52 @@
   background-size: cover !important;
 }
 
-.search-form {
-  font-size: 18px;
-  border-radius: 8px;
-  text-align: center;
-  background-color: transparent;
-  color: white !important;
-  border-color: white;
-  width: 204px;
+.search-button-index {
+    .search-form {
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: transparent;
+    color: black !important;
+    border-color: white;
+    width: 204px;
+    margin-bottom: 4%;
+    margin-top: -4%;
+    margin-left: 3%;
 
-  &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
+    &::placeholder {
+      color: black;
+    }
 
-  &:focus {
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: none;
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: none;
+    }
   }
 }
+
+.search-button {
+    .search-form {
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: transparent;
+    color: white !important;
+    border-color: white;
+    width: 204px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: none;
+    }
+  }
+}
+
+
 
 
 .search-button {

@@ -1,7 +1,17 @@
 
+.site-content-show {
+
+  width: 100%;
+  margin-top: 0;
+  background-color: white;
+}
+
+.photo-row {
+  margin-top: 100px;
+}
+
 .show-card {
   background-color: white;
-  margin-top: 150px;
   box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
   border-radius: 6px;
 }
@@ -23,16 +33,17 @@
   margin-bottom: 22px;
   margin-top: 7%;
 
+
   .fas {
     padding-right: 10px;
-    color: #C7374B;
-    opacity: 0.75;
+    color: #B4D682;
+    font-size: 25px;
   }
 
   p {
-    font-family: 'Nunito', sans-serif;
-    font-weight: lighter;
-    font-size: 18px;
+    font-family: 'Gaegu';
+    font-weight: 500;
+    font-size: 24px;
   }
 }
 
@@ -47,18 +58,21 @@
 }
 
 .description-show {
-  margin-top: 23%;
+  margin-top: 17%;
 }
 
 .author-show {
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 30px;
+  padding-right: 55px;
   position: relative;
 
 
   h2{
     padding-bottom: 1px;
-    font-size: 25px;
+    font-family: 'Gaegu';
+    font-weight: 500;
+    font-size: 43px;
+    color: #F0BD68;
   }
 
   h3{
@@ -69,11 +83,31 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: justify;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: lighter;
+    color: #757A77;
+    padding-right: 4px;
+    line-height: 1.8;
   }
 
-  h3 h2 p {
+  h3 p {
     font-family: 'Nunito', sans-serif;
   }
+}
+
+.btn-primary {
+
+  border: 1px solid #F0BD68;
+  background-color: #F0BD68;
+  color: white;
+  font-family: "Gaegu";
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #B4D682;
+    color: white;
+    border: 1px solid #B4D682;
 }
