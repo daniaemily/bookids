@@ -16,7 +16,10 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-bookie-item">
         <div class="dropdown">
-          <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbar-bookie-menu", "data-toggle" => "dropdown" %>
+          <% if current_user %>
+            <div class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+              <%= cl_image_tag current_user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar" %>
+            </div>
           <ul class="dropdown-menu dropdown-menu-right navbar-bookie-dropdown-menu">
             <li>
               <%= link_to "#" do %>
@@ -34,6 +37,7 @@
               <% end %>
             </li>
           </ul>
+          <% end %>
         </div>
       </div>
     <% else %>
