@@ -1,6 +1,5 @@
 <div class="site-content-index">
-  <div class="wrapper-search">
-    <div class="container-search">
+  <div class="container-search">
       <% if @books.count == 0 %>
         <div class="not">
           <h1>Sorry, your book was not found</h1>
@@ -21,7 +20,7 @@
           <%= text_field_tag :query,
             params[:query],
             class: "search-form form-control-index",
-            placeholder: "Enter Child's Age"
+            placeholder: "Search"
           %>
         </div>
         <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"], ["Grow Up", "grow-up"]]), id: "index-category") %>
@@ -34,6 +33,7 @@
         <% end %>
       </div>
     </div>
+  <div class="wrapper-search">
   <div class="wrapper">
     <div class="row">
         <% @books.each do |book| %>
