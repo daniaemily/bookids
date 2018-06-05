@@ -3,9 +3,12 @@ class BooksController < ApplicationController
 
   def like
     book = Book.find(params[:id])
-    book.favorite = true
-    book.save
-    raise
+    @favorite = Favorite.create(book:book, user: current_user)
+    redirect_to books_path
+  end
+
+  def dislike
+
   end
 
   def dashboard

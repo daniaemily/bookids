@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'books#dashboard', as: :dashboard
 
   patch '/books/:id/like', to: 'books#like', as: :like_book
+  patch 'books/:id/dislike', to: 'books#dislike', as: :dislike_book
 end
