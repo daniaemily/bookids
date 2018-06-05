@@ -1,6 +1,6 @@
 <div class="site-content-index">
-  <div class="wrapper">
-    <div class="row row-index">
+  <div class="wrapper-search">
+    <div class="container-search">
       <% if @books.count == 0 %>
       <div class="not">
         <h1>Sorry, your book was not found</h1>
@@ -8,6 +8,13 @@
       </div>
       <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
       <% else %>
+      <div class="header">
+        <% if current_user != nil %>
+          <p>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</p>
+        <% else %>
+          <p class="search-results">Our search has resulted the following books:</p>
+        <% end %>
+      </div>
       <div class="index-search">
         <%= form_tag books_path, method: :get, class: 'search-filters' do %>
         <div class ="search-button-index">
@@ -19,19 +26,17 @@
         </div>
           <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"], ["Grow Up", "grow-up"]]), id: "index-category") %>
         <div class="slidecontainer">
-          <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 15, class: "slider", id: "myPriceRange") %>
-          <p>Price Range <span id="demo"></span></p>
+          <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
+          <p><i class="fas fa-euro-sign"></i>
+
+ <span id="demo"></span></p>
         </div>
-        <input type="submit" name="commit">
+        <input class="apply-btn" type="submit" name="commit">
         <% end %>
-      </div>
-      <div class="header">
-        <% if current_user != nil %>
-          <h2>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</h2>
-        <% else %>
-          <h2 class="search-results">Our search has resulted the following books:</h2>
-        <% end %>
-      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="row">
       <% @books.each do |book| %>
       <div class="col-sm-6 col-md-4 single-card">
         <%= link_to book_path(book) do %>
