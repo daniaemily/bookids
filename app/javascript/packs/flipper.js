@@ -15,18 +15,21 @@ function initFlipper() {
 }
 
 function turn(direction) {
-  if (is_turning)
+  if (is_turning) {
     return;
+  }
 
 
-  if (direction != 'next' && direction != 'prev')
+  if (direction != 'next' && direction != 'prev') {
     return;
+  }
 
 
   let is_next = (direction == 'next');
   let new_left_data = is_next ? dataFlipper[idx + 2] : dataFlipper[idx - 2];
   let new_right_data = is_next ? dataFlipper[idx + 3] : dataFlipper[idx - 1];
-
+  console.log(new_left_data)
+  console.log(new_right_data)
   if (!new_left_data && !new_right_data) {
     return;
   }

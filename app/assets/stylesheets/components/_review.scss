@@ -13,3 +13,16 @@
 .review-header {
   font-weight: bold;
 }
+
+.average {
+  display:flex;
+  i {
+    color:  #EDB867;
+    margin-right: 5px;
+  }
+  float:right
+}
+
+.header-review {
+  margin-top: 60px;
+}

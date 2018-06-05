@@ -88,24 +88,25 @@
     </div>
 
 <!-- reviews -->
-  <div style="margin-top:50px;margin-bottom:10px">
-    <div class="line"></div>
-  </div>
-  <div>
-    <% @personalizations.each do |personalization| %>
-      <% personalization.reviews.each do |review| %>
-        <div class="reviews">
-          <div class="reviews-left">
-            <div class="review-stars">
-              <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
-            </div>
-            <div class="review-user">
-              <%= personalization.user.first_name %>
-            </div>
-          </div>
-          <div class="review-right">
-            <div class="review-header">
-              <%= review.header %>
+    <h2 class="header-review">Reviews</h2>
+    <div class="average">
+      <i class="fas fa-star"></i>
+      <%= @average %>
+    </div>
+    <div>
+      <% @personalizations.each do |personalization| %>
+        <% personalization.reviews.each do |review| %>
+        <div style="margin-top:50px;margin-bottom:10px">
+          <div class="line"></div>
+        </div>
+          <div class="reviews">
+            <div class="reviews-left">
+              <div class="review-stars">
+                <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
+              </div>
+              <div class="review-user">
+                <%= personalization.user.first_name %>
+              </div>
             </div>
             <div class="review-right">
               <div class="review-header">
@@ -116,9 +117,6 @@
               </div>
             </div>
           </div>
-        <div style="margin-top:50px;margin-bottom:10px">
-          <div class="line"></div>
-        </div>
         <% end %>
       <% end %>
     </div>

@@ -111,22 +111,26 @@
     color: #757A77;
   }
 
-  .like {
+  .dislike {
+    margin-top:5px;
     color: gray;
     opacity: 0.5;
   }
 
-  .like:hover {
-    color: red;
-    opacity: 1;
-  }
-
-  .dislike {
-    color: red;
-    opacity: 1;
-  }
-
   .dislike:hover {
+    margin-top:5px;
+    color: red;
+    opacity: 1;
+  }
+
+  .like {
+    margin-top:5px;
+    color: red;
+    opacity: 1;
+  }
+
+  .like:hover {
+    margin-top:5px;
     color: gray;
     opacity: 0.5;
   }
