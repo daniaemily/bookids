@@ -11,6 +11,7 @@
   justify-content: space-between;
   position: fixed;
   z-index: 9999;
+  border-bottom: 1px solid RGBA(255, 255, 255, 0.5);
 }
 
 /* Logo */
@@ -33,9 +34,8 @@
 
   a {
     color: white;
-    font-weight: lighter;
-    font-family: 'Nunito', sans-serif;
-    font-size: 19px;
+    font-family: 'Gaegu';
+    font-size: 27px;
   }
 
   a:hover {
