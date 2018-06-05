@@ -49,15 +49,29 @@ class BooksController < ApplicationController
     end
     @personalizations = @book.personalizations
 
+    @average = average
   end
+
+
 
   # def multisearch
 
   #   pg_search_scope : search_page_fields, :against => [:category, :price_cents, :age]
 
   # end
-
-  def private
+private
+  def average
+    sum = 0
+    number = 0
+    @personalizations = @book.personalizations
+    @personalizations.each do |personalization|
+      personalization.reviews.each do |review|
+        number += 1
+        sum += review.stars
+      end
+    end
+    @average = (sum.to_f/number.to_f).to_f.round(1)
+    return @average
   end
 end
 

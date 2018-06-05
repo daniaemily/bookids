@@ -4,7 +4,8 @@ class User < ApplicationRecord
   has_many :personalizations, dependent: :destroy
   has_many :books, through: :personalizations
   has_many :orders, dependent: :destroy
-  has_many :favorites, through: :books
+  has_many :favorites
+  has_many :favorite_books, through: :favorites, source: :book
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

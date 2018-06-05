@@ -52,15 +52,10 @@
                 <div class="text">
                   <div class="age-stars-price-index">
                     <p><i class="fas fa-child"></i>  <%=book.age %></p>
-                    <% if @favorite.nil? %>
-                      <%= link_to like_book_path(book), method:'patch' do %>
-                        <i class="fas fa-heart like"></i>
+
+                      <%= link_to book_favorites_path(book), method: :post, remote: true do %>
+                        <i class="fas fa-heart <%= book.liked?(current_user) ? "like" : "dislike"  %>" id='favorite-book-<%= book.id %>'></i>
                       <% end %>
-                    <% else %>
-                      <%= link_to dislike_book_path(book), method:'patch' do %>
-                        <i class="fas fa-heart dislike"></i>
-                      <% end %>
-                    <% end %>
                     <p><%= humanized_money_with_symbol(book.price) %></p>
                   </div>
                 </div>
