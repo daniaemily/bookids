@@ -59,19 +59,8 @@
 }
 
 
-  $size: 300px;
+$size: 300px;
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700');
-
-*{
-  box-sizing: border-box;
-}
-
-body{
-  font-family: 'Fira Sans';
-  background:#e7e7e7;
-  margin-top:5%;
-}
 .flex-container , .c-logo {
     display: flex;
     flex-direction: row;
