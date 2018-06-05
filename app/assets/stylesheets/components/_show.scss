@@ -94,3 +94,20 @@
     font-family: 'Nunito', sans-serif;
   }
 }
+
+.btn-primary {
+
+  border: 1px solid #F0BD68;
+  background-color: #F0BD68;
+  color: white;
+  font-family: "Gaegu";
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #B4D682;
+    color: white;
+    border: 1px solid #B4D682;
+}
