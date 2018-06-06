@@ -30,7 +30,7 @@ class PersonalizationsController < ApplicationController
       elsif page.markup == "image"
         content = "<img src='#{ActionController::Base.helpers.asset_path(page.image)}' alt='' class='preview-image'>"
       elsif page.markup == "paragraph"
-        content = "<p>#{page.content.gsub(/name/, @personalization.character_name)}</p>"
+        content = "<p class='preview-book-text'>#{page.content.gsub(/name/, @personalization.character_name)}</p>"
       else
         content = ""
       end

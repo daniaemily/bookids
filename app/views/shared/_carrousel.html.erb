@@ -10,7 +10,6 @@
       <% books.each do |book| %>
         <%= link_to book_path(book) do %>
           <div class="card-caroussel" style="background-image: url('<%= image_path book.photo, height: 300, width: 400, crop: :fill %>')">
-              <p class="name-carrousel"><%= book.name %></p>
           </div>
         <% end %>
       <% end %>
