@@ -48,7 +48,7 @@
             <div class="caption">
               <div class="text">
                 <div class="age-stars-price-index">
-                  <p><i class="fas fa-child"></i>  <%=book.age %></p>
+                  <p><i class="fas fa-birthday-cake"></i>  <%=book.age %></p>
                     <%= link_to book_favorites_path(book), method: :post, remote: true do %>
                       <i class="fas fa-heart <%= book.liked?(current_user) ? "like" : "dislike"  %>" id='favorite-book-<%= book.id %>'></i>
                     <% end %>
