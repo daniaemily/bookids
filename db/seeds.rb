@@ -20,7 +20,7 @@ users = User.all
 
 book1 = Book.create!(
   name: "Little Monkey",
-  author: "Andreae Giles",
+  author: "Marta Altes",
   category: "sleep",
   description: "Little Monkey is a touching tale of Lina the monkey, who struggles with sleeping through the whole night. A meeting with Mr. Butterfly during her walk home from school on a sunny and warm afternoon changes everything... In this classic of children's literature, beloved by generations of readers and listeners, the quiet poetry of the words and the gentle, lulling illustrations combine to make a perfect book for the end of the day.",
   language: "English",

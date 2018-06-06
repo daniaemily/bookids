@@ -178,6 +178,8 @@
 .slidecontainer {
   margin-left: 33px;
   text-align: center;
+  font-family: 'Gaegu';
+  font-size: 17px;
 }
 
 .slider {
@@ -232,12 +234,13 @@
 .apply-btn {
   background-color: #fdbd6a;
   border-color: #fdbd6a;
-  padding: 6px 20px;
+  padding: 2px 20px;
   height: 39px;
   border-radius: 6.5px;
-  margin-left: 12px;
+  margin-left: 5%;
   font-family: 'Gaegu';
-  font-size: 18px;
+  font-size: 23px;
+  font-weight: bolder
 }
 .apply-btn:hover {
   background-color: white;
@@ -258,19 +261,20 @@
 
 .search-button-index {
     .search-form {
-    font-size: 14px;
+    font-size: 17px;
     border-radius: 6.5px;
     text-align: left;
     background-color: #B4D682;
     color: white !important;
     border-color: white;
-    width: 100%;
+    width: 87%;
     margin-bottom: 4%;
     margin-left: 4%;
-    padding: 0px 20px;
+    padding: 0px 20px 4px 12px;
     height: 39px;
     -webkit-appearance: none;
     border: 1px solid white;
+    font-family: 'Gaegu';
 
     &::placeholder {
       color: white;

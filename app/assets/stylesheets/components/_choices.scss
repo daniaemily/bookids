@@ -3,9 +3,9 @@
 ===============================*/
 
 $choices-selector: 'choices' !default;
-$choices-font-size-lg: 16px !default;
-$choices-font-size-md: 14px !default;
-$choices-font-size-sm: 12px !default;
+$choices-font-size-lg: 17px !default;
+$choices-font-size-md: 17px !default;
+$choices-font-size-sm: 17px !default;
 $choices-guttering: 24px !default;
 $choices-border-radius: 6.5px !default;
 $choices-border-radius-item: 20px !default;
@@ -126,6 +126,7 @@ $choices-button-offset: 8px !default;
   border-radius: $choices-border-radius;
   font-size: $choices-font-size-md;
   overflow: hidden;
+  font-family: 'Gaegu';
   height: 39px;
   margin-left: 3px;
   border-color: white;
@@ -138,11 +139,12 @@ $choices-button-offset: 8px !default;
   margin: 0;
   padding-left: 0;
   list-style: none;
+  font-family: 'Gaegu';
 }
 
 .#{$choices-selector}__list--single {
   display: inline-block;
-  padding: 4px 16px 4px 4px;
+  padding: 0px 16px 4px 4px;
   width: 100%;
   [dir="rtl"] & {
     padding-right: 4px;
@@ -158,7 +160,7 @@ $choices-button-offset: 8px !default;
     vertical-align: middle;
     border-radius: $choices-border-radius-item;
     padding: 4px 10px;
-    font-size: $choices-font-size-sm;
+    font-size: 17px;
     font-weight: 500;
     margin-right: 3.75px;
     margin-bottom: 3.75px;
