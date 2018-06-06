@@ -9,8 +9,8 @@ Review.destroy_all
 Favorite.destroy_all
 Order.destroy_all
 Personalization.destroy_all
-User.destroy_all
 Page.destroy_all
+User.destroy_all
 Book.destroy_all
 
 User.create(email: "test@test.com", password: "123123")
