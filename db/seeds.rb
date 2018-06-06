@@ -306,12 +306,12 @@ book20 = Book.create!(
 
 
 Page.create!(
-  content: "Giraffes Can't Dance",
+  content: "Little Monkey",
   book: book1,
   markup: "title"
   )
 Page.create!(
-  content: "My name is Dimitri",
+  content: "I am name, and I'm a beautiful little monkey who lives in a big forest surrounded by trees and a lot of animals",
   book: book1
   )
 Page.create!(
@@ -320,18 +320,20 @@ Page.create!(
   markup: "image"
   )
 Page.create!(
-  content: "This book was made with love for name ",
+  content: "name loved living in the jungle. There were so many things to do and so many things to see. But every now and then... ",
   book: book1
   )
 Page.create!(
+  image: 'picture2.png',
   book: book1,
-  content: "hello"
+  markup: "image"
   )
 Page.create!(
-  content: "9 weeks ago , name started the coding Bootcamp at LeWagon. After spending more than nine hours a day in front of a laptop name has spleeping problems. However name is still happy to be here",
+  content: "name had a little problem. And the problem was being little. Some days everything was out of reach.",
   book: book1
   )
 Page.create!(
-  content: "And name coded happily ever after...",
-  book: book1
+  image: 'picture3.png',
+  book: book1,
+  markup: "image"
   )
