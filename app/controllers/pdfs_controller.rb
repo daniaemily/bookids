@@ -3,7 +3,7 @@ class PdfsController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf: "file_name.pdf",
+        render pdf: "your_book.pdf",
         template: "pdfs/show.html.erb",
         layout:'pdf'
       end
