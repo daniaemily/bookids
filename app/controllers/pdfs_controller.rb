@@ -1,5 +1,6 @@
 class PdfsController < ApplicationController
   def show
+    @personalization = Personalization.find(params[:id])
     respond_to do |format|
       format.html
       format.pdf do
