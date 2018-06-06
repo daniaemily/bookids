@@ -12,6 +12,7 @@
 
 .review-header {
   font-weight: bold;
+  margin-bottom: 3px;
 }
 
 .average {
@@ -25,4 +26,12 @@
 
 .header-review {
   margin-top: 60px;
+}
+.picture {
+  .avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
 }
