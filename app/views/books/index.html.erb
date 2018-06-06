@@ -1,4 +1,4 @@
-<div class="site-content-index">
+b<div class="site-content-index">
   <div class="container-search">
       <% if @books.count == 0 %>
         <div class="not">
@@ -43,7 +43,7 @@
           <%= link_to book_path(book) do %>
           <div class='thumbnail'>
             <p class="name"> <%= book.name %></p>
-            <div class="photo-index" style="background-image:url(<%= image_path(book.photo)%>)">
+            <div class="photo-index" style="background-image: url(<%= image_url(book.photo)%>)">
             </div>
             <div class="caption">
               <div class="text">

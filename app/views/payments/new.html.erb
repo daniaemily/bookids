@@ -1,48 +1,50 @@
 
 <div class="site-content-checkout">
-  <div class="checkout-wrapper">
-    <%= form_tag order_payments_path(@order) do %>
-    <article>
-      <label class="amount">
-        <div class="col-sm-12 col-md-12 book-photo-checkout">
-          <%= image_tag(@order.user.personalizations.last.book.photo, width: '100%', height: '100%') %>
-        </div>
-        <div class="col-sm-12 col-md-12 author-show">
-          <div class="description-checkout">
-            <h2><%= @order.user.personalizations.last.book.name %></h2>
-            <p>View your personalization details below:</p>
+  <div class="wrapper">
+    <div class="checkout-wrapper">
+      <%= form_tag order_payments_path(@order) do %>
+      <article>
+        <label class="amount">
+          <div class="col-sm-12 col-md-12 book-photo-checkout">
+            <%= image_tag(@order.user.personalizations.last.book.photo, width: '100%', height: '100%') %>
           </div>
-          <div class="list-facts">
-            <p><i class="em em-abc"></i> <%=  @order.user.personalizations.last.character_name %></p>
-            <p><i class="em em-couple"></i> <%=  @order.user.personalizations.last.character_gender %></p>
-            <p><i class="em em-1234"></i> <%= @order.user.personalizations.last.character_age %></p>
+          <div class="col-sm-12 col-md-12 author-show">
+            <div class="description-checkout">
+              <h2><%= @order.user.personalizations.last.book.name %></h2>
+              <p>View your personalization details below:</p>
+            </div>
+            <div class="list-facts">
+              <p><i class="em em-abc"></i> <%=  @order.user.personalizations.last.character_name %></p>
+              <p><i class="em em-couple"></i> <%=  @order.user.personalizations.last.character_gender %></p>
+              <p><i class="em em-1234"></i> <%= @order.user.personalizations.last.character_age %></p>
+            </div>
+
+            <table style="width:100%" class="price-delivery-checkout">
+              <tr>
+                <td><p>Amount:</p></td>
+                <td><p><strong><%= humanized_money_with_symbol(@order.amount) %><strong></p></td>
+              </tr>
+              <tr>
+                <td><p>Expected delivery:</p></td>
+                <td><p><strong><%= DateTime.now.to_date + 4%><strong></p></td>
+
+              </tr>
+            </table>
+
+
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button custom-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-name="<%= @order.user.personalizations.last.book.name%>"
+            data-email="<%= current_user.email %>"
+            data-description="<%= @order.personalization_sku %>"
+            data-amount="<%= @order.amount_cents %>"
+            data-currency="<%= @order.amount.currency %>"></script>
           </div>
 
-          <table style="width:100%" class="price-delivery-checkout">
-            <tr>
-              <td><p>Amount:</p></td>
-              <td><p><strong><%= humanized_money_with_symbol(@order.amount) %><strong></p></td>
-            </tr>
-            <tr>
-              <td><p>Expected delivery:</p></td>
-              <td><p><strong><%= DateTime.now.to_date + 4%><strong></p></td>
-
-            </tr>
-          </table>
-
-
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button custom-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-name="<%= @order.user.personalizations.last.book.name%>"
-          data-email="<%= current_user.email %>"
-          data-description="<%= @order.personalization_sku %>"
-          data-amount="<%= @order.amount_cents %>"
-          data-currency="<%= @order.amount.currency %>"></script>
-        </div>
-
-      </label>
-    </article>
-  <% end %>
+        </label>
+      </article>
+    <% end %>
+    </div>
   </div>
 </div>
 

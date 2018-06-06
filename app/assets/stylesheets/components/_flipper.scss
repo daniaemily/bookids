@@ -175,10 +175,14 @@
 
 }
 
-.preview-image-full {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.preview-book-title{
+  color: green;
+  font-family: gaegu;
+  font-size: 70px;
+}
+
+.preview-book-text{
+  color: gray;
+  font-family: gaegu;
+  font-size: 30px;
 }
