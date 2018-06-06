@@ -26,7 +26,7 @@ book1 = Book.create!(
   language: "English",
   price: "15.99",
   age: "4-7",
-  photo: '/assets/books-images-cropped/16.jpg',
+  photo: '16.jpg',
   publishing_year: "2016",
   sku: "book",
   )
@@ -40,7 +40,7 @@ book2 = Book.create!(
   language: "English",
   price: "17.99",
   age: "4-8",
-  photo: '/assets/books-images-cropped/5.jpg',
+  photo: '5.jpg',
   publishing_year: "2009",
   sku: "book",
   )
@@ -53,7 +53,7 @@ book3 = Book.create!(
   language: "English",
   price: "22.99",
   age: "3-7",
-  photo: '/assets/books-images-cropped/11.jpg',
+  photo: '11.jpg',
   publishing_year: "2015",
   sku: "book",
   )
@@ -67,7 +67,7 @@ book4 = Book.create!(
   language: "English",
   price: "13.99",
   age: "3-9",
-  photo: '/assets/books-images-cropped/17.jpg',
+  photo: '17.jpg',
   publishing_year: "2018",
   sku: "book",
   )
@@ -81,7 +81,7 @@ book5 = Book.create!(
   language: "English",
   price: "19.99",
   age: "3-6",
-  photo: '/assets/books-images-cropped/2.jpg',
+  photo: '2.jpg',
   publishing_year: "2014",
   sku: "book",
   )
@@ -94,7 +94,7 @@ book6 = Book.create!(
   language: "English",
   price: "19.99",
   age: "3-5",
-  photo: '/assets/books-images-cropped/7.jpg',
+  photo: '7.jpg',
   publishing_year: "2015",
   sku: "book",
   )
@@ -108,7 +108,7 @@ book7 = Book.create!(
   language: "English",
   price: "15.99",
   age: "2-5",
-  photo: '/assets/books-images-cropped/8.jpg',
+  photo: '8.jpg',
   publishing_year: "2012",
   sku: "book",
   )
@@ -121,7 +121,7 @@ book8 = Book.create!(
   language: "English",
   price: "19.99",
   age: "2-5",
-  photo: '/assets/books-images-cropped/9.jpg',
+  photo: '9.jpg',
   publishing_year: "2016",
   sku: "book",
   )
@@ -134,7 +134,7 @@ book9 = Book.create!(
   language: "English",
   price: "16.99",
   age: "4-8",
-  photo: '/assets/books-images-cropped/10.jpg',
+  photo: '10.jpg',
   publishing_year: "2017",
   sku: "book",
   )
@@ -147,7 +147,7 @@ book10 = Book.create!(
   language: "English",
   price: "19.99",
   age: "2-4",
-  photo: '/assets/books-images-cropped/3.jpg',
+  photo: '3.jpg',
   publishing_year: "2010",
   sku: "book",
   )
@@ -160,7 +160,7 @@ book11 = Book.create!(
   language: "English",
   price: "13.99",
   age: "4-10",
-  photo: '/assets/books-images-cropped/13.jpg',
+  photo: '13.jpg',
   publishing_year: "1995",
   sku: "book",
   )
@@ -174,7 +174,7 @@ book12 = Book.create!(
   language: "English",
   price: "15.99",
   age: "2-3",
-  photo: '/assets/books-images-cropped/14.jpg',
+  photo: '14.jpg',
   publishing_year: "2011",
   sku: "book",
   )
@@ -188,7 +188,7 @@ book12 = Book.create!(
   language: "English",
   price: "19.99",
   age: "5-12",
-  photo: '/assets/books-images-cropped/15.jpg',
+  photo: '15.jpg',
   publishing_year: "1998",
   sku: "book",
   )
@@ -202,7 +202,7 @@ book13 = Book.create!(
   language: "English",
   price: "18.99",
   age: "2-3",
-  photo: '/assets/books-images-cropped/1.jpg',
+  photo: '1.jpg',
   publishing_year: "1999",
   sku: "book",
   )
@@ -215,7 +215,7 @@ book14 = Book.create!(
   language: "English",
   price: "21.99",
   age: "4-8",
-  photo: '/assets/books-images-cropped/4.jpg',
+  photo: '4.jpg',
   publishing_year: "2016",
   sku: "book",
   )
@@ -233,7 +233,7 @@ book15 = Book.create!(
   language: "English",
   price: "21.99",
   age: "2-9",
-  photo: '/assets/books-images-cropped/18.jpg',
+  photo: '18.jpg',
   publishing_year: "2017",
   sku: "book",
   )
@@ -246,7 +246,7 @@ book16 = Book.create!(
   language: "English",
   price: "16.99",
   age: "2-4",
-  photo: '/assets/books-images-cropped/19.jpg',
+  photo: '19.jpg',
   publishing_year: "2015",
   sku: "book",
   )
@@ -259,7 +259,7 @@ book17 = Book.create!(
   language: "English",
   price: "18.99",
   age: "5-9",
-  photo: '/assets/books-images-cropped/20.jpg',
+  photo: '20.jpg',
   publishing_year: "1962",
   sku: "book",
   )
@@ -272,7 +272,7 @@ book18 = Book.create!(
   language: "English",
   price: "21.99",
   age: "3-7",
-  photo: '/assets/books-images-cropped/21.jpg',
+  photo: '21.jpg',
   publishing_year: "2017",
   sku: "book",
   )
@@ -286,7 +286,7 @@ book19 = Book.create!(
   language: "English",
   price: "21.99",
   age: "4-8",
-  photo: '/assets/books-images-cropped/22.jpg',
+  photo: '22.jpg',
   publishing_year: "2015",
   sku: "book",
   )
@@ -299,7 +299,7 @@ book20 = Book.create!(
   language: "English",
   price: "21.99",
   age: "2-3",
-  photo: '/assets/books-images-cropped/12.jpg',
+  photo: '12.jpg',
   publishing_year: "2006",
   sku: "book",
   )
