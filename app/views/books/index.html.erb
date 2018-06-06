@@ -23,10 +23,12 @@ b<div class="site-content-index">
             placeholder: "Search"
           %>
         </div>
-        <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"], ["Grow Up", "grow-up"]]), id: "index-category") %>
+
+        <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"]]), id: "index-category") %>
+
         <div class="slidecontainer">
           <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
-          <p><i class="fas fa-euro-sign"></i>
+          <p>Max Price <i class="fas fa-euro-sign"></i>
           <span id="demo"></span></p>
         </div>
         <input class="apply-btn" type="submit" name="commit">
