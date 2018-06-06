@@ -55,6 +55,7 @@ class BooksController < ApplicationController
 
   # end
 private
+
   def average
     sum = 0
     number = 0

@@ -43,6 +43,19 @@
           <%= link_to book_path(book) do %>
           <div class='thumbnail'>
             <p class="name"> <%= book.name %></p>
+            <% sum = 0 %>
+            <% number = 0 %>
+            <% book.personalizations.each do |personalization| %>
+              <%personalization.reviews.each do |review| %>
+                <% number += 1%>
+                <%sum += review.stars %>
+              <% end  %>
+            <% end %>
+            <% average = (sum.to_f/number.to_f).to_f.round(1) %>
+            <div class="average-index">
+              <i class="fas fa-star"></i>
+              <%= average %>
+            </div>
             <div class="photo-index" style="background-image: url(<%= image_url(book.photo)%>)">
             </div>
             <div class="caption">

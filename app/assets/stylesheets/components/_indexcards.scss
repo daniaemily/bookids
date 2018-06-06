@@ -63,6 +63,24 @@
   width: 90%;
   box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
 
+  .average-index {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    color:white;
+    text-align: center;
+    width: 86%;
+    font-size: 20px;
+    i {
+      color:#F0BD68
+    }
+  }
+
+  &:hover .average-index {
+    visibility: visible;
+    z-index: 9999;
+  }
+
 
   a {
     font-style: $headings-font-family;
