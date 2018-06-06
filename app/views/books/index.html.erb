@@ -23,7 +23,9 @@
             placeholder: "Search"
           %>
         </div>
+
         <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"]]), id: "index-category") %>
+
         <div class="slidecontainer">
           <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
           <p>Max Price <i class="fas fa-euro-sign"></i>

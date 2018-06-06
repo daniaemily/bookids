@@ -41,7 +41,7 @@ $choices-button-offset: 8px !default;
   cursor: pointer;
   .#{$choices-selector}__inner { padding-bottom: 7.5px; }
   .#{$choices-selector}__input {
-    display: block;
+    display: none;
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid $choices-keyline-color;
@@ -191,12 +191,12 @@ $choices-button-offset: 8px !default;
   border: 1px solid #B4D682;
   top: 100%;
   margin-top: -1px;
-  border-bottom-left-radius: $choices-border-radius;
-  border-bottom-right-radius: $choices-border-radius;
+  border-bottom-left-radius: white;
+  border-bottom-right-radius: white;
   overflow: hidden;
   word-break: break-all;
   &.is-active { display: block; }
-  .is-open & { border-color: darken($choices-keyline-color, 15%); }
+  .is-open & { border-color: darken(white, 15%); }
   .is-flipped & {
     top: auto;
     bottom: 100%;
