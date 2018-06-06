@@ -88,7 +88,9 @@
     </div>
   <% if @book.reviews.any? %>
 <!-- reviews -->
-    <h2 class="header-review">Reviews</h2>
+    <div class="header-review">
+      <h2>Reviews</h2>
+    </div>
     <div class="average">
       <i class="fas fa-star"></i>
       <%= @average %>
