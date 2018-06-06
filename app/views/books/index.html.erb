@@ -41,7 +41,7 @@ b<div class="site-content-index">
           <%= link_to book_path(book) do %>
           <div class='thumbnail'>
             <p class="name"> <%= book.name %></p>
-            <div class="photo-index" style="background-image:url(<%= asset_path(book.photo)%>)">
+            <div class="photo-index" style="background-image: url(<%= image_url(book.photo)%>)">
             </div>
             <div class="caption">
               <div class="text">
