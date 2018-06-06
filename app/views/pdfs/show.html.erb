@@ -1,1 +1,11 @@
-<h1>hi</h1>
+<% @personalization.book.pages.each do |page| %>
+  <% if page.markup == "paragraph" %>
+    <p><%= page.content.gsub(/name/, @personalization.character_name) %></p>
+  <% elsif page.markup == "title" %>
+    <h1><%= page.content.gsub(/name/, @personalization.character_name) %></h1>
+  <% elsif page.markup == "image" %>
+    <%= wicked_pdf_image_tag page.image %>
+  <% end %>
+<% end %>
+
+
