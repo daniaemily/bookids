@@ -14,14 +14,14 @@
               <p>View your personalization details below:</p>
             </div>
             <div class="list-facts">
-              <p><i class="em em-abc"></i> <%=  @order.user.personalizations.last.character_name %></p>
-              <p><i class="em em-couple"></i> <%=  @order.user.personalizations.last.character_gender %></p>
-              <p><i class="em em-1234"></i> <%= @order.user.personalizations.last.character_age %></p>
+              <p><i class="fas fa-address-card"></i> <%=  @order.user.personalizations.last.character_name %></p>
+              <p><i class="fas fa-child"></i> <%=  @order.user.personalizations.last.character_gender %></p>
+              <p><i class="fas fa-birthday-cake"></i> <%= @order.user.personalizations.last.character_age %></p>
             </div>
 
             <table style="width:100%" class="price-delivery-checkout">
               <tr>
-                <td><p>Amount:</p></td>
+                <td class="payment-review"><p>Amount:</p></td>
                 <td><p><strong><%= humanized_money_with_symbol(@order.amount) %><strong></p></td>
               </tr>
               <tr>
