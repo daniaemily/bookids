@@ -162,7 +162,10 @@
   font-weight: lighter;
 }
 
-.description-content h1 {
+.description-content {
+  width: 100%;
+  h1 {
   font-family: 'Gaegu';
   font-size: 42px;
+  }
 }
