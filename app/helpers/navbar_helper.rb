@@ -6,6 +6,8 @@ module NavbarHelper
     when 'dashboard#books' then 'dashboard-color'
     when 'home#books' then 'home-color'
     when 'new#payments' then 'checkout-color'
+    when 'show#orders' then 'confirmation-color'
+    when 'show#personalizations' then 'personalization-color'
     else
       ''
     end

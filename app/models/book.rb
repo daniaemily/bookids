@@ -9,6 +9,7 @@ class Book < ApplicationRecord
   monetize :price_cents
 
   def liked?(user)
-    return user.favorite_books.include?(self)
+    return unless user
+    user.favorite_books.include?(self) if user.favorite_books
   end
 end

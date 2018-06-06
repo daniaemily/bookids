@@ -16,6 +16,7 @@ $index_color: #B4D682;
 $show_color: #F0BD68;
 $home_color: #82D0E2;
 $dashboard_color: #F0BD68;
+$personalization_color: #9ACFE1;
 
 .index-color {
   background-color: $index_color;
@@ -35,4 +36,12 @@ $dashboard_color: #F0BD68;
 
 .checkout-color {
   background-color: $dashboard_color;
+}
+
+.confirmation-color {
+ background-color: $index-color;
+}
+
+.personalization-color {
+ background-color: $personalization-color;
 }

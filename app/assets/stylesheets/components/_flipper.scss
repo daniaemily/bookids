@@ -46,13 +46,15 @@
   margin-top: 80px;
   font-family: 'Muli', sans-serif;
 }
+
 .book-container {
   display: flex;
   position: relative;
   justify-content: center;
   // margin-top: 32px;
-  background-color: #9ACFE1;
+  // background-color: #9ACFE1;
 }
+
 .flipper .page{
   position:absolute;
   top:0;width:50%;
@@ -168,7 +170,10 @@
   color: white;
   background-color: #F0BD68;
   border-color: #F0BD68;
-} .btn.btn-primary.purchase:hover {
+  margin-top: 60%;
+}
+
+.btn.btn-primary.purchase:hover {
   color: #F0BD68;
   background-color: white;
   border-color: #F0BD68;
@@ -185,4 +190,11 @@
   color: gray;
   font-family: gaegu;
   font-size: 30px;
+}
+
+
+.site-content-personalization {
+  height: 100%;
+  width: 100%;
+  background-color: #9ACFE1;
 }
