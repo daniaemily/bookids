@@ -13,7 +13,13 @@
           </div>
           <div class="description-show">
             <h2><%= @book.name %></h2>
-            <h3>by <%= @book.author %></h3>
+            <div class="author-and-average">
+              <h3>by <%= @book.author %></h3>
+              <div class="average-show">
+                <i class="fas fa-star"></i>
+                <%= @average %>
+              </div>
+            </div>
             <p><%= @book.description %></p>
           </div>
           <div class="list-facts">
@@ -102,7 +108,11 @@
           <div class="line"></div>
         </div>
           <div class="reviews">
+            <div class="picture">
+              <%= cl_image_tag personalization.user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar" %>
+            </div>
             <div class="reviews-left">
+
               <div class="review-stars">
                 <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
               </div>
