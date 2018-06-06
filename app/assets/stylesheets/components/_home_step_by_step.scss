@@ -12,7 +12,7 @@
   h1 {
     color: #9FB96E;
     font-size: 40px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
   }
   p {
       color: #565656;
@@ -30,18 +30,18 @@
   .step_by_step {
     margin: 10px;
     padding: 30px;
-    border: 1px solid #d8dee9;
+    border: none;
     border-radius: 5px;
     flex: 0 1 20%;
     h1 {
       color: black;
-      font-size: 20px;
-      font-family: 'Montserrat', sans-serif;
+      font-size: 29px;
+      font-family: 'Gaegu';
       color: #565656;
     }
     p {
       color: black;
-      font-size: 15px;
+      font-size: 18px;
       font-family: 'Nunito', sans-serif;
       color: #565656;
     }
@@ -75,7 +75,11 @@
   z-index: 99;
 }
 
-.home-description{
-  margin-top: 30px;
 
+.home-description{
+    h1 {
+      font-family: "Gaegu";
+      font-size: 60px;
+      margin-top: 45px;
+    }
 }

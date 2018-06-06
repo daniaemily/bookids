@@ -1,7 +1,7 @@
 .banner {
   color: white;
   text-align: center;
-  background: url('bookies_background.jpg');
+  background: image-url('bookies_background.jpg');
   height: calc(100vh - 0px);
   position: relative;
 
@@ -11,21 +11,22 @@
   align-items: center;
   justify-content: center;
     h1 {
-    font-size: 70px;
+    font-size: 79px;
     font-weight: 100;
     letter-spacing: 10px;
-    font-family: 'Montserrat', sans-serif, font;
+    font-family: 'Gaegu';
     text-shadow: 1px 1px 6px white;
   }
-  //   p {
-  //   font-size: 25px;
-  //   font-weight: lighter;
-  //   color: rgb(255, 255, 255);
-  //   opacity: 0.9;
-  //   margin-bottom: 30px;
-  //   font-family: 'Nunito', sans-serif;
+    p {
+    font-size: 25px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Nunito', sans-serif;
 
-  // }
+  }
 
   .btn {
     padding: 13px 23px;
@@ -39,6 +40,10 @@
 .btn:hover {
   box-shadow: 1px 1px 8px white;
 }
+}
+
+.banner-content {
+  margin-bottom: 13%;
 }
 
 .logo_glow {
@@ -62,42 +67,25 @@
   background-size: cover !important;
 }
 
-.search-button-index {
-    .search-form {
-    font-size: 18px;
-    border-radius: 8px;
-    text-align: center;
-    background-color: transparent;
-    color: black !important;
-    border-color: white;
-    width: 204px;
-    margin-bottom: 4%;
-    margin-top: -4%;
-    margin-left: 3%;
 
-    &::placeholder {
-      color: black;
-    }
-
-    &:focus {
-      border-color: rgba(255, 255, 255, 0.5);
-      box-shadow: none;
-    }
-  }
-}
 
 .search-button {
     .search-form {
     font-size: 18px;
     border-radius: 8px;
     text-align: center;
-    background-color: transparent;
+    background-color: RGBA(255,255,255, 0.1);
     color: white !important;
     border-color: white;
-    width: 204px;
+    width: 570px;
+    height: 46px;
+    margin-top: 20px;
+    padding-top: 10px;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Gaegu';
+      font-size: 35px;
     }
 
     &:focus {

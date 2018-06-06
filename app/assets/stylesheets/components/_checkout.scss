@@ -4,22 +4,26 @@
 }
 
 .checkout-wrapper {
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-top: 10%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 10%;
   border-radius: 6px;
-  padding: 0px;
   background-color: white;
-  margin-bottom: 3%;
   box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
-}
-
-.amount{
-  margin-bottom: -6px;
 }
 
 .description-checkout {
   margin-top: 6%;
+
+  h2 {
+    font-family: 'Gaegu';
+    font-size: 46px;
+    color: #F0BD68;
+  }
+
+  p {
+    font-weight: 300;
+  }
 }
 
 
@@ -30,6 +34,8 @@
 
   p {
     padding-bottom: 1px;
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
   }
 }
 
@@ -38,7 +44,7 @@
     justify-content: center;
     align-items: center;
   img {
-    width: 40%;
+    width: 37%;
     margin-top: 5%;
     border-radius: 15px;
 
@@ -109,10 +115,12 @@
   font-weight: normal !important;
   margin-bottom: 20px;
   height: 50px;
+  font-size: 22px;
 }
 
 .stripe-button-el span {
-  font-family: sans-serif !important;
+  font-family: 'Gaegu' !important;
+  font-size: 50px !important;
   -webkit-font-smoothing: antialiased;
   font-weight: normal !important;
   font-size: 1em !important;
@@ -123,6 +131,8 @@
   background: #B4D682 !important;
   background-color: #B4D682 !important;
   text-shadow: none !important;
+  box-shadow: none !important;
+
 }
 
 // .stripe-button-el span:hover {

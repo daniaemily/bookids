@@ -37,7 +37,9 @@
                       <div class="footer-own">
                         <div class="review-dashboard">
                           <%= link_to '<i class="fas fa-plus-circle"></i> Review'.html_safe, new_personalization_review_path(personalization) %>
-                          <%= link_to '<i class="fas fa-cloud-download-alt"></i> Download'.html_safe, new_personalization_review_path(personalization) %>
+                          <%= link_to show_pdf_path(format: :pdf) do %>
+                            <i class="fas fa-cloud-download-alt"></i> Download
+                          <% end %>
                         </div>
                       </div>
                     </div>
@@ -74,6 +76,9 @@
         </div>
   </div>
 </div>
+
+
+
 
 
 

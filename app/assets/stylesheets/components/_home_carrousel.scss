@@ -11,8 +11,8 @@
 
   h1 {
     color: white;
-    font-size: 40px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-family: 'Gaegu';
   }
   p {
       color: #565656;
@@ -55,23 +55,12 @@
 }
 
 .home-description{
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 }
 
 
-  $size: 300px;
+$size: 300px;
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700');
-
-*{
-  box-sizing: border-box;
-}
-
-body{
-  font-family: 'Fira Sans';
-  background:#e7e7e7;
-  margin-top:5%;
-}
 .flex-container , .c-logo {
     display: flex;
     flex-direction: row;
