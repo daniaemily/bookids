@@ -1,42 +1,42 @@
 <div class="site-content-index">
-  <div class="container-search">
-      <% if @books.count == 0 %>
-        <div class="not">
-          <h1>Sorry, your book was not found</h1>
-          <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
-        </div>
-      <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
-      <% else %>
-      <div class="header">
-        <% if current_user != nil %>
-          <p>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</p>
-        <% else %>
-          <p class="search-results">Our search has resulted the following books:</p>
-        <% end %>
-      </div>
-      <div class="index-search">
-        <%= form_tag books_path, method: :get, class: 'search-filters' do %>
-        <div class ="search-button-index">
-          <%= text_field_tag :query,
-            params[:query],
-            class: "search-form form-control-index",
-            placeholder: "Search"
-          %>
-        </div>
-
-        <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"]]), id: "index-category") %>
-
-        <div class="slidecontainer">
-          <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
-          <p>Max Price <i class="fas fa-euro-sign"></i>
-          <span id="demo"></span></p>
-        </div>
-        <input class="apply-btn" type="submit" name="commit">
-        <% end %>
-      </div>
-    </div>
-  <div class="wrapper-search">
   <div class="wrapper">
+    <div class="container-search">
+        <% if @books.count == 0 %>
+          <div class="not">
+            <h1>Sorry, your book was not found</h1>
+            <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
+          </div>
+        <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
+        <% else %>
+        <div class="header">
+          <% if current_user != nil %>
+            <p>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</p>
+          <% else %>
+            <p class="search-results">Our search has resulted the following books:</p>
+          <% end %>
+        </div>
+        <div class="index-search">
+          <%= form_tag books_path, method: :get, class: 'search-filters' do %>
+          <div class ="search-button-index">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "search-form form-control-index",
+              placeholder: "Search"
+            %>
+          </div>
+
+          <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"]]), id: "index-category") %>
+
+          <div class="slidecontainer">
+            <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
+            <p>Max Price <i class="fas fa-euro-sign"></i>
+            <span id="demo"></span></p>
+          </div>
+          <input class="apply-btn" type="submit" name="commit">
+          <% end %>
+        </div>
+      </div>
+    <div class="wrapper-search">
     <div class="row">
         <% @books.each do |book| %>
         <div class="col-sm-6 col-md-4 single-card">
