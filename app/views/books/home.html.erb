@@ -52,19 +52,9 @@
      <%= image_tag "banner_bottom_2.png", class:"banner_bottom" %>
     <div>
 </div>
-
 <div class="landing-bottom">
- <div class="row">
-    <div class="col-xs-12 home-description">
-        <h1>Search by categories</h1>
-        </div>
-        <div class = "carrousel_filter">
-          <%= link_to "sleep", filtered_books_path(category: "sleep"), class: "btn-carrousel", remote: true %>
-          <%= link_to "sports", filtered_books_path(category: "sports"), class: "btn-carrousel", remote: true %>
-          <%= link_to "friends", filtered_books_path(category: "friends"), class: "btn-carrousel", remote: true %>
-          <%= link_to "food", filtered_books_path(category: "food"), class: "btn-carrousel", remote: true %>
-        </div>
-        <p>.</p>
+  <h1>Explore our latest releases!</h1>
+
       <div id="main-carrousel">
         <%= render 'shared/carrousel', books: @books %>
       </div>
@@ -73,3 +63,8 @@
 
 <%= javascript_pack_tag 'carrousel' %>
 <%= javascript_pack_tag 'navbar' %>
+
+
+
+
+
