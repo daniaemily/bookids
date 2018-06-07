@@ -8,6 +8,9 @@ module NavbarHelper
     when 'show#orders' then 'confirmation-color'
     when 'show#personalizations' then 'personalization-color'
     when 'new#reviews' then 'review-color'
+    when 'devise/sessions#new' then 'dashboard-color'
+    when 'devise/registrations#new' then 'dashboard-color'
+    when 'devise/passwords#new' then 'dashboard-color'
     else
       ''
     end
