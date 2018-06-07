@@ -25,7 +25,19 @@
             %>
           </div>
 
-          <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"]], params[:query]), id: "index-category") %>
+          <% case %>
+            <% when params[:query].downcase.include?("sleep")%>
+            <%= select_tag(:category, options_for_select([ ["Sleep", "sleep"] ], params[:query]), id: "index-category") %>
+            <% when params[:query].downcase.include?("sport") %>
+            <%= select_tag(:category, options_for_select([["Sports", "sports"]], params[:query]), id: "index-category") %>
+            <% when params[:query].downcase.include?("food")%>
+            <%= select_tag(:category, options_for_select([["Food", "food"]], params[:query]), id: "index-category") %>
+            <% when params[:query].downcase.include?("friend") %>
+            <%= select_tag(:category, options_for_select([["Friends", "friends"]], params[:query]), id: "index-category") %>
+            <% else %>
+            <%= select_tag(:category, options_for_select([["Sleep", "sleep"]], params[:query]), id: "index-category") %>
+          <% end  %>
+
 
           <div class="slidecontainer">
             <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
