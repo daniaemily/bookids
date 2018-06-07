@@ -313,6 +313,9 @@ book21 = Book.create!(
   sku: "book",
   )
 
+personalization_lina1 = Personalization.create!(user: lina, book: book2)
+personalization_lina1 = Personalization.create!(user: lina, book: book4)
+
 
 personalization_simon = Personalization.create!(user: simon, book: book1)
 personalization_oma = Personalization.create!(user: oma, book: book1)
