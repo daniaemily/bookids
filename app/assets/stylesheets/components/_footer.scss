@@ -12,16 +12,31 @@
   display: flex;
   align-items: center;
 }
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+
+.list-footer {
+  p {
+    margin: 0;
+    font-family: 'Gaegu';
+    font-size: 23px;
+    font-weight: 300;
+    padding-right: 20px;
+    color: #757A77;
+  }
+
+  a {
+    font-family: 'Gaegu';
+    font-size: 23px;
+    font-weight: 300;
+    padding-right: 20px;
+    color: #757A77;
+  }
+
+  a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
 }
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
+
+.logo-footer {
+  background-color: black;
 }
