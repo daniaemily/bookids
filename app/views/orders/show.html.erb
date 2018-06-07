@@ -10,19 +10,19 @@
         </div>
         <table style="width:100%" class="order-summary">
           <tr>
-            <td>Name</td>
-            <td><%= @order.user.first_name %> <%= @order.user.last_name %></td>
+            <td class="confirmation-info">Username</td>
+            <td><%= @order.user.first_name.capitalize %> <%= @order.user.last_name %></td>
           </tr>
           <tr>
-            <td>Book</td>
+            <td class="confirmation-info">Book Title</td>
             <td><%= @order.user.personalizations.last.book.name%></td>
           </tr>
           <tr>
-            <td>Status</td>
-            <td><%= @order.state %></td>
+            <td class="confirmation-info">Order Status</td>
+            <td><%= @order.state.capitalize %></td>
           </tr>
           <tr>
-            <td><strong>Amount</strong></td>
+            <td class="confirmation-info"><strong>Amount Paid</strong></td>
             <td><strong><%= humanized_money_with_symbol(@order.amount) %></strong></td>
           </tr>
         </table>
