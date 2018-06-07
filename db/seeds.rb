@@ -13,7 +13,9 @@ Page.destroy_all
 User.destroy_all
 Book.destroy_all
 
-User.create(email: "test@test.com", password: "123123")
+user1 = User.create(email: "lina.meyer@gmail.com", password: "123456", photo: 'Lina.jpg')
+user2 = User.create(email: "simon.sohm@gmail.com", password: "123456", photo: 'Simon.jpg')
+
 
 users = User.all
 
