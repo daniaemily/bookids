@@ -137,6 +137,7 @@
   // margin-bottom: 30px;
   background-color: #9ACFE1;
   padding-bottom: 20px;
+  margin-top: 20px;
 
 
 }
@@ -173,12 +174,12 @@
   margin-top: 60%;
 }
 
-.btn.btn-primary.purchase:hover {
-  color: #F0BD68;
-  background-color: white;
-  border-color: #F0BD68;
+// .btn.btn-primary.purchase:hover {
+//   color: #F0BD68;
+//   background-color: white;
+//   border-color: #F0BD68;
 
-}
+// }
 
 .preview-book-title{
   color: green;
@@ -194,7 +195,7 @@
 
 
 .site-content-personalization {
-  height: 100%;
   width: 100%;
   background-color: #9ACFE1;
+  min-height: 100vh;
 }

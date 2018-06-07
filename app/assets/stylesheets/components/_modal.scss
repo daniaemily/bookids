@@ -29,22 +29,23 @@
 }
 
 .modal-footer {
-  display:flex;
-  justify-content:space-between;
+  text-align:center;
 }
 
 #personalization-links {
-  margin-top: 9px;
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
 .btn-preview-book {
-  background-color: $green;
+  background-color: white;
   padding: 10px 15px;
   border-radius: 2px;
-  color: white;
-  opacity: 0.6;
+  color: #B4D682;
   text-decoration: none;
-  text-align:center;
+  border: 1px solid #B4D682;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .btn-preview-book:hover {
@@ -87,7 +88,6 @@ $gray: #ccc;
   margin: 0 auto;
   max-width: 600px;
   .gender-row {
-    width:60%;
     display: flex;
     justify-content:space-around;
   }

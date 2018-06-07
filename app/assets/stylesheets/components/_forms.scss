@@ -68,3 +68,55 @@
 
 }
 
+
+// devise forms
+
+.form-actions {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.form-inputs {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.if-devise {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+  a {
+    color: black;
+    opacity: 0.8;
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid RGBA(255, 255, 255, 1);
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.header-devise {
+  margin-left: 20%;
+  h2 {
+    font-family: 'Gaegu';
+    font-size: 50px;
+  }
+}
+
+.site-content-devise {
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #F0BD68;
+  padding-top: 5%;
+}
+

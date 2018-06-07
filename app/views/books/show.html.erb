@@ -12,20 +12,28 @@
             <i class="fas fa-bookmark"></i>
           </div>
           <div class="description-show">
-            <h2><%= @book.name %></h2>
-            <h3>by <%= @book.author %></h3>
+            <h2 class="book-preview-title"><%= @book.name %></h2>
+            <div class="author-and-average">
+              <h3>by <%= @book.author %></h3>
+              <div class="average-show">
+                <i class="fas fa-star"></i>
+                <%= @average %>
+              </div>
+            </div>
             <p><%= @book.description %></p>
           </div>
           <div class="list-facts">
             <p><i class="fas fa-search"></i> <%=  @book.category %></p>
             <p><i class="fas fa-money-bill-alt"></i> <%= humanized_money_with_symbol(@book.price) %></p>
-            <p><i class="fas fa-child"></i> <%=  @book.age %></p>
+            <p><i class="fas fa-birthday-cake"></i> <%=  @book.age %></p>
           </div>
 
         <!-- Button trigger modal -->
+        <div class="button-personalize">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
             Personalize your book
           </button>
+        </div>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -88,7 +96,9 @@
     </div>
   <% if @book.reviews.any? %>
 <!-- reviews -->
-    <h2 class="header-review">Reviews</h2>
+    <div class="header-review">
+      <h2>Reviews</h2>
+    </div>
     <div class="average">
       <i class="fas fa-star"></i>
       <%= @average %>
@@ -100,7 +110,11 @@
           <div class="line"></div>
         </div>
           <div class="reviews">
+            <div class="picture">
+              <%= cl_image_tag personalization.user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar" %>
+            </div>
             <div class="reviews-left">
+
               <div class="review-stars">
                 <%= select_tag "stars", options_for_select((0..5).to_a, review.stars), class: "review-stars-select" %>
               </div>

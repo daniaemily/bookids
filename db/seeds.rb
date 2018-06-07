@@ -13,14 +13,16 @@ Page.destroy_all
 User.destroy_all
 Book.destroy_all
 
-User.create(email: "test@test.com", password: "123123")
+user1 = User.create(email: "lina.meyer@gmail.com", first_name: 'Lina', last_name:'Meyer', password: "123456", photo: 'Lina.jpg')
+user2 = User.create(email: "simon.sohm@gmail.com", password: "123456", photo: 'Simon.jpg')
+
 
 users = User.all
 
 
 book1 = Book.create!(
   name: "Little Monkey",
-  author: "Andreae Giles",
+  author: "Marta Altes",
   category: "sleep",
   description: "Little Monkey is a touching tale of Lina the monkey, who struggles with sleeping through the whole night. A meeting with Mr. Butterfly during her walk home from school on a sunny and warm afternoon changes everything... In this classic of children's literature, beloved by generations of readers and listeners, the quiet poetry of the words and the gentle, lulling illustrations combine to make a perfect book for the end of the day.",
   language: "English",

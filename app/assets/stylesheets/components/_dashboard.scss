@@ -1,5 +1,5 @@
 .site-content-dashboard {
-
+  min-height: 100vh;
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
@@ -28,20 +28,20 @@
 
     padding-right: 15px;
     padding-left: 15px;
-    color: #C7374B;
-    opacity: 0.75;
+    color: #B4D682;
+    opacity: 1;
     font-size: 26px;
     }
 
     .fas:hover {
-      opacity: 1;
+      opacity: 0.8;
     }
 
     a {
       color: grey;
       font-family: 'Nunito', sans-serif;
       font-weight: lighter;
-      font-size: 20px;
+      font-size: 17px;
     }
 
     a:hover {
@@ -75,7 +75,6 @@
   padding: 30px;
   margin-left: 4%;
   margin-right: 4%;
-  padding-top: 100px;
 }
 .profile .main {
   grid-row: 1 / span 3;

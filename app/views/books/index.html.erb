@@ -1,54 +1,67 @@
 <div class="site-content-index">
-  <div class="container-search">
-      <% if @books.count == 0 %>
-        <div class="not">
-          <h1>Sorry, your book was not found</h1>
-          <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
-        </div>
-      <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
-      <% else %>
-      <div class="header">
-        <% if current_user != nil %>
-          <p>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</p>
-        <% else %>
-          <p class="search-results">Our search has resulted the following books:</p>
-        <% end %>
-      </div>
-      <div class="index-search">
-        <%= form_tag books_path, method: :get, class: 'search-filters' do %>
-        <div class ="search-button-index">
-          <%= text_field_tag :query,
-            params[:query],
-            class: "search-form form-control-index",
-            placeholder: "Search"
-          %>
-        </div>
-
-        <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"]]), id: "index-category") %>
-
-        <div class="slidecontainer">
-          <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
-          <p>Max Price <i class="fas fa-euro-sign"></i>
-          <span id="demo"></span></p>
-        </div>
-        <input class="apply-btn" type="submit" name="commit">
-        <% end %>
-      </div>
-    </div>
-  <div class="wrapper-search">
   <div class="wrapper">
+    <div class="container-search">
+        <% if @books.count == 0 %>
+          <div class="not">
+            <h1>Sorry, your book was not found</h1>
+            <p>Feel free to browse our current <a href="/books">library</a> or try again.</p>
+          </div>
+        <!-- MESSAGE NOT FOUND... LINK TO SHOW ALL BOOKS -->
+        <% else %>
+        <div class="header">
+          <% if current_user != nil %>
+            <p>Hi <%= current_user.first_name.capitalize %>, our search resulted in the following books:</p>
+          <% else %>
+            <p class="search-results">Our search has resulted the following books:</p>
+          <% end %>
+        </div>
+        <div class="index-search">
+          <%= form_tag books_path, method: :get, class: 'search-filters' do %>
+          <div class ="search-button-index">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "search-form form-control-index",
+              placeholder: "Search"
+            %>
+          </div>
+
+          <%= select_tag(:category, options_for_select([["Friends", "friends"], ["Sports", "sports"], ["Sleep", "sleep"], ["Food", "food"]]), id: "index-category") %>
+
+          <div class="slidecontainer">
+            <%= range_field_tag('price_cents', nil, min: 1, max: 30, value: params[:price_cents] ? params[:price_cents] : 30, class: "slider", id: "myPriceRange") %>
+            <p>Max Price <i class="fas fa-euro-sign"></i>
+            <span id="demo"></span></p>
+          </div>
+          <input class="apply-btn" type="submit" name="commit">
+          <% end %>
+        </div>
+      </div>
+    <div class="wrapper-search">
     <div class="row">
         <% @books.each do |book| %>
         <div class="col-sm-6 col-md-4 single-card">
           <%= link_to book_path(book) do %>
           <div class='thumbnail'>
             <p class="name"> <%= book.name %></p>
+            <% sum = 0 %>
+            <% number = 0 %>
+            <% book.personalizations.each do |personalization| %>
+              <%personalization.reviews.each do |review| %>
+                <% number += 1%>
+                <%sum += review.stars %>
+              <% end  %>
+            <% end %>
+            <% average = (sum.to_f/number.to_f).to_f.round(1) %>
+            <div class="average-index">
+              <i class="fas fa-star"></i>
+              <%= average %>
+            </div>
             <div class="photo-index" style="background-image: url(<%= image_url(book.photo)%>)">
             </div>
             <div class="caption">
               <div class="text">
                 <div class="age-stars-price-index">
-                  <p><i class="fas fa-child"></i>  <%=book.age %></p>
+                  <p><i class="fas fa-birthday-cake"></i>  <%=book.age %></p>
                     <%= link_to book_favorites_path(book), method: :post, remote: true do %>
                       <i class="fas fa-heart <%= book.liked?(current_user) ? "like" : "dislike"  %>" id='favorite-book-<%= book.id %>'></i>
                     <% end %>

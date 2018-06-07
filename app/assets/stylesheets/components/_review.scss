@@ -1,3 +1,11 @@
+.site-content-review {
+  min-height: 100vh;
+  width: 100%;
+  // background-color: white;
+  // background-color: #82D0E2;
+  background-color: #B4D682;
+}
+
 .line {
   border-bottom: 1px solid #DBDBDB !important;
 }
@@ -12,6 +20,7 @@
 
 .review-header {
   font-weight: bold;
+  margin-bottom: 3px;
 }
 
 .average {
@@ -25,4 +34,12 @@
 
 .header-review {
   margin-top: 60px;
+}
+.picture {
+  .avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
 }

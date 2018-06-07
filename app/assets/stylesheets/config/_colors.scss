@@ -27,7 +27,7 @@ $personalization_color: #9ACFE1;
 }
 
 .home-color {
-  background-color: $home_color;
+  background-color: transparent;
 }
 
 .dashboard-color {
@@ -44,4 +44,8 @@ $personalization_color: #9ACFE1;
 
 .personalization-color {
  background-color: $personalization-color;
+}
+
+.review-color {
+  background-color: $index_color;
 }

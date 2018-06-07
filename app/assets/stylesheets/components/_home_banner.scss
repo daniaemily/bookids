@@ -2,9 +2,9 @@
   color: white;
   text-align: center;
   background: image-url('bookies_background.jpg');
-  height: calc(100vh - 0px);
+  height: 100vh;
   position: relative;
-
+  margin-top: -70px;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
