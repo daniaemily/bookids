@@ -7,6 +7,16 @@
   <!-- Right Navigation -->
   <div class="navbar-bookie-right hidden-xs hidden-sm">
 
+    <div class ="navbar-search-hidden search-button-navbar" id="search-navbar">
+      <%= form_tag books_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "search-form form-control",
+        placeholder: "Enter problem"
+        %>
+        <% end %>
+    </div>
+
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->

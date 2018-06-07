@@ -13,6 +13,10 @@
   border-bottom: 1px solid RGBA(255, 255, 255, 0.5);
 }
 
+.navbar-search-hidden{
+  display: none;
+}
+
 /* Logo */
 .navbar-bookie-brand img {
   height: 39px;
@@ -89,4 +93,34 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+
+.search-button-navbar {
+    .search-form {
+    border-radius: 8px;
+    text-align: left;
+    background-color: RGBA(255, 255, 255, 0.1);
+    color: white !important;
+    border-color: white;
+    width: 375px;
+    height: 37px;
+    padding-top: 10px;
+    // margin-right: 35vh;
+    margin-top: 2px;
+    position: absolute;
+    left: 10%;
+    top: 14px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Gaegu';
+      font-size: 25px;
+    }
+
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: none;
+    }
+  }
 }
