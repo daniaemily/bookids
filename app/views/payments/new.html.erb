@@ -11,25 +11,25 @@
           <div class="col-sm-12 col-md-12 author-show">
             <div class="description-checkout">
               <h2><%= @order.user.personalizations.last.book.name %></h2>
-              <p>View your personalization details below:</p>
             </div>
-            <div class="list-facts">
-              <p><i class="fas fa-address-card"></i> <%=  @order.user.personalizations.last.character_name %></p>
-              <p><i class="fas fa-child"></i> <%=  @order.user.personalizations.last.character_gender %></p>
-              <p><i class="fas fa-birthday-cake"></i> <%= @order.user.personalizations.last.character_age %></p>
+            <div>
+              <div class="list-facts">
+                <p><i class="fas fa-address-card"></i> <%=  @order.user.personalizations.last.character_name.capitalize %></p>
+                <p><i class="fas fa-child"></i> <%=  @order.user.personalizations.last.character_gender.capitalize %></p>
+                <p><i class="fas fa-birthday-cake"></i> <%= @order.user.personalizations.last.character_age %></p>
+              </div>
+              <p class="detail-text">Your personalization details</p>
             </div>
-
-            <table style="width:100%" class="price-delivery-checkout">
-              <tr>
-                <td class="payment-review"><p>Amount:</p></td>
-                <td><p><strong><%= humanized_money_with_symbol(@order.amount) %><strong></p></td>
-              </tr>
-              <tr>
-                <td><p>Expected delivery:</p></td>
-                <td><p><strong><%= DateTime.now.to_date + 4%><strong></p></td>
-
-              </tr>
-            </table>
+            <div class="payment-details-container">
+              <div class="payment-detail">
+                <h3><%= humanized_money_with_symbol(@order.amount) %></h3>
+                <p class="detail-text">Amount to be completed</p>
+              </div>
+              <div class="payment-detail">
+                <h3><%= (DateTime.now.to_date + 4).strftime("%A, %b %d") %></h3>
+                <p class="detail-text">Expected delivery</p>
+              </div>
+            </div>
 
 
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button custom-button"
