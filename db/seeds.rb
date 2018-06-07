@@ -13,10 +13,17 @@ Page.destroy_all
 User.destroy_all
 Book.destroy_all
 
-user1 = User.create(email: "lina.meyer@gmail.com", first_name: 'Lina', last_name:'Meyer', password: "123456", photo: 'Lina.jpg')
-user2 = User.create(email: "simon.sohm@gmail.com", password: "123456", photo: 'Simon.jpg')
 
 
+
+lina = User.create!(email: "lina.meyer@gmail.com", first_name: 'Lina', last_name:'Meyer', password: '123456',  photo: 'Lina.jpg')
+simon = User.create!(email: "simon.sohm@gmail.com", first_name: 'Simon', last_name:'Sohm', password: "123456", photo: 'Simon.jpg')
+oma = User.create!(email: "oma@gmail.com", first_name: 'Ingrid', last_name:'Müller', password: "123456", photo: 'Oma.jpg')
+mama = User.create!(email: "mama@gmail.com", first_name: 'Kerstin', last_name:'Meyer', password: "123456", photo: 'Mama.jpg')
+papa = User.create!(email: "papa@gmail.com", first_name: 'Thomas', last_name:'Rauert', password: "123456", photo: 'Papa.jpg')
+chica1 = User.create!(email: "chica1@gmail.com", first_name: 'Anne', last_name:'Stemer', password: "123456", photo: 'chica1.jpg')
+chica2 = User.create!(email: "chica2@gmail.com", first_name: 'Stella', last_name:'Künne', password: "123456", photo: 'chica2.jpg')
+opa = User.create!(email: "opa@gmail.com", first_name: 'Sigmund', last_name:'Heist', password: "123456", photo: 'Opa.jpg')
 users = User.all
 
 
@@ -89,7 +96,7 @@ book5 = Book.create!(
   )
 
 book6 = Book.create!(
-  name: "The Night Before My World Dance Championships",
+  name: "My World Dance Championships",
   author: "Natasha Wing",
   category: "sports",
   description: "It's the night before Peter Panama's first dance recital. At the dress rehearsal, he and her class go over the steps one last time. What if he messes up? he worries. But the next day, he's ready to perform. When the class spins left she spins right! Without missing a beat, he keeps on dancing and smiling. The incredible story celebrates this with humor, warmth, and engaging illustrations by Amy Wummer.",
@@ -182,7 +189,7 @@ book12 = Book.create!(
   )
 
 
-book12 = Book.create!(
+book13 = Book.create!(
   name: "Recipes For You & Your Family",
   author: "P.D. Eastman",
   category: "grow-up",
@@ -195,7 +202,7 @@ book12 = Book.create!(
   sku: "book",
   )
 
-book13 = Book.create!(
+book14 = Book.create!(
   name: "Away We Go",
   author: "Marcus Pfister",
   category: "sleep",
@@ -209,7 +216,7 @@ book13 = Book.create!(
   sku: "book",
   )
 
-book14 = Book.create!(
+book15 = Book.create!(
   name: "How Pigs Sleep",
   author: "James Dean",
   category: "sleep",
@@ -222,7 +229,7 @@ book14 = Book.create!(
   sku: "book",
   )
 
-book15 = Book.create!(
+book16 = Book.create!(
   name: "Bulle & Pelle",
   author: "Sigal Adler",
   category: "sleep",
@@ -240,7 +247,7 @@ book15 = Book.create!(
   sku: "book",
   )
 
-book16 = Book.create!(
+book17 = Book.create!(
   name: "Mr. Galliano's Circus",
   author: "Brianna Caplan Sayres",
   category: "sports",
@@ -253,7 +260,7 @@ book16 = Book.create!(
   sku: "book",
   )
 
-book17 = Book.create!(
+book18 = Book.create!(
   name: "Dr Seuss's Sleep Book",
   author: "Dr. Seuss",
   category: "sleep",
@@ -266,7 +273,7 @@ book17 = Book.create!(
   sku: "book",
   )
 
-book18 = Book.create!(
+book19 = Book.create!(
   name: "Where Do Jet Planes Sleep at Night?",
   author: "Brianna Caplan Sayres",
   category: "sleep",
@@ -279,7 +286,7 @@ book18 = Book.create!(
   sku: "book",
   )
 
-book19 = Book.create!(
+book20 = Book.create!(
   name: "Good Night Yoga",
   author: "Mariam Gates",
   category: "sleep",
@@ -293,7 +300,7 @@ book19 = Book.create!(
   sku: "book",
   )
 
-book20 = Book.create!(
+book21 = Book.create!(
   name: "Good Night New York City",
   author: "Adam Gamble",
   category: "sleep",
@@ -304,6 +311,226 @@ book20 = Book.create!(
   photo: '12.jpg',
   publishing_year: "2006",
   sku: "book",
+  )
+
+
+personalization_simon = Personalization.create!(user: simon, book: book1)
+personalization_oma = Personalization.create!(user: oma, book: book1)
+personalization_papa = Personalization.create!(user: papa, book: book1)
+personalization_mama = Personalization.create!(user: mama, book: book1)
+personalization_chica1 = Personalization.create!(user: chica1, book: book1)
+personalization_chica2 = Personalization.create!(user: chica2, book: book1)
+personalization_opa = Personalization.create!(user: opa, book: book1)
+
+review_simon = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon
+  )
+
+review_oma = Review.create!(
+  header: "Very nice birthday present",
+  description: "This was the best birthday present that i could have found for my grand-daughtere. She was so happy that she appears in the book. I had to read it out all day long.",
+  stars: '5',
+  personalization: personalization_oma
+  )
+
+review_papa = Review.create!(
+  header: "Thank you @bookids",
+  description: "Thanks to this book i can sleep again in the night because my 4-year old son has finally overcome his sleeping problems. He couldn't fall asleep for 3 weeks now but since i read out this book to him in the evening he falls asleep while i read it. ",
+  stars: '5',
+  personalization: personalization_papa
+  )
+
+review_mama = Review.create!(
+  header: "Mia loves it",
+  description: "Great children book. We especially love the drawings. It is also a nice personal birthday present for godchilds.",
+  stars: '5',
+  personalization: personalization_mama
+  )
+
+review_chica1 = Review.create!(
+  header: "So sweet!",
+  description: "This is definitely a book that I recommend to parents with little ones. The mischievous little monkey just keeps making mistakes but after guidance from Big monkey he makes it better. It shows how you can rectify mistakes such as making a mess (clean it up). It also shows that parents can make mistakes just like anyone else, and we can also apologize to our little ones. My 2year old now looks at me after she does something wrong and says, 'i will make it better Big Monkey'.",
+  stars: '4',
+  personalization: personalization_chica1
+  )
+
+review_chica2 = Review.create!(
+  header: "So sweet!",
+  description: "My kids, ages 3-6, really love this book. For me, the value of stories is partly about helping kids process different emotional experiences, and so I think the story of this one does that.",
+  stars: '5',
+  personalization: personalization_chica2
+  )
+
+review_opa = Review.create!(
+  header: "Cute Book for my little monkey!",
+  description: "I bought this Little Monkey book for my 2 year old grand-daughter. She was happy and i was impressed of the good quality and the easy way to download it.",
+  stars: '4',
+  personalization: personalization_opa
+  )
+
+personalization_simon_book2 = Personalization.create!(user: simon, book: book2)
+personalization_simon_book3 = Personalization.create!(user: simon, book: book3)
+personalization_simon_book4 = Personalization.create!(user: simon, book: book4)
+personalization_simon_book5 = Personalization.create!(user: simon, book: book5)
+personalization_simon_book6 = Personalization.create!(user: simon, book: book6)
+personalization_simon_book7 = Personalization.create!(user: simon, book: book7)
+personalization_simon_book8 = Personalization.create!(user: simon, book: book8)
+personalization_simon_book9 = Personalization.create!(user: simon, book: book9)
+personalization_simon_book10 = Personalization.create!(user: simon, book: book10)
+personalization_simon_book11 = Personalization.create!(user: simon, book: book11)
+personalization_simon_book12 = Personalization.create!(user: simon, book: book12)
+personalization_simon_book13 = Personalization.create!(user: simon, book: book13)
+personalization_simon_book14 = Personalization.create!(user: simon, book: book14)
+personalization_simon_book15 = Personalization.create!(user: simon, book: book15)
+personalization_simon_book16 = Personalization.create!(user: simon, book: book16)
+personalization_simon_book17 = Personalization.create!(user: simon, book: book17)
+personalization_simon_book18 = Personalization.create!(user: simon, book: book18)
+personalization_simon_book19 = Personalization.create!(user: simon, book: book19)
+personalization_simon_book20 = Personalization.create!(user: simon, book: book20)
+personalization_simon_book21 = Personalization.create!(user: simon, book: book21)
+
+review_simon_2 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book2
+  )
+
+review_simon_3 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book3
+  )
+
+review_simon_4 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '4',
+  personalization: personalization_simon_book4
+  )
+
+review_simon_5 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '4',
+  personalization: personalization_simon_book5
+  )
+
+review_simon_6 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book6
+  )
+
+review_simon_7 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '3',
+  personalization: personalization_simon_book7
+  )
+
+review_simon_8 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '3',
+  personalization: personalization_simon_book8
+  )
+
+review_simon_9 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book9
+  )
+
+review_simon_10 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book10
+  )
+
+review_simon_11 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '4',
+  personalization: personalization_simon_book11
+  )
+
+
+review_simon_12 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book12
+  )
+
+review_simon_13 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book13
+  )
+
+review_simon_14 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '3',
+  personalization: personalization_simon_book14
+  )
+
+review_simon_15 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '4',
+  personalization: personalization_simon_book15
+  )
+
+review_simon_16 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book16
+  )
+
+review_simon_17 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book17
+  )
+
+review_simon_18 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '2',
+  personalization: personalization_simon_book18
+  )
+
+review_simon_19 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '5',
+  personalization: personalization_simon_book19
+  )
+
+review_simon_20 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '4',
+  personalization: personalization_simon_book20
+  )
+
+review_simon_21 = Review.create!(
+  header: "Great Book!",
+  description: "I bought this book for my daughter and she loves it. We read it together every evening and she immediately falls asleep afterwards. I would highly recommend this book!",
+  stars: '4',
+  personalization: personalization_simon_book21
   )
 
 
