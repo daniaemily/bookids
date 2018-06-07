@@ -12,9 +12,9 @@ class PersonalizationsController < ApplicationController
     @dataset_flipper = []
     @dataset_flipper << {
       id: 0,
-      content: "<img  src='#{@personalization.book.photo}' alt='' class='preview-image preview-image-full'>",
+      content: "<img  src='#{ActionController::Base.helpers.asset_path(@personalization.book.photo)}' alt='' class='preview-image preview-image-full'>",
       color: ["orange", "pink"].sample,
-      image: @personalization.book.photo
+      image: ActionController::Base.helpers.asset_path(@personalization.book.photo) # 16.jpg
     }
       # pages: [{ id: '1', color: 'orange', content: @personalization.book.name, image: @personalization.book.pages.first.image }]
         # 6.times { |i|

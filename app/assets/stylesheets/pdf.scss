@@ -1,0 +1,38 @@
+.pdf-book-title {
+  color: green;
+  font-family: gaegu;
+  font-size: 70px;
+  text-align: center;
+}
+
+.pdf-book-text {
+  color: gray;
+  font-family: gaegu;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.pdf-imag {
+
+}
+
+.break {
+  page-break-before: always;
+
+}
+
+.image-pdf{
+
+  height: 500px;
+  width: 400px;
+
+}
+
+.pdf-image {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}

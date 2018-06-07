@@ -1,10 +1,18 @@
+
+<%= wicked_pdf_image_tag @personalization.book.photo, class: "pdf-image" %>
+<% @personalization.book.pages.each do |page| %>
+
+  <% if page.markup == "title" %>
+    <h1 class='pdf-book-title'><%= page.content.gsub(/name/, @personalization.character_name) %></h1>
+  <% end %>
+<% end %>
+
+<div class="break"></div>
 <% @personalization.book.pages.each do |page| %>
   <% if page.markup == "paragraph" %>
-    <p><%= page.content.gsub(/name/, @personalization.character_name) %></p>
-  <% elsif page.markup == "title" %>
-    <h1><%= page.content.gsub(/name/, @personalization.character_name) %></h1>
+    <p class='pdf-book-text'><%= page.content.gsub(/name/, @personalization.character_name) %></p>
   <% elsif page.markup == "image" %>
-    <%= wicked_pdf_image_tag page.image %>
+    <%= wicked_pdf_image_tag page.image, class: "pdf-image" %>
   <% end %>
 <% end %>
 

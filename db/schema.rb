@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_06_05_152628) do
     t.text "description"
     t.string "language"
     t.text "category"
-    t.integer "age"
+    t.text "age"
     t.string "photo"
     t.integer "publishing_year"
     t.datetime "created_at", null: false
