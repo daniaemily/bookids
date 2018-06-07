@@ -2,6 +2,7 @@
 .site-content-show {
 
   width: 100%;
+  min-height: 100vh;
   margin-top: 0;
   background-color: white;
 }
@@ -10,10 +11,12 @@
   background-color: white;
   box-shadow: 0 4px 7px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
   border-radius: 6px;
+  height: 80vh;
 }
 
 .book-photo img {
   border-radius: 6px 0px 0px 6px;
+  height: 80vh;
 }
 
 .list-facts {
@@ -23,7 +26,6 @@
   margin-right: 7px;
   padding: 20px 30px;
   margin-bottom: 16.5px;
-  margin-top: 50px;
   border-radius: 3px;
   background: rgba(180, 214, 130, 0.1);
 
@@ -72,14 +74,12 @@
   position: absolute;
   font-size: 60px;
   top: 0;
-  right: 100px;
+  right: 60px;
   color: #F0BD68;
   }
 }
 
-.description-show {
-  margin-top: 17%;
-}
+
 
 .author-show {
   padding-left: 55px;
@@ -103,10 +103,10 @@
   .author-and-average {
     display: flex;
     justify-content: space-between;
+    margin-top: -10px;
   }
 
   h2{
-    padding-bottom: 1px;
     font-family: 'Gaegu';
     font-weight: 500;
     font-size: 43px;
@@ -121,7 +121,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: justify;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: lighter;
     color: #757A77;
     padding-right: 4px;

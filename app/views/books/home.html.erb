@@ -3,8 +3,7 @@
   <div class="banner-content">
     <h1><%= image_tag "bookie_logo.svg", height: 50 %> BOOKIDS</h1>
     <%= image_tag "linea_redonda.png" %>
-    <p>Amazing personalized stories
-    for amazing children</p>
+    <p>An easy way to solve problems through identification and imagination</p>
     <div class ="search-button">
       <%= form_tag books_path, method: :get do %>
       <%= text_field_tag :query,
@@ -21,7 +20,7 @@
   <div class="row">
     <div class="col-xs-12 home-description">
       <h1>Welcome to Bookids</h1>
-      <p>The funnest way to educate and share stunning personalized stories with your kids.</p>
+      <p>The best way to educate and share stunning personalized stories with your kids.</p>
     </div>
   </div>
   <div class="col-xs-12">
@@ -29,18 +28,18 @@
       <div class=" steps">
         <div class="step_by_step">
           <%= image_tag "icon1.png", class:"intro-icons" %>
-          <h1>Search for inspiration</h1>
-          <p >Select what kind of story you want to share with your kids.</p>
+          <h1>Find a story</h1>
+          <p> Search for a story that fits to your children's problem.</p>
         </div>
         <div class="step_by_step">
           <%= image_tag "icon2.png", class:"intro-icons" %>
-          <h1>Personalize your story</h1>
-          <p>Make the story personal and add some personal details to make it stunning!</p>
+          <h1>Personalize</h1>
+          <p>Customize the story to make your child the main characater. </p>
         </div>
         <div class="step_by_step last"  >
           <%= image_tag "icon3.png", class:"intro-icons"  %>
-          <h1>Print it or download it</h1>
-          <p>Print an awesome book or download it straight to your phone, ipad or laptop.</p>
+          <h1>Download & Print </h1>
+          <p>Download the personalized book and receive a printed version only 4 days after.</p>
         </div>
       </div>
       <div class ="cloud">
@@ -49,9 +48,8 @@
     </div>
    </div>
  </div>
-     <%= image_tag "banner_bottom_2.png", class:"banner_bottom" %>
-    <div>
-</div>
+
+<%= image_tag "banner_bottom_2.png", class: "banner_bottom", id: "limit-bottom-home" %>
 <div class="landing-bottom">
   <h1>Explore our latest releases!</h1>
 
