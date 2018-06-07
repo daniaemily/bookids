@@ -15,4 +15,10 @@ $(function() {
   });
 });
 
+$(function() {
+  $('.save-button').click(function() {
+    $(this).addClass('hidden');
+  });
+});
+
 
