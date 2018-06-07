@@ -50,12 +50,17 @@
 //   font-weight:lighter;
 // }
 .order-summary {
-  margin-bottom: 20px;
-  margin-top: 40px;
+  margin-bottom: 29px;
+  margin-top: 29px;
   vertical-align: middle;
-  margin-left: 20%;
-  margin-right: 20%;
+  // margin-left: 29%;
+  // margin-right: 20%;
   line-height: 1.9;
+  display: flex;
+  width: 84%;
+  border-radius: 3px;
+  background: rgba(180, 214, 130, 0.1);
+  padding: 20px 163px;
 
   td {
     font-size: 17px;
@@ -66,7 +71,7 @@
 
 .back-to-confirmation {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 3%;
   margin-top: 6%;
   margin-left: 5%;
@@ -88,5 +93,13 @@
   a:hover {
     text-decoration: none;
   }
+}
+
+
+.confirmation-info {
+  padding-right: 42px;
+  color: #333333;
+  opacity: 0.9;
+  font-weight: bold;
 }
 
