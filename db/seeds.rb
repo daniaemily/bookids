@@ -16,14 +16,14 @@ Book.destroy_all
 
 
 
-lina = User.create!(email: "lina.meyer@gmail.com", first_name: 'Lina', last_name:'Meyer', password: '123456',  photo: 'Lina.jpg')
-simon = User.create!(email: "simon.sohm@gmail.com", first_name: 'Simon', last_name:'Sohm', password: "123456", photo: 'Simon.jpg')
-oma = User.create!(email: "oma@gmail.com", first_name: 'Ingrid', last_name:'Müller', password: "123456", photo: 'Oma.jpg')
-mama = User.create!(email: "mama@gmail.com", first_name: 'Kerstin', last_name:'Meyer', password: "123456", photo: 'Mama.jpg')
-papa = User.create!(email: "papa@gmail.com", first_name: 'Thomas', last_name:'Rauert', password: "123456", photo: 'Papa.jpg')
-chica1 = User.create!(email: "chica1@gmail.com", first_name: 'Anne', last_name:'Stemer', password: "123456", photo: 'chica1.jpg')
-chica2 = User.create!(email: "chica2@gmail.com", first_name: 'Stella', last_name:'Künne', password: "123456", photo: 'chica2.jpg')
-opa = User.create!(email: "opa@gmail.com", first_name: 'Sigmund', last_name:'Heist', password: "123456", photo: 'Opa.jpg')
+lina = User.create!(email: "lina.meyer@gmail.com", first_name: 'Lina', last_name:'Meyer', password: '123456',  remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Lina.jpg')
+simon = User.create!(email: "simon.sohm@gmail.com", first_name: 'Simon', last_name:'Sohm', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Simon.jpg')
+oma = User.create!(email: "oma@gmail.com", first_name: 'Ingrid', last_name:'Müller', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Oma.jpg')
+mama = User.create!(email: "mama@gmail.com", first_name: 'Kerstin', last_name:'Meyer', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Mama.jpg')
+papa = User.create!(email: "papa@gmail.com", first_name: 'Thomas', last_name:'Rauert', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Papa.jpg')
+chica1 = User.create!(email: "chica1@gmail.com", first_name: 'Anne', last_name:'Stemer', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/chica1.jpg')
+chica2 = User.create!(email: "chica2@gmail.com", first_name: 'Stella', last_name:'Künne', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/chica2.jpg')
+opa = User.create!(email: "opa@gmail.com", first_name: 'Sigmund', last_name:'Heist', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Opa.jpg')
 users = User.all
 
 
