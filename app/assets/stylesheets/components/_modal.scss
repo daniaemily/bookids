@@ -30,50 +30,47 @@
 
 .modal-footer {
   text-align:center;
+  padding-bottom: 0px;
+  padding-top: 15px;
 }
 
 #personalization-links {
-  margin-top: 20px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 23px;
 }
 
 .btn-preview-book {
-  background-color: white;
   padding: 10px 15px;
-  border-radius: 2px;
-  color: #B4D682;
   text-decoration: none;
-  border: 1px solid #B4D682;
-  text-align: center;
-  margin-top: 5px;
+  color: white;
+  font-family: 'Gaegu';
+  background-color: #F0BD68;
+  border: none;
+  border-radius: 8px;
 }
 
 .btn-preview-book:hover {
-  background-color: $green;
-  padding: 10px 15px;
-  border-radius: 2px;
-  color: white;
-  opacity: 0.8;
+  background-color: #B4D682;
+  color:white;
   text-decoration: none;
-  text-align:center;
 
 }
 
 .save-button {
   margin-left:3px;
-  padding:7px;
   width:70px;
-  border-radius: 2px;
-  background-color: white;
-  border: 1px solid #F0BD68;
-  color: #F0BD68;
+  color: white;
+  font-family: 'Gaegu';
+  background-color: #F0BD68;
+  border: none;
+  border-radius: 8px;
+  padding: 7px;
+
 }
 .save-button:hover {
-  padding:7px;
-  width:70px;
-  border-radius: 2px;
-  background-color: #F0BD68;
+  background-color: #B4D682;
   color:white;
+  text-decoration: none;
 }
 
 .save-button:focus {
