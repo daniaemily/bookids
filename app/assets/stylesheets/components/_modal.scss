@@ -76,6 +76,10 @@
   color:white;
 }
 
+.save-button:focus {
+  outline: none;
+}
+
 
 
 $custom-easing: cubic-bezier(1, .1, 0, 0.9);
