@@ -50,17 +50,17 @@
 //   font-weight:lighter;
 // }
 .order-summary {
-  margin-bottom: 29px;
-  margin-top: 29px;
+  margin-bottom: 5px;
+  margin-top: 13px;
   vertical-align: middle;
-  // margin-left: 29%;
-  // margin-right: 20%;
   line-height: 1.9;
   display: inline-block;
   width: 84%;
-  border-radius: 3px;
+  border-radius: 6px;
   background: rgba(180, 214, 130, 0.1);
   padding-left: 33%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   td {
     font-size: 17px;
