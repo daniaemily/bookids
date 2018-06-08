@@ -16,7 +16,7 @@ Book.destroy_all
 
 
 
-lina = User.create!(email: "lina.meyer@gmail.com", first_name: 'Lina', last_name:'Meyer', password: '123456',  remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Lina.jpg')
+lina = User.create!(email: "lina.meyer@gmail.com", first_name: 'Lina', last_name:'Meyer', password: '123456',  remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528448332/Linaneu.jpg')
 simon = User.create!(email: "simon.sohm@gmail.com", first_name: 'Simon', last_name:'Sohm', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Simon.jpg')
 oma = User.create!(email: "oma@gmail.com", first_name: 'Ingrid', last_name:'Müller', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Oma.jpg')
 mama = User.create!(email: "mama@gmail.com", first_name: 'Kerstin', last_name:'Meyer', password: "123456", remote_photo_url: 'http://res.cloudinary.com/linameyer/image/upload/v1528372666/Mama.jpg')
