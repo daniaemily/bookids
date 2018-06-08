@@ -119,6 +119,15 @@
   font-size: 22px;
 }
 
+.stripe-button-el:focus {
+  outline: none;
+}
+
+.stripe-button-el span:active:focus, .stripe-button-el.active.focus{
+  outline: none;
+  border: none;
+}
+
 .stripe-button-el span {
   font-family: 'Gaegu' !important;
   font-size: 50px !important;
@@ -133,8 +142,9 @@
   background-color: #B4D682 !important;
   text-shadow: none !important;
   box-shadow: none !important;
-
 }
+
+
 
 // .stripe-button-el span:hover {
 //   background-color: white !important;
